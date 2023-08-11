@@ -12,9 +12,11 @@ const nextConfig = {
   },
   webpack: (config, { nextRuntime }) => {
     if (typeof nextRuntime === 'undefined') {
-      const { IgnorePlugin } = require('webpack')
-      const ignoreFs = new IgnorePlugin({ resourceRegExp: /fs/ })
-      config.plugins.push(ignoreFs)
+      config.resolve.fallback = {
+        fs: false,
+        path: false,
+        os: false,
+      }
     }
 
     return config
