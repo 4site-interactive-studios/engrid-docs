@@ -13,6 +13,7 @@ const nextConfig = {
   webpack: (config, { nextRuntime }) => {
     if (typeof nextRuntime === 'undefined') {
       config.resolve.fallback = {
+        ...config.resolve.fallback,
         fs: false,
         path: false,
         os: false,
