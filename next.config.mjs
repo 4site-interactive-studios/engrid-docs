@@ -9,6 +9,9 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   webpack: (config, { nextRuntime }) => {
     if (typeof nextRuntime === 'undefined') {
       config.resolve.fallback = {
