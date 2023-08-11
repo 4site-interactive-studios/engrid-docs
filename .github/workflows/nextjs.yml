@@ -79,6 +79,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Create a .nojekyll file to prevent GitHub from ignoring files that begin with an underscore
         run: touch ./out/.nojekyll
+      - name: Create CNAME file
+        run: echo "engrid.4sitestudios.com" > ./out/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
