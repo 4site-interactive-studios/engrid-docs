@@ -10,10 +10,11 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      ;(config.resolve.fallback.fs = false),
-        (config.resolve.fallback.path = false)
+  webpack: (config, { nextRuntime }) => {
+    if (typeof nextRuntime === 'undefined') {
+      const { IgnorePlugin } = require('webpack')
+      const ignoreFs = new IgnorePlugin({ resourceRegExp: /fs/ })
+      config.plugins.push(ignoreFs)
     }
 
     return config
