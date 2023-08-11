@@ -6,12 +6,14 @@ import withSearch from './src/markdoc/search.mjs'
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md'],
+  preferRelative: true,
   experimental: {
     scrollRestoration: true,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      config.resolve.fallback.fs = false
+      ;(config.resolve.fallback.fs = false),
+        (config.resolve.fallback.path = false)
     }
 
     return config
