@@ -6,7 +6,6 @@ import withSearch from './src/markdoc/search.mjs'
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md'],
-  preferRelative: true,
   experimental: {
     scrollRestoration: true,
   },
