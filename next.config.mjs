@@ -9,9 +9,6 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-  output: 'export',
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
 }
 
 export default withSearch(
