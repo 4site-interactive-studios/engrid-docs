@@ -82,6 +82,38 @@ export default function App({ Component, pageProps }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
+        <meta name="theme-color" content="#0ea5e9" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="twitter:site" content="@4SiteStudios" />
+        <meta name="twitter:creator" content="@4SiteStudios" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="4Site ENgrid" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="" />
+
+        <meta
+          name="st:title"
+          content="ENgrid - Engaging Networks Template Framework"
+        />
+        <meta
+          name="twitter:title"
+          content="ENgrid - Engaging Networks Template Framework"
+        />
+        <meta
+          name="twitter:image"
+          content="https://use.sharethumb.io/og/engrid.4sitestudios.com"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="og:title"
+          content="ENgrid - Engaging Networks Template Framework"
+        />
+        <meta
+          property="og:image"
+          content="https://use.sharethumb.io/og/engrid.4sitestudios.com"
+        />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="1200" />
         <title>{pageTitle}</title>
         {description && <meta name="description" content={description} />}
       </Head>
