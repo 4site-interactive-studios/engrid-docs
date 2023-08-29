@@ -18,6 +18,19 @@ npm run dev
 
 Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
+## Deployment
+
+To deploy this site, first build the site:
+
+```bash
+npm run build
+```
+
+Then, push the site to GitHub.
+GitHub will automatically deploy the site to AWS Amplify.
+
+Hosted at: https://engrid.4sitestudios.com
+
 ## Technologies
 
 To learn more about the technologies used in this site, see the following resources:
