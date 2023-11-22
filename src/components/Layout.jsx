@@ -17,6 +17,7 @@ export const navigation = [
     links: [
       { title: 'Getting started', href: '/' },
       { title: 'Stef Test', href: '/docs/stef-testing' },
+      { title: 'Stef Test', href: '/docs/another-stef' },
       { title: 'Installation', href: '/docs/installation' },
     ],
   },
