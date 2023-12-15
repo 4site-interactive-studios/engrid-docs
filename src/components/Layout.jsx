@@ -16,31 +16,31 @@ export const navigation = [
     title: 'Introduction',
     links: [
       { title: 'Getting started', href: '/' },
-      { title: 'Stef Test', href: '/docs/stef-testing' },
-      { title: 'Stef Test', href: '/docs/another-stef' },
-      { title: 'Installation', href: '/docs/installation' },
+      { title: 'Before you begin', href: '/docs/before-you-begin' },
+     /*  { title: 'Installation', href: '/docs/installation' },*/
+      { title: 'Installation', href: '/docs/installation-IP' },
     ],
   },
   {
     title: 'Core concepts',
     links: [
-      { title: 'Understanding ENgrid', href: '/docs/understanding-engrid' },
-      {
-        title: 'Predicting user behavior',
-        href: '/docs/predicting-user-behavior',
-      },
-      { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
+      { title: 'Understanding ENgrid theme code', href: '/docs/understanding-engrid-theme' },
+    /*  { title: 'ENGrid Visuals', href: '/docs/familiarize-engrid' }, */
+      { title: 'Developing with ENgrid', href: '/docs/developing-engrid', },
+      { title: 'Example pages', href: '/docs/example-pages', },
+     /*  { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
       {
         title: 'Introduction to string theory',
         href: '/docs/introduction-to-string-theory',
       },
-      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },
+      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },*/
     ],
   },
   {
     title: 'Advanced guides',
     links: [
-      { title: 'Writing components', href: '/docs/writing-components' },
+      { title: 'ENGrid In Page Builder', href: '/docs/engrid-page-builder', },
+      { title: 'Special Classes Cheat Sheet', href: '/docs/cheat-sheet' },
       { title: 'Neuralink integration', href: '/docs/neuralink-integration' },
       { title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
       { title: 'Testing', href: '/docs/testing' },
