@@ -41,8 +41,8 @@ export const navigation = [
     links: [
       { title: 'ENGrid In Page Builder', href: '/docs/engrid-page-builder', },
       { title: 'Special Classes Cheat Sheet', href: '/docs/cheat-sheet' },
-      { title: 'Neuralink integration', href: '/docs/neuralink-integration' },
-      { title: 'Temporal paradoxes', href: '/docs/temporal-paradoxes' },
+      { title: 'Monthly Donation Upsell Lightbox', href: '/docs/upsell-lightbox' },
+      { title: 'Google Tag Manager', href: '/docs/datalayer' },
       { title: 'Testing', href: '/docs/testing' },
       { title: 'The ENgrid Class', href: '/docs/the-engrid-class' },
       {

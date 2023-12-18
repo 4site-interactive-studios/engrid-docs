@@ -6,7 +6,7 @@ description: Quidem magni aut exercitationem maxime rerum eos.
 
 ## Click To Expand (add to form component)
 
-Utility class that makes a form component collapsed with clicked to expanded.
+Utility class that makes a form component collapsed with clicked to expanded
 
 ```
 Click-to-expand
@@ -113,7 +113,7 @@ When the Radio to Buttons class is added you can change the number of buttons by
 
 ### Give by Select (add to form component) AKA Gift Type 
 
-The Give by Select pseudo field has its own markup; if it has the `"en__field--give-by-select"` class, then no additional classes are needed. You can change the number of buttons by including a second helper class or by defining your own values in CSS.
+The Give by Select pseudo field has its own markup; if it has the `en__field--give-by-select` class, then no additional classes are needed. You can change the number of buttons by including a second helper class or by defining your own values in CSS.
 
 | Class                        | Description                 |
 | ---------------------------- | --------------------------- |
@@ -200,8 +200,17 @@ Typically, this can be used to hide elements, such as lead-in copy, when an opt-
 
 The class format looks like this:
 
-* Show this element when the supporter question is present: `engrid__supporterquestions{id}-present`
-* Show this element when the supporter question is absent: `engrid__supporterquestions{id}-absent`
+* Show this element when the supporter question is present:
+
+```
+engrid__supporterquestions{id}-present
+```
+
+* Show this element when the supporter question is absent:
+
+```
+engrid__supporterquestions{id}-absent
+```
 
 
 
@@ -212,8 +221,14 @@ The `{id}` is the id of the supporter question. This can be found by inspecting 
 
  It's also possible to combine multiple questions using the following format. These examples show 2 questions, but you can use as many as you like:
 
-* Show this element when EITHER question is present: `engrid__supporterquestions{id1}__supporterquestions{id2}-present`
-* Show this element when EITHER question is absent: `engrid__supporterquestions{id1}__supporterquestions{id2}-absent`
+* Show this element when EITHER question is present: 
+```
+engrid__supporterquestions{id1}__supporterquestions{id2}-present
+```
+* Show this element when EITHER question is absent: 
+```
+engrid__supporterquestions{id1}__supporterquestions{id2}-absent
+```
 
 ---
 
@@ -323,8 +338,11 @@ showifamount-between-10-100
 ```
 **Animation classes for dynamic content:**
 
-* `animate-replace` -  Will animate the content switch using scale
-* `animate-vertical-slide` - Will animate the content switch using max-height
+| Class                   | Description                                         |
+| ----------------------- | --------------------------------------------------- |
+| `animate-replace`       | Will animate the content switch using scale         |
+| `animate-vertical-slide`| Will animate the content switch using max-height    |
+
 
 ---
 

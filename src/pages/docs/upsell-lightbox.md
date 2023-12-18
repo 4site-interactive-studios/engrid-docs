@@ -1,380 +1,153 @@
 ---
-title: Special Classes Cheat Sheet
+title: Monthly Donation Upsell Lightbox
 description: Quidem magni aut exercitationem maxime rerum eos.
 
 ---
 
-## Click To Expand (add to form component)
+Drop this Code Block into your donation page to trigger an Upsell Lightbox whenever a one-time gift is made.
 
-Utility class that makes a form component collapsed with clicked to expanded.
-
-```
-Click-to-expand
-```
-
-You can add a second class to the same component (e.g., `click-to-expand click-to-expand-mobile` ), and this will cause this section to only appear as a "click-to-expand" on mobile. When viewed on desktop, the entire contents of the area will remain visible ( [recording](https://cln.sh/rsb696qg) ).
-
----
-
-### Form Field Helper Classes (Up to 10 per form component)
-
-Utility classes to hide form fields (e.g "i1" = 1st field)  in a component or just its label
-
-| Class          | Description                                                       |
-| -------------- | ----------------------------------------------------------------- |
-| `i1-hide`      | Hides the entire 1st field both visually and from screen readers |
-| `i1-hide-label`| Hides the 1st field's label visually but not for screen readers  |
-| `i1-start`     | Indicates the 1st field is at the start of its visual row in the form flow |
-| `i1-end`       | Indicates the 1st field is at the end of its visual row in the form flow |
-| `i1-20`        | 20% width                                                         |
-| `i1-25`        | 25% width                                                         |
-| `i1-33`        | 33% width                                                         |
-| `i1-50`        | 50% width                                                         |
-| `i1-66`        | 66% width                                                         |
-| `i1-75`        | 75% width                                                         |
-| `i1-100`       | 100% width, does not need the iX-start or iX-end helper classes  |
-| `i1-m50`       | 50% width on the ENGrid Mobile breakpoint, not client theme      |
-| `i1-m100`      | 100% width on the ENGrid Mobile breakpoint, not client theme     |
-
----
-
-### In Memorial / In Honor Giving (add to form component) 
-
-A utility class to hide/show a component based on in memorial / in honor giving.
-
-* `inmem-Y` = Show component if tribute giving option is checked and value is `Y`
-
----
-
-### Gift Frequency (add to form component)
-
-Makes the Gift Frequency Radio Inputs look like Buttons. Also works as a page level class.
-
-```
-radio-to-buttons_recurrpay
+## Options
+| Property        | Description                                                                   |
+| --------------- | ----------------------------------------------------------------------------- |
+| `image`         | Image URL to load on the Upsell Lightbox.                                     |
+| `imagePosition` | You can set "left" or "right" to choose the position of the image.             |
+| `title`         | Title of the Upsell Lightbox. Variables allowed (see below).                  |
+| `paragraph`     | Sub-title of the Upsell Lightbox. Variables allowed (see below).              |
+| `yesLabel`      | Label used on the "Yes" button. Variables allowed (see below).                |
+| `noLabel`       | Label used on the "No" button. Variables allowed (see below).                 |
+| `otherAmount`   | Set it to true if you want to show the "other amount" field on the Upsell Lightbox. false otherwise. |
+| `otherLabel`    | Label used on the "other amount" field.                                       |
+| `upsellOriginalGiftAmountFieldName`     | The field "name" to record the original gift amount into when the donor is successfully converted by the upsell lightbox from a one-time to recurring gift. Useful for calculating the conversion / lifetime value gained through the use of the upsell lightbox. The field does not need to be present on the page via page builder, it is automatically added via Javascript. And it is best to use the Other 1, Other 2, Other 3, or Other 4 field as these fields live on the transaction record rather than the supporter record. 
+|    | E.g. transaction.othamt1  |
+|   | Screenshot: [https://d.pr/i/tqciIF](https://d.pr/i/tqciIF) |
+| `amountRange`      | Array with the amount suggestions range. It follows this format:     | 
+```javascript
+amountRange: [
+    { max: 10, suggestion: 0 },
+    { max: 15, suggestion: 7 },
+    { max: 20, suggestion: 8 },
+    { max: 25, suggestion: 9 },
+    { max: 30, suggestion: 10 },
+    { max: 35, suggestion: 11 },
+    { max: 40, suggestion: 12 },
+    { max: 50, suggestion: 14 },
+    { max: 100, suggestion: 15 },
+    { max: 200, suggestion: 19 },
+    { max: 300, suggestion: 29 },
+    { max: 500, suggestion: "Math.ceil((amount / 12)/5)*5" },
+    ],
 ```
 
-When the Radio to Buttons class is added you can change the number of buttons by including a second helper class or by defining your own values in CSS.
+The donation amount is compared to each `max` property and, when it's lower or equal, we'll return the equivalent `suggestion` value. If the suggested amount is 0 the lightbox will not display.
 
-| Class                             | Description                  |
-| --------------------------------- | ---------------------------- |
-| `recurring-frequency_count_1`     | Shows 1 button per row       |
-| `recurring-frequency_count_2`     | Shows 2 buttons per row      |
-| `recurring-frequency_count_3`     | Shows 3 buttons per row      |
-| `recurring-frequency_count_4`     | Shows 4 buttons per row      |
-| `recurring-frequency_count_5`     | Shows 5 buttons per row      |
+As you can see in the example above, you can also use javascript code as the **"suggestion"** property. When using javascript code (inside quotes) to calculate your suggestion, use the special word `amount`. That word will get replaced by the dynamic one-time amount.
 
-{% callout title="You should know!" %}
-Giving frequency utility classes can also be used on thank you pages
-{% /callout %}
+* **canClose** - `true` or `false` to enable/disable the close functions/button.
 
-Utility classes to hide/show a component based on giving frequency.
+* **submitOnClose** - `true` or `false` to enable/disable the form submission when closing the lightbox. It only works if **canClose** is `true`.
 
+* **debug** - `true` or `false` to enable/disable console notifications.
 
-| Class                                    | Description                                                   |
-| ---------------------------------------- | ------------------------------------------------------------- |
-| `recurring-frequency-y-hide`             | Hides component when recurring gift frequency is Y            |
-| `recurring-frequency-y-show`             | Shows component when recurring gift frequency is Y            |
-| `recurring-frequency-n-hide`             | Hides component when recurring gift frequency is N            |
-| `recurring-frequency-n-show`             | Shows component when recurring gift frequency is N            |
-| `recurring-frequency-annual-hide`        | Hides component when recurring gift frequency is Annual       |
-| `recurring-frequency-annual-show`        | Shows component when recurring gift frequency is Annual       |
-| `recurring-frequency-monthly-hide`       | Hides component when recurring gift frequency is Monthly      |
-| `recurring-frequency-monthly-show`       | Shows component when recurring gift frequency is Monthly      |
-| `recurring-frequency-onetime-hide`       | Hides component when recurring gift frequency is One-Time     |
-| `recurring-frequency-onetime-show`       | Shows component when recurring gift frequency is One-Time     |
-| `recurring-frequency-quarterly-hide`     | Hides component when recurring gift frequency is Quarterly    |
-| `recurring-frequency-quarterly-show`     | Shows component when recurring gift frequency is Quarterly    |
-| `recurring-frequency-semi-annual-hide`   | Hides component when recurring gift frequency is Semi-Annual  |
-| `recurring-frequency-semi-annual-show`   | Shows component when recurring gift frequency is Semi-Annual  |
+You can omit any option that you don't need to change the default value.
+
+## Variables
+
+Some options allows variables, that will get replaced by dynamic values:
+
+* `{new-amount}` - Will get replaced by the current suggested upsell amount based on the `amountRange` option.
+
+* `{old-amount}` - Will get replaced by the current one-time amount this user is trying to give.
 
 
----
+### Features 
 
-### Gift Amount (add to form component)
-
-Makes the Gift Amount Radio Inputs look like Buttons.  Also works as a page level class.
-
-```
-radio-to-buttons_donationAmt
-```
-
-When the Radio to Buttons class is added you can change the number of buttons by including a second helper class or by defining your own values in CSS.
-
-| Class                      | Description                 |
-| -------------------------- | --------------------------- |
-| `donation-amount_count_1`  | Shows 1 button per row      |
-| `donation-amount_count_2`  | Shows 2 buttons per row     |
-| `donation-amount_count_3`  | Shows 3 buttons per row     |
-| `donation-amount_count_4`  | Shows 4 buttons per row     |
-| `donation-amount_count_5`  | Shows 5 buttons per row     |
-
----
-
-### Give by Select (add to form component) AKA Gift Type 
-
-The Give by Select pseudo field has its own markup; if it has the `"en__field--give-by-select"` class, then no additional classes are needed. You can change the number of buttons by including a second helper class or by defining your own values in CSS.
-
-| Class                        | Description                 |
-| ---------------------------- | --------------------------- |
-| `give-by-select_count_1`     | Shows 1 button per row      |
-| `give-by-select_count_2`     | Shows 2 buttons per row     |
-| `give-by-select_count_3`     | Shows 3 buttons per row     |
-| `give-by-select_count_4`     | Shows 4 buttons per row     |
-| `give-by-select_count_5`     | Shows 5 buttons per row     |
+* It only runs if you're on the first page of a donation page. If you add the script to other pages, you'll not get any output errors.
+* It works alongside the `enOnSubmit`, so it's future proof.
+* To improve performance, it will not render anything to the page if you're not on the first step of a Donation Page.
+* If **canClose** is `true`, you can close the lightbox by clicking on the close button (top right), by pressing the ESC key, or by clicking anywhere outside the lightbox.
+* When you change the **"different amount"** field, it will update the YES button at the same time, so the user will not have doubt about the amount.
+* You don't need to worry about any HTML or CSS.
+* It has no external dependency.
 
 
-Utility classes to hide/show a component based on gift type.
+### Upsell Lightbox Code
 
 
-| Class                  | Description                                      |
-| ---------------------- | ------------------------------------------------ |
-| `giveBySelect-Card`    | Show component when Give by Card is selected     |
-| `giveBySelect-ACH`     | Show component when Give by Check is selected    |
-| `giveBySelect-Paypal`  | Show component when Give by Paypal is selected   |
+* Current Code Block: [https://pastebin.com/raw/uwTMeweU](https://pastebin.com/raw/uwTMeweU) 
+* Legacy Code Block [https://pastebin.com/raw/D9mjV5dP](https://pastebin.com/raw/D9mjV5dP)
 
 
----
+## Upsell Links
 
-### Hide any element via URL arguments using a Class or ID 
+These links contain a special class, when clicked or unclicked, this will cause the Donation Frequency to change from one-time to the defined recurrancy. In the example below `"MONTHLY"` is appended to the end of the `"setRecurrFreq-"` class name which corresponds to the value of the recurring frequency desired.
 
-By using one of the following you can hide any content based on its class or ID with a URL argument.
-
-Example: [https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id](https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id)
+These links can be combined with the Utility classes that hide/show a component based on giving frequency.
 
 
-```
-engrid_hide[element]=id
-engrid_hide[element]=class
+```html
+<a class="setRecurrFreq-MONTHLY" href="#">Make this a MONTHLY recurring gift!</a>
 ```
 
----
+## Upsell Pseudo Checkbox
 
-### Hide any element based on the selected value of a select dropdown, checkbox, or radio select field 
+These pseudo checkboxes mirror the markup of Engaging Networks checkboxes so they get styled the same, but their values are never saved or submitted as part of the form submission. If the pseudo checkbox contains the correct special `"value"` and `"name"`, when selected or unselected, this will cause the Donation Frequency to change from one-time to the defined recurrancy, or vice versa. In the example below `"MONTHLY"` is set as the value and name is set as `"engrid.recurrfreq"` which will cause the Recurring Frequency field to toggle between One Time and Monthly when the checkbox is toggled.
 
-{% callout title="You should know!" %}
-Note that this does not work for other field types (e.g. Input, Textarea, etc..)
-{% /callout %}
+These checkboxes can be combined with the Utility classes that hide/show a component based on giving frequency.
 
-By using this you can hide an element based on the value of another Select, Checkbox, or Radio select fields. To start you need to get the root name of the field you want to base this condition on. The easiest way to do this is to grab it from the top level Labels `"for"` value.
-
-
-```
-<label for="en__field_supporter_questions_600302" class="en__field__label" style="" id="en__field__label--e4hhk">I would like to get WWF text messages:</label>
-```
-
-
-You'll change `"en"` to `"engrid"` and remove the word `"field"` and then for everything after the word `"field"` you will remove the underscores and capitalize each word. \
- \
-This
-
-```
-.en__field_supporter_questions_600302
-```
-
-Becomes
-
-```
-.engrid__supporterquestions600302
-```
-
-Now you have your base class and you can append the value that will be used so that the content with that class will only be visible when that value is selected. 
  
-
-Example Class:
-
-```
-.engrid__supporterquestions600302-Y
-```
-
- \
-With this example, that class will cause content to only be visible when that field's value is `Y`, otherwise it will be hidden.
-
----
-
-### Hide an element based on if other question(s) are present or absent on the page 
-
-Special classes can be used to hide elements if certain supporter questions are present or absent on the page.
-
-Typically, this can be used to hide elements, such as lead-in copy, when an opt-in question is not rendered on the page because the supporter came from a campaign link and is already opted in, so EN doesn't render the question on the page. But it can be used in other ways too.
-
-The class format looks like this:
-
-* Show this element when the supporter question is present: `engrid__supporterquestions{id}-present`
-* Show this element when the supporter question is absent: `engrid__supporterquestions{id}-absent`
-
-
-
-{% callout title="You should know!" %}
-The `{id}` is the id of the supporter question. This can be found by inspecting the element on the page
-{% /callout %}
-
-
- It's also possible to combine multiple questions using the following format. These examples show 2 questions, but you can use as many as you like:
-
-* Show this element when EITHER question is present: `engrid__supporterquestions{id1}__supporterquestions{id2}-present`
-* Show this element when EITHER question is absent: `engrid__supporterquestions{id1}__supporterquestions{id2}-absent`
-
----
-
-### Custom Merge Fields and URL Based Content (Dynamic Content) 
-
-You can create merge fields on the fly by any name you give them which in turn can be populated with URL arguments. These merge fields can have default fallback values that will be used if no URL argument is present or they can have no default fallback value in which case they will disappear if no URL argument is present.
-
-`_ALL_` values for URL arguments used by these merge fields must be URL-encoded
-
-* [Encode to URL-encoded format](https://www.urlencoder.org/)
-* [Screenshot Example](https://share.cleanshot.com/PO83Qf)
-
-You can also hide content with the `.hide-until-merged` class which will set it to invisible until after the merge has completed.
-
-Example: Title
-```
-<h1 class="hide-until-merged">{engrid_data~[title]}</h1>
-
-&engrid_data[title]=Give%20Today%21
-```
-
-Example: Inline Copy
-
-```
-<p>{engrid_data~[body-lead]~[Protect Our Oceans with a Monthly or One-Time Gift Today]}</p>
-
-&engrid_data[body-lead]=Thanks%20for%20signing%20the%20XYZ%20petition%2C%20can%20you%20take%20one%20more%20step%20and%20do%20this%3F
+ ```html
+  <tr>
+   <td>
+<!-- Custom Checkbox using the same markup as Engaging Networks -->
+<div class="en__field en__field--checkbox en__field--000000 en__field--make_monthy pseudo-en-field has-value">
+    <div class="en__field__element en__field__element--checkbox has-value">
+        <div class="en__field__item">
+            <input class="en__field__input en__field__input--checkbox" id="en__field_supporter_make_monthly" name="engrid.recurrfreq" type="checkbox" value="MONTHLY"> <label class="en__field__label en__field__label--item" for="en__field_supporter_make_monthly">Make this a MONTHLY recurring gift!</label>
+        </div>
+    </div>
+</div>
+   </td>
+  </tr>
 ```
 
 
-Example: Image
+## Add HTML
 
+For the addHtml function, the html parameter can be either a string (example: `<strong>`Fernando`</strong>`) or an Element.
+
+* The target should be a string for query selector (example: `body` , or `.en__submit`).
+* The position defaults to `"before"`, but can be set as `"after"`.
+* Combining only those 2 positions with the target element, you can add your component anywhere you want in the page.
+
+```javascript
+ addHtml(html, target, position)
+```
+
+## Remove HTML 
+
+The removeHtml function expects a string for query selector (example: body , or .en__submit).
 
 ```
-<img data-src="{engrid_data~[background-image-url]~[https://via.placeholder.com/1280x720]}">
-
-&engrid_data[background-image-url]=https%3A%2F%2Fexample.com%2Fmy-image.jpg
+removeHtml(target)
 ```
 
----
 
-### Live Giving Amounts (added as classes on content) ([example](https://d.pr/v/zjkzde)) 
+## ThreatMetrix 
 
-* `live-giving-amount`
-    * If $60 one-time is selected without Processing Fee
-        * $60 = **$60**
-    * If $60 one-time is selected with Processing Fee
-        * $60 + Processing Fee ($60 * .029 + $0.30) = **$62.04**
-* `live-giving-frequency`
-    * If $60 one-time is selected
-        * The value is `blank`
-    * If $60 monthly is selected
-        * The value is `"monthly"` because the value in the frequency selector is `"monthly"`
-* `live-giving-upsell-amount`
-    * If $60 `one-time` is selected without Processing Fee
-        * $60 / 12 months  = $5 (Rounded up by $5) = **$5**
-    * If $60.01 `one-time` is selected without Processing Fee
-        * $60.01 / 12 months  = $5.00083 (Rounded up by $5) = **$10**
-    * If $60 `one-time` is selected with Processing Fee
-        * $60 + Processing Fee ($60 * .029 + $0.30) = $62.04
-        * $62.04 / 12 months = $5.17 (Rounded up by $5) = **$10**
-    * If $60.01 `one-time` is selected with Processing Fee
-        * $60.01 + Processing Fee ($60.01 * .029 + $0.30) = $62.040
-        * $62.040 / 12 months = $5.17 (Rounded up by $5) = **$10**
-* `live-giving-upsell-amount-raw`
-    * Same as `live-giving-upsell-amount` but no `$` symbol prefixed
+If you are implementing ThreatMetrix, be aware their suggested implementation kills page load performance. We have an alternative route that neuters how aggressively they profile the visitor and this approach has worked well enough for our clients. Your mileage may vary and if it's not stopping scammers / spammers, try reverting to their suggested installation.
 
----
+Once you have their suggested embed code, you need to pull a few bits of client specific information out of it. In the code below replace the iFrame's `ORGID` and `SESSIONID_PREFIX` with their corresponding values which you can infer from your embed code. Then insert that updated markup as the last bit before the page template's closing `</body>` tag.
 
-### Dynamic Content Based on Amount (added as classes on content) 
+  
 
-Utility classes to hide/show a component based on giving amount.
-
+```html
+<tr>
+   <td>
+<!-- Start ThreatMetrix Profiling Tag -->
+<!-- The default ThreatMetrix installation murders page load performance -->
+<!-- To optimize it we have removed the <script> tag and rely on the <iframe> for profiling 100% of site traffic -->
+<iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;" src="https://h.online-metrix.net/fp/tags.js?org_id=ORGID&session_id=SESSIONID_PREFIX-${page~sessionId}&page_id=1"></iframe>
+<!-- End ThreatMetrix Profiling Tag -->
+   </td>
+  </tr>
 ```
-showifamount-{operand}-{value}
-```
-{% callout title="You should know!" %}
-`showifamount`- classes can also be used on thank you pages
-{% /callout %}
-
-**Operands:**
-
-* lessthan - Shows component when giving amount is less than {value} - Example: 
-```
-showifamount-lessthan-10
-
-```
-* lessthanorequalto - Shows component when giving amount is less than or equal to {value} - Example: 
-```
-showifamount-lessthanorequalto-10
-```
-* equalto - Shows component when giving amount is exactly equal to {value} - Example: 
-```
-showifamount-equalto-10
-```
-* greaterthanorequalto -  Shows component when giving amount is greater than or equal to {value} - Example:
-```
-showifamount-greaterthanorequalto-10
-```
-* greaterthan -  Shows component when giving amount is greater than {value} - Example: 
-```
-showifamount-greaterthan-10
-```
-* between -  Shows component when giving amount is between {valuemin} and {valuemax} - Example: 
-```
-showifamount-between-10-100
-```
-**Animation classes for dynamic content:**
-
-* `animate-replace` -  Will animate the content switch using scale
-* `animate-vertical-slide` - Will animate the content switch using max-height
-
----
-
-### Conditionally Required Fields
-
-Add the `i-required` class to a form component which will require every visible field; this is great for fields that are conditionally hidden like In Memorial fields. If a field is hidden it will not be required. Alternatively if you only want to require only some fields, not all of them, in the form component when it's visible you can use `i#-required` where `#` indicated the field number (e.g. the first field would get `i1-required`).
-
-{% callout title="You should know!" %}
-Form submissions for digital wallets do not trigger EN's form validation, and in turn our form validation does not trigger either because it depends on EN's. Submitting a form with a digital wallet does however trigger validation for the minimally required fields for that payment processor (e.g. Email Address). As an example, this means you could submit a PayPal OneTouch donation with only your email address filled out. There's nothing we can do about this at the moment and we have submitted it as feedback to EN.
-{% /callout %}
-
----
-
-### Miscellaneous
-
-* `form-submit`
-    * Causes the form to submit when the element is clicked
-* `manual-form-layout` (Experimental, might not work)
-    * Removes any opinionated styling (e.g First and Last name are 50% width) from form field widths. All form fields take up 100% width.
-* `inline-country`
-    * Forces the country field to display visually inside and at the end of the next field, which should be the Address field. Screenshot: [https://d.pr/i/NgZsl3](https://d.pr/i/NgZsl3)
-* `forceUncheck`
-    * Only works on "Subscription Management" pages AKA unsubscribe pages with the url path "/subscription". For email list with only one subscription option, a user clicking the unsubscribe link in an email will be dropped onto an Unsubscribe page with their account details pre-populates. This present a usability issue because the user sees their email, a checkbox that is checked for staying subscribed to the email list, and an unsubscribe (submit) button. They will click the button assuming that it will unsubscribe, but in reality they needed to uncheck the checkbox first to update their preferences before submitting the form. This class will cause all checkboxes inside to be unchecked. It can be combined with the "hide" class to also visually hide the choice altogether streamlining the unsubscribe experience even further.
-* `edit-warning` - [https://d.pr/i/11bENF](https://d.pr/i/11bENF)
-    * Visually style the component to present a warning to the user that they should unlink the component from the library before editing. This class is not able to tell when the component is unlinked and will continue to appear until the class is removed.
-* `edit-lock` - [https://d.pr/i/vsA4ao](https://d.pr/i/vsA4ao)
-    * Visually style the component to present a warning to the user that they are looking at a component which should be edited from the component library. It also visually hides the "edit" action for the component. Note, if you can't edit the component you can't tell what its name is and what you should look for in the component library. The only way to remove the class is to edit the component or inspect the page in your browser and manually remove the class so you can see the "edit" action again.
-
----
-
-### Replace Banner Media with Background Media 
-
-By adding a data attribute to the body you can control under what circumstances the background should replace or act as the banner on the layout's breakpoint.
-
-```
-data-replace-banner-with-background="if-background-exists"
-```
-* Replaces the banner media if the background contains an image or video.
-
-```
-data-replace-banner-with-background="if-background-image"
-```
- * Replaces the banner media ONLY if the background contains an image.
-
-```
-`data-replace-banner-with-background="if-background-video"`
-```
- * Replaces the banner media ONLY if the background contains a video.
-
-```
-`data-replace-banner-with-background="if-banner-empty"`
-```
- * Replaces the banner media ONLY if the banner does not contain media and the background contains an image or video.
