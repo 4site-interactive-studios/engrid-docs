@@ -3,21 +3,19 @@ title: ENGrid in Page Builder
 description: Quidem magni aut exercitationem maxime rerum eos.
 
 ---
-
-
 ## Page Template Structure
 
 The order of content and assets in the page template is intentional. Below is the breakdown of the logic and reasoning for everything.
 
 ### Header ([example markup](https://github.com/4site-interactive-studios/engrid-scripts/blob/main/reference-materials/html/page-template-example/page-template-header-example.html)) 
 
-#### 1. Initialize the GTM Data Layer (assumes GTM is needed)
+#### Initialize the GTM Data Layer (assumes GTM is needed)
 Has to come before everything, might as well be the first thing.
-#### 2. Commented out copy of Google Optimize w/ anti-flicker snippet
+#### Commented out copy of Google Optimize w/ anti-flicker snippet
 Commented out because even if it's not used, if it's turned on it will dramatically slow down page load time.
-#### 3. Favicons
+#### Favicons
 Usually copied directly from organizational website
-#### 4. Meta Tags
+#### Meta Tags
     These tags are here to provide Page Template level defaults for social sharing that can then be overwritten when Social Sharing Settings are configured on an individual page. This was extensively tested, no tags more / no tags less should be used. See: [GitHub Issue #12](https://github.com/4site-interactive-studios/en-wishlist/issues/12)
 ```javascript
 <!-- Sharing Meta Tags Used by Facebook-->
@@ -35,7 +33,7 @@ Usually copied directly from organizational website
 <meta name="twitter:description" content="Up to 160 character long description">
 ```
 
-#### 5. Preconnection 
+#### Preconnection 
 Begin the DNS handshake process for all URLs that will load assets. Replace the below with your domains in priority order of access.
 ```javascript
 <link rel="preconnect" href="//c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com">
@@ -44,7 +42,7 @@ Begin the DNS handshake process for all URLs that will load assets. Replace the 
 <link rel="preconnect" href="//[www.google-analytics.com](www.google-analytics.com)">
 ```
 
-#### 6. Get color on the page with inline CSS
+#### Get color on the page with inline CSS
 
 ```html
 <style>
@@ -60,16 +58,16 @@ Begin the DNS handshake process for all URLs that will load assets. Replace the 
 
 ```
 
-#### 7. Preload 
+#### Preload 
 Start to download the theme's CSS and logo before any other asset is downloaded.
 ```html
    <link rel="preload" href="TBD.css" as="style">
    <link rel="preload" href="TBD.svg" as="image">
 ```
-#### 8. Noscript Message
+#### Noscript Message
 A message for visitors without javascript enabled. Not really needed but wins points on some automated "Accessibility" testing software.
 
-#### 9. Detect if in an iFrame 
+#### Detect if in an iFrame 
 Detect if the page is being served in an iFrame and add the corresponding class to the body so that it never renders in the wrong visual state.
 
 ```javascript
@@ -78,24 +76,23 @@ Detect if the page is being served in an iFrame and add the corresponding class 
           };
     </script>
 ```      
-#### 10. Load ENGrid's CSS file
+#### Load ENGrid's CSS file
 We load our CSS file here so that it comes after Engaging Network's CSS file which is inserted in `<head>`. If our CSS file in added right before `</head>`, Engaging Network's file will still come after it requiring you to use !important or other methods for winning CSS specificity when applying your styles.
 
 In our testing a single CSS file performed better than multiple CSS files. This assumes a CSS file of reasonable size.
 
 
-#### 11. Preload fonts 
+#### Preload fonts 
 Download render critical fonts without the need to read our CSS file first
 ```javascript
     <link rel="preload" href="TBD1.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="TBD2.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="TBD3.woff" as="font" type="font/woff" crossorigin> 
 ```
+---
+## Footer ([example markup](https://github.com/4site-interactive-studios/engrid-scripts/blob/main/reference-materials/html/page-template-example/page-template-footer-example.html))
 
-### Footer 
-#### ([example markup](https://github.com/4site-interactive-studios/engrid-scripts/blob/main/reference-materials/html/page-template-example/page-template-footer-example.html))
-
-#### 1. Additional Default meta tags 
+#### Additional Default meta tags 
 Like the other default meta tags, this exact setup is required for the optimal configuration
 
 ```html
@@ -106,25 +103,25 @@ Like the other default meta tags, this exact setup is required for the optimal c
 <meta name="description" content="Up to 255 character long description">
 ```
 
-#### 2. Load ENGrid's JS file
+#### Load ENGrid's JS file
 Loaded asynchronously and loaded here so our JS file here so it comes after all page content.
  ```html
  <script async src="TBD.js"></script>
 ```        
-#### 3. Render Critical Javascript
+#### Render Critical Javascript
 Javascript that moves DOM components
 * Contained in `main.js`, but also included here as to not wait for it
 Javascript that loads lazy loaded images
  * Contained in main.js, but also included here as to not wait for it
-#### 4. Google Tag Manager
+#### Google Tag Manager
 Add your GTM script here
 
-#### 5. ThreatMetrix
+#### ThreatMetrix
 Our customized implementation of ThreatMetrix placed here so that it minimizes the impact on page load experience while still retaining support for the service.
-#### 6. Custom CSS
+#### Custom CSS
 Place your temporary custom CSS here. Eventually all styles should be moved into the main.css file, but you can place them here until that happens.
 
-
+----
 ## Give By Selector Example
 #### Code Example for Card, Paypal, and Check 
 

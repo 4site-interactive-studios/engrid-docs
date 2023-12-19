@@ -32,7 +32,7 @@ npm run build
 ```
 ---
 
-## Upgrading the core ENgrid Scripts Package {#upgrading-the-core-engrid-scripts-package}
+## Upgrading the core ENgrid Scripts Package
 
 Your ENgrid theme gets the vast majority of its functionality from the engrid-scripts package, which is used by your theme code.
 

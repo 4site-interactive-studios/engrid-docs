@@ -4,11 +4,11 @@ description: Learn more about how we live our values at GitLab
 
 ---
 
-## Thank you for chosing 4Site ENGrid
+## Thank you for choosing 4Site ENGrid
 
 ENgrid is our battle-tested framework for supercharging Engaging Networks page templates. It supports a wide variety of designs and functionality that are not available natively in EN. Best of all, it’s free for you to download, use, and extend.
 
-#### Account Buildout
+#### Account Build out
 
 Client theme dependent on [4Site's Page Template Framework (ENgrid)](https://github.com/4site-interactive-studios/engrid-scripts)
 

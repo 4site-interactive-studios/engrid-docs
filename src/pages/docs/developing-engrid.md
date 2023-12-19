@@ -29,7 +29,7 @@ https://github.com/4site-interactive-studios/engrid-[client-name]/[branch-name]
 
 
 ### Advanced "Row"
-```shell
+```css
 1. page-alert
 2. content-header
 3. body-headerOutside
