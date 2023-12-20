@@ -35,6 +35,11 @@ With the above implementation, in GTM you will be able to set up Custom Triggers
 
 ### Example Donation Variables ( screenshot: [https://cln.sh/T4GhF4](https://cln.sh/T4GhF4) )
 
+![Alt text](images/CleanShot2022-10-0612.03.15)
+
+![Images](/images/CleanShot2022-10-0612.03.15.png)
+
+
  Variable                              | Description                          |
 | ------------------------------------- | ------------------------------------ |
 | `"EN_PAGEJSON_TRANSACTIONTYPE": "FCS"` | Fundraising Credit/Debit Single      |

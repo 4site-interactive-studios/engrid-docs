@@ -37,7 +37,7 @@ export const navigation = [
     ],
   },
   {
-    title: 'Advanced ENGrid Guides',
+    title: 'ENGrid in Page Builder Guides',
     links: [
       { title: 'ENGrid Page Builder Guides', href: '/docs/advanced-engrid-guide-index' },
       /*{ title: 'ENGrid Special Classes Cheat Sheet', href: '/docs/cheat-sheet' },
@@ -59,9 +59,9 @@ export const navigation = [
     ],
   },
   {
-    title: 'Advanced guides',
+    title: 'Refernce',
     links: [
-      { title: 'ENGrind Page Builder Template', href: '/docs/engrid-page-builder-template', },
+      { title: 'Native Custom Ask String & Swap Lists', href: '/docs/native-custom-ask-string', },
       { title: 'ENGrid Form Feild Components', href: '/docs/engrid-page-builder-backend', },
       { title: 'Special Classes Cheat Sheet', href: '/docs/cheat-sheet' },
       { title: 'ENGrid Lightbox Features', href: '/docs/upsell-lightbox' },
