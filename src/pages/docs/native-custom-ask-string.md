@@ -1,20 +1,13 @@
 ---
-title: ENGrid Page Builder Componants & Features
+title: Native Custom Ask String / Swap Lists
 description: Quidem magni aut exercitationem maxime rerum eos.
 
 ---
-
-
-
-# Native Custom Ask String / Swap Lists
-
 This is documentation about managing the ask string swap list in Engaging Networks and is not specific to ENgrid, but it comes up often enough that we have a step-by-step guide. Here is how to update One-time or Monthly giving amounts on a page that uses a Form Component with a Swap List.
 
 
 
-1. Edit the Form Component with the “Donation Amount” field 
-![screenshot](https://cln.sh/xQVrHW62)
-( [screenshot](https://cln.sh/xQVrHW62) )
+1. Edit the Form Component with the “Donation Amount” field ( [screenshot](https://cln.sh/xQVrHW62) )
 2. If linked, unlink the Form Component from the Component Library. Otherwise, your change will impact every page ( [screenshot](https://cln.sh/7RxGjNSJ) )
 3. If you plan to use these same giving amounts across multiple pages, save the form component back to the component library with an appropriate name that includes the amounts ( [screenshot](https://cln.sh/hdVVVhyn) )
 4. Now click the Dependencies icon ( [screenshot](https://cln.sh/xzySrCx3) ); if you try to edit the “Donations Amounts” field directly, it will only change the amounts for one-time as that’s the default giving frequency for the page in my screenshots.
