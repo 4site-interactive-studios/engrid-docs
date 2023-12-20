@@ -110,44 +110,30 @@ These checkboxes can be combined with the Utility classes that hide/show a compo
   </tr>
 ```
 
+---
 
-## Add HTML
+## Exit intent lightbox 
 
-For the addHtml function, the html parameter can be either a string (example: `<strong>`Fernando`</strong>`) or an Element.
+A lightbox that asks the user to confirm exiting the page can be configured to show on any page. To activate it, add a code block to the page with: \
 
-* The target should be a string for query selector (example: `body` , or `.en__submit`).
-* The position defaults to `"before"`, but can be set as `"after"`.
-* Combining only those 2 positions with the target element, you can add your component anywhere you want in the page.
-
-```javascript
- addHtml(html, target, position)
-```
-
-## Remove HTML 
-
-The removeHtml function expects a string for query selector (example: body , or .en__submit).
-
-```
-removeHtml(target)
+ ```Javascript
+<script>
+const EngridExitIntent = {
+	enabled: true,
+}
+</script>
 ```
 
 
-## ThreatMetrix 
+#### The lightbox has additional configurations options for:
 
-If you are implementing ThreatMetrix, be aware their suggested implementation kills page load performance. We have an alternative route that neuters how aggressively they profile the visitor and this approach has worked well enough for our clients. Your mileage may vary and if it's not stopping scammers / spammers, try reverting to their suggested installation.
-
-Once you have their suggested embed code, you need to pull a few bits of client specific information out of it. In the code below replace the iFrame's `ORGID` and `SESSIONID_PREFIX` with their corresponding values which you can infer from your embed code. Then insert that updated markup as the last bit before the page template's closing `</body>` tag.
-
-  
-
-```html
-<tr>
-   <td>
-<!-- Start ThreatMetrix Profiling Tag -->
-<!-- The default ThreatMetrix installation murders page load performance -->
-<!-- To optimize it we have removed the <script> tag and rely on the <iframe> for profiling 100% of site traffic -->
-<iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;" src="https://h.online-metrix.net/fp/tags.js?org_id=ORGID&session_id=SESSIONID_PREFIX-${page~sessionId}&page_id=1"></iframe>
-<!-- End ThreatMetrix Profiling Tag -->
-   </td>
-  </tr>
-```
+| Property                         | Description                                                                                   |
+|----------------------------------|-----------------------------------------------------------------------------------------------|
+| `Title`                          | The headline copy of the lightbox                                                             |
+| `Text`                           | The body copy of the lightbox                                                                 |
+| `buttonText`                     | The button label text                                                                         |
+| `buttonLink`                     | Where clicking the button will send the user to                                               |
+| ` cookieName`                   | Name of the cookie used to prevent the lightbox opening more than once                        |
+| ` cookieDuration`               | Expiry length of the cookie                                                                   |
+| `triggers.visibilityState`    | Boolean - if the lightbox should trigger on visibilityState changes (e.g., changing tab)      |
+| ` triggers.mousePosition`       | Boolean - if the lightbox should trigger on mousePosition (e.g., the mouse goes towards the close button) |
