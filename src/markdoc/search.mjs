@@ -32,7 +32,7 @@ function extractSections(node, sections, isRoot = true) {
       let hash = node.attributes?.id ?? slugify(content)
       sections.push([content, hash, []])
     } else {
-      sections.at(-1)[2].push(content)
+      sections.at(-1)[2].push(content)s
     }
   } else if ('children' in node) {
     for (let child of node.children) {

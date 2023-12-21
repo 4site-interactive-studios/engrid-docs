@@ -57,7 +57,7 @@ export function Hero() {
                 natively in EN.
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
-                <Button href="/">Get started</Button>
+                <Button href="docs/before-you-begin">Get started</Button>
                 <Button
                   href="https://github.com/4site-interactive-studios/engrid-scripts"
                   variant="secondary"

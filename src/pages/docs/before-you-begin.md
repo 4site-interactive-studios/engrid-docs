@@ -1,10 +1,10 @@
 ---
-title: About 4Site Studios
-description: Learn more about how we live our values at GitLab
+title: 4Site Interactive Studios - Engaging Networks & Digital Services Experts
+description: Learn more about 4Site Interactive Studios, experts in Engaging Networks, web development, digital strategy, and event video services since 2001. Transform your online presence today.
 
 ---
 
-## Thank you for choosing 4Site ENGrid
+## Thank you for choosing 4Site ENgrid
 
 ENgrid is our battle-tested framework for supercharging Engaging Networks page templates. It supports a wide variety of designs and functionality that are not available natively in EN. Best of all, it’s free for you to download, use, and extend.
 

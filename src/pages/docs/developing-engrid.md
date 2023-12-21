@@ -1,6 +1,6 @@
 ---
-title: Developing with ENgrid
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Advanced Development Techniques with ENgrid for Engaging Networks
+description: Advanced development practices with ENgrid for Engaging Networks. Learn how to manage assets, utilize global variables, and enhance your page templates for a more dynamic and engaging donor experience.
 
 ---
 

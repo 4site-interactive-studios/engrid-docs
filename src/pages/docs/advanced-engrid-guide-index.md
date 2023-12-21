@@ -1,6 +1,6 @@
 ---
-title: Using ENGrid and Page Builder
-description: A comprehensive walkthrough of ENGrid, providing insights and tips to maximize its capabilities.
+title: A Step-by-Step Guide to using ENGrid and Engaging Network's Page Builder.
+description: Learn how to structure templates, manage form fields, incorporate components and features, and utilize special classes to enhance your Engaging Networks Page Builder projects effectively.
 
 ---
 

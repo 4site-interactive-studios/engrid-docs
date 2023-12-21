@@ -1,6 +1,6 @@
 ---
-title: ENGrid and Page Builder's Form Fields
-description: ENGrid 
+title: Optimizing Form Fields with ENgrid and Page Builder
+description: A guide to populating and customizing form fields in Engaging Networks with ENgrid and Page Builder. Learn to use URL arguments for field values, understand live variables, and adapt payment types for a seamless user experience in multiple countries
 
 ---
 

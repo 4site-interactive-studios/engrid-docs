@@ -1,6 +1,6 @@
 ---
-title: Special Classes Cheat Sheet
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: ENgrid Special Classes Cheat Sheet - Enhancing Form Interactivity and Design
+description: Use special classes in ENgrid to transform your Engaging Networks forms. This cheat sheet covers classes for expanding components, adjusting form field visibility, managing in-memorial options, customizing gift amounts, and more, providing you with the tools to create dynamic and responsive fundraising pages..
 
 ---
 
@@ -33,8 +33,8 @@ Utility classes to hide form fields (e.g "i1" = 1st field)  in a component or ju
 | `i1-66`        | 66% width                                                         |
 | `i1-75`        | 75% width                                                         |
 | `i1-100`       | 100% width, does not need the iX-start or iX-end helper classes  |
-| `i1-m50`       | 50% width on the ENGrid Mobile breakpoint, not client theme      |
-| `i1-m100`      | 100% width on the ENGrid Mobile breakpoint, not client theme     |
+| `i1-m50`       | 50% width on the ENgrid Mobile breakpoint, not client theme      |
+| `i1-m100`      | 100% width on the ENgrid Mobile breakpoint, not client theme     |
 
 ---
 

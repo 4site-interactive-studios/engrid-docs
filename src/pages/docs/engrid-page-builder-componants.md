@@ -1,6 +1,6 @@
 ---
-title: ENGrid Page Builder Componants & Features
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: ENgrid Page Builder Components and Features
+description: A guide to Page Builder components and features. Learn how to set body data attributes via URL or code blocks, manage universal opt-ins, and utilize currency symbols and lazy loading for a more dynamic and engaging user experience.
 
 ---
 

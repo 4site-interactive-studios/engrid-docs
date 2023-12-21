@@ -3,7 +3,7 @@
     "id": "engrid-docs",
     "path": "/Documents/GitHub/engrid-docs",
     "schema": {
-      "path": "docs/dist/schema.js",
+      "path": "engrid-docs/dist/schema.js",
       "type": "node",
       "property": "default",
       "watch": true

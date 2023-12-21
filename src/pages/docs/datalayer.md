@@ -1,6 +1,6 @@
 ---
-title: GTM / DataLayer
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Integrating Google Tag Manager's DataLayer with ENgrid for Enhanced Tracking
+description: Maximize your Engaging Networks platform's tracking capabilities by integrating Google Tag Manager and DataLayer with ENgrid. Learn how to capture custom events, define variables, and optimize your user data collection for more informed decisions and strategies.
 
 ---
 

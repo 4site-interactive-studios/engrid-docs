@@ -17,8 +17,8 @@ export const navigation = [
     links: [
       { title: 'Getting started', href: '/' },
       { title: 'Before you begin', href: '/docs/before-you-begin' },
-      { title: 'Installation', href: '/docs/installation-IP' },
-      /*  { title: 'Markdoc Design Tests', href: '/docs/design-principles' },*/
+      { title: 'Installation', href: '/docs/installation' },
+      { title: 'REMOVE: Internal Markdoc Design Tests', href: '/docs/design-principles' },
     ],
   },
   {
@@ -58,10 +58,10 @@ export const navigation = [
     ],
   },
   {
-    title: 'Refernce',
+    title: 'Reference',
     links: [
-   /*   { title: 'Native Custom Ask String & Swap Lists', href: '/docs/native-custom-ask-string', },
-      { title: 'ENGrid Form Feild Components', href: '/docs/engrid-page-builder-backend', },
+     { title: 'Native Custom Ask String & Swap Lists', href: '/docs/native-custom-ask-string', },
+     /*    { title: 'ENGrid Form Feild Components', href: '/docs/engrid-page-builder-backend', },
       { title: 'Special Classes Cheat Sheet', href: '/docs/cheat-sheet' },
       { title: 'ENGrid Lightbox Features', href: '/docs/upsell-lightbox' },
       { title: 'ENGrid and Google Tag Manager', href: '/docs/datalayer' },

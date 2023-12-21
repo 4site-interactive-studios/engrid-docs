@@ -1,6 +1,6 @@
 ---
-title: ENGrid and Page Builder Template Structure
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: ENgrid and Page BuilderTemplate Structure and Optimization
+description: Learn about the intricacies Engaging Network's Page Builder and ENgrid templates. This guide provides a detailed breakdown of template structures, optimization techniques, and best practices to supercharge your page's performance and design.
 
 ---
 

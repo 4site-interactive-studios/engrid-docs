@@ -1,6 +1,6 @@
 ---
-title: Familiarize Yourself With ENGrid
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Visualizations, Naming Conventions, and Real-World Examples
+description: Explore ENgrid's capabilities through detailed visualizations, understand its intuitive naming patterns, and see how it's applied in various real-world scenarios.
 
 ---
 

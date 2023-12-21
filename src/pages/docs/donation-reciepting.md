@@ -1,6 +1,6 @@
 ---
-title: Email Donation Receipting
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Donation Receipt Management with ENgrid and Page Builder
+description: Learn the essentials of managing fundraising receipts with ENgrid and Page Builder, including how to create and customize receipts for various scenarios, and effectively attach and resend them in your donor communications.
 
 ---
 
