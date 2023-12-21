@@ -3,7 +3,7 @@ title: Embeddding ENGrid
 description: Techniques for Integrating Engaging Networks Pages. Learn how to seamlessly embed one Engaging Networks page into another and integrate ENgrid into your WordPress site with our dedicated iframe plugin.
 ---
 
-### Embedding one EN page in another 
+## Embedding one EN page in another 
 
 Should you want to embed one Engaging Networks page in another (e.g. Embedded donation page on donation thank you page) simply add a code block with your desired URL; just **be sure to include ?chain** at the end.
 
