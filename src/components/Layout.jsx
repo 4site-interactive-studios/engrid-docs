@@ -18,7 +18,6 @@ export const navigation = [
       { title: 'Getting started', href: '/' },
       { title: 'Before you begin', href: '/docs/before-you-begin' },
       { title: 'Installation', href: '/docs/installation' },
-      { title: 'REMOVE: Internal Markdoc Design Tests', href: '/docs/design-principles' },
     ],
   },
   {
@@ -27,12 +26,8 @@ export const navigation = [
       { title: 'ENgrid theme code', href:'/docs/understanding-engrid-theme' },
       { title: 'Developing with ENgrid', href: '/docs/developing-engrid' },
       { title: 'ENgrid Visualizations & Examples', href: '/docs/example-pages' },
-     /*  { title: 'Basics of time-travel', href: '/docs/basics-of-time-travel' },
-      {
-        title: 'Introduction to string theory',
-        href: '/docs/introduction-to-string-theory',
-      },
-      { title: 'The butterfly effect', href: '/docs/the-butterfly-effect' },*/
+     /*  { title: '', href: '#' },
+      */
     ],
   },
   {
@@ -43,16 +38,6 @@ export const navigation = [
       { title: 'Embedding ENgrid', href: '/docs/embedd-engrid' },
       { title: 'Donation Form Reciepting', href: '/docs/donation-reciepting',},
       { title: 'Integrating GTM', href: '/docs/datalayer' },
-
-
-      /*{ title: 'ENGrid Special Classes Cheat Sheet', href: '/docs/cheat-sheet' },
-      
-
-      { title: 'ENGrid Page Builder Template', href: '/docs/engrid-page-builder-template', },
-
-      { title: 'ENGrid Form Field Details', href: '/docs/engrid-field-details', },
-
-      { title: 'ENGrid Form Componant Details', href: '/docs/engrid-page-builder-backend', },*/
      
      
     ],
@@ -61,37 +46,28 @@ export const navigation = [
     title: 'Reference',
     links: [
      { title: 'Native Custom Ask String & Swap Lists', href: '/docs/native-custom-ask-string', },
-     /*    { title: 'ENGrid Form Feild Components', href: '/docs/engrid-page-builder-backend', },
-      { title: 'Special Classes Cheat Sheet', href: '/docs/cheat-sheet' },
-      { title: 'ENGrid Lightbox Features', href: '/docs/upsell-lightbox' },
-      { title: 'ENGrid and Google Tag Manager', href: '/docs/datalayer' },
-      { title: 'Testing', href: '/docs/testing' },
-      { title: 'The ENgrid Class', href: '/docs/the-engrid-class' },
-      {
-        title: 'Predictive data generation',
-        href: '/docs/predictive-data-generation',
-      },*/
+    
     ],
   },
 
 
-  {
-    title: 'API reference',
-    links: [
+ {
+  //  title: 'API reference',
+   links: [
     /* { title: 'ENgrid.predict()', href: '/docs/engrid-predict' },
       { title: 'ENgrid.flush()', href: '/docs/engrid-flush' },
       { title: 'ENgrid.revert()', href: '/docs/engrid-revert' },
       { title: 'ENgrid.regret()', href: '/docs/engrid-regret' }, */
-    ],
-  },
+  ],
+ },
   {
-    title: 'Contributing',
+//    title: 'Contributing',
     links: [
    /*   { title: 'How to contribute', href: '/docs/how-to-contribute' },
       { title: 'Architecture guide', href: '/docs/architecture-guide' },
       { title: 'Design principles', href: '/docs/design-principles' }, */
     ],
-  },
+ },
 ] 
 
 function GitHubIcon(props) {

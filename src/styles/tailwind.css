@@ -9,3 +9,21 @@
     display: none;
   }
 }
+
+
+
+code {
+  margin: 5px 0;
+  background-color: rgba(30,41,59,0.08);
+  padding: 5px;
+  max-width: 100%;
+  border-radius: .25rem;
+}
+
+/* .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+ color: var(--tw-prose-code);
+     background-color: rgb(54 80 135 / 56%);
+  font-weight: 600;
+  font-size: 0.875em;
+  background-color: rgba(30,41,59,0.08);
+} */
