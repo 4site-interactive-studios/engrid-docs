@@ -12,7 +12,10 @@ For SCSS you’ll find the majority of your code in the `/src/sass/page-template
 The majority of styles can be customized via CSS custom properties.
 
 {% callout title="You should know!" %}
-These properties are named with the convention: `{component__name}-{property_name}_{modifier}`.
+These properties are named with the convention: 
+\
+`{component__name}-{property_name}_{modifier}`
+
 {% /callout %}
 
 

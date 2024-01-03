@@ -36,7 +36,8 @@ Personalize your theme with SCSS or JS adjustments, and tweak component function
 Easily preview local or remote changes to ensure everything looks perfect.
 
 - To preview local changes, add `?assets=local` to your URL.
-- For remote changes, push a Git branch with your changes to Github and use `?assets=your-branch-name` to load assets.
+- For remote changes, push a Git branch with your changes to Github and use\
+`?assets=your-branch-name` to load assets.
 
 ### Building and Deploying Production Files
 Compile, test, and deploy your customizations for an enhanced user experience.

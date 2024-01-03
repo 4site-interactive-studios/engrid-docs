@@ -54,6 +54,8 @@ export default function (nextConfig = {}) {
             this.addContextDependency(pagesDir)
 
             let files = glob.sync('**/*.md', { cwd: pagesDir })
+            // Filter out the specific file you don't want to index.
+            files = files.filter(file => !file.endsWith('docs/design-principles.md'))
             let data = files.map((file) => {
               let url =
                 file === 'index.md' ? '/' : `/${file.replace(/\.md$/, '')}`
