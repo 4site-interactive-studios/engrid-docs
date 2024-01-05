@@ -118,7 +118,7 @@ Processing Fee Checkbox Code Block: [https://pastebin.com/raw/7n4k0kPM](https://
 ```javascript
 data-processing-fee-fixed-amount-added=".30"
 ```
- * After calculating the gift amount with `"data-processing-fee-percent-added"` this amount in cents is added to the total.
+ * After calculating the gift amount with `data-processing-fee-percent-added` this amount in cents is added to the total.
 
  ---
 

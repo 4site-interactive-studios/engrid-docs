@@ -157,7 +157,7 @@ engrid_hide[element]=class
 Note that this does not work for other field types (e.g. Input, Textarea, etc..)
 {% /callout %}
 
-By using this you can hide an element based on the value of another Select, Checkbox, or Radio select fields. To start you need to get the root name of the field you want to base this condition on. The easiest way to do this is to grab it from the top level Labels `"for"` value.
+By using this you can hide an element based on the value of another Select, Checkbox, or Radio select fields. To start you need to get the root name of the field you want to base this condition on. The easiest way to do this is to grab it from the top level Labels `for` value.
 
 
 ```
@@ -165,7 +165,7 @@ By using this you can hide an element based on the value of another Select, Chec
 ```
 
 
-You'll change `"en"` to `"engrid"` and remove the word `"field"` and then for everything after the word `"field"` you will remove the underscores and capitalize each word. \
+You'll change `en` to `engrid` and remove the word `field` and then for everything after the word `field` you will remove the underscores and capitalize each word. \
  \
 This
 
@@ -282,7 +282,7 @@ Example: Image
     * If $60 one-time is selected
         * The value is `blank`
     * If $60 monthly is selected
-        * The value is `"monthly"` because the value in the frequency selector is `"monthly"`
+        * The value is `monthly` because the value in the frequency selector is `monthly`
 * `live-giving-upsell-amount`
     * If $60 `one-time` is selected without Processing Fee
         * $60 / 12 months  = $5 (Rounded up by $5) = **$5**

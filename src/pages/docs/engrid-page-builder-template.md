@@ -68,8 +68,8 @@ Begin the DNS handshake process for all URLs that will load assets. Replace the 
 #### Preload 
 Start to download the theme's CSS and logo before any other asset is downloaded.
 ```html
-   <link rel="preload" href="TBD.css" as="style">
-   <link rel="preload" href="TBD.svg" as="image">
+<link rel="preload" href="TBD.css" as="style">
+<link rel="preload" href="TBD.svg" as="image">
 ```
 #### Noscript Message
 A message for visitors without javascript enabled. Not really needed but wins points on some automated "Accessibility" testing software.
@@ -78,10 +78,11 @@ A message for visitors without javascript enabled. Not really needed but wins po
 Detect if the page is being served in an iFrame and add the corresponding class to the body so that it never renders in the wrong visual state.
 
 ```javascript
-    <script>
-        if(window.self !== window.top){        document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "");
-          };
-    </script>
+<script>
+    if(window.self !== window.top)
+    {document.getElementsByTagName("BODY")[0].setAttribute("data-engrid-embedded", "");
+      };
+</script>
 ```      
 #### Load ENGrid's CSS file
 We load our CSS file here so that it comes after Engaging Network's CSS file which is inserted in `<head>`. If our CSS file in added right before `</head>`, Engaging Network's file will still come after it requiring you to use !important or other methods for winning CSS specificity when applying your styles.
@@ -92,9 +93,9 @@ In our testing a single CSS file performed better than multiple CSS files. This 
 #### Preload fonts 
 Download render critical fonts without the need to read our CSS file first
 ```javascript
-    <link rel="preload" href="TBD1.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="TBD2.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="TBD3.woff" as="font" type="font/woff" crossorigin> 
+<link rel="preload" href="TBD1.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="TBD2.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="TBD3.woff" as="font" type="font/woff" crossorigin> 
 ```
 ---
 ## Footer ([example markup](https://github.com/4site-interactive-studios/engrid-scripts/blob/main/reference-materials/html/page-template-example/page-template-footer-example.html))
@@ -131,7 +132,7 @@ Place your temporary custom CSS here. Eventually all styles should be moved into
 ---
 ### Baked In Page Buider Layouts
 
-Body Custom Attribute values for `"data-engrid-layout"`
+Body Custom Attribute values for `data-engrid-layout`
 
 * `leftleft1col`
 * `centerleft1col`
@@ -142,7 +143,7 @@ Body Custom Attribute values for `"data-engrid-layout"`
 
 
 Example code block to your page, change to use the desired layout class: 
-```
+```html
 <script>
     const engrid = document.getElementsByTagName("BODY")[0];
     engrid.setAttribute("data-engrid-layout", "centercenter1col");
@@ -167,7 +168,7 @@ fancy
 For the addHtml function, the html parameter can be either a string (example: `<strong>`Fernando`</strong>`) or an Element.
 
 * The target should be a string for query selector (example: `body` , or `.en__submit`).
-* The position defaults to `"before"`, but can be set as `"after"`.
+* The position defaults to `before`, but can be set as `after`.
 * Combining only those 2 positions with the target element, you can add your component anywhere you want in the page.
 
 ```javascript

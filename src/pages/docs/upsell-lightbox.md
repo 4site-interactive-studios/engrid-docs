@@ -79,7 +79,7 @@ Some options allows variables, that will get replaced by dynamic values:
 
 ## Upsell Links
 
-These links contain a special class, when clicked or unclicked, this will cause the Donation Frequency to change from one-time to the defined recurrancy. In the example below `"MONTHLY"` is appended to the end of the `"setRecurrFreq-"` class name which corresponds to the value of the recurring frequency desired.
+These links contain a special class, when clicked or unclicked, this will cause the Donation Frequency to change from one-time to the defined recurrancy. In the example below `MONTHLY` is appended to the end of the `setRecurrFreq-` class name which corresponds to the value of the recurring frequency desired.
 
 These links can be combined with the Utility classes that hide/show a component based on giving frequency.
 
@@ -90,7 +90,7 @@ These links can be combined with the Utility classes that hide/show a component 
 
 ## Upsell Pseudo Checkbox
 
-These pseudo checkboxes mirror the markup of Engaging Networks checkboxes so they get styled the same, but their values are never saved or submitted as part of the form submission. If the pseudo checkbox contains the correct special `"value"` and `"name"`, when selected or unselected, this will cause the Donation Frequency to change from one-time to the defined recurrancy, or vice versa. In the example below `"MONTHLY"` is set as the value and name is set as `"engrid.recurrfreq"` which will cause the Recurring Frequency field to toggle between One Time and Monthly when the checkbox is toggled.
+These pseudo checkboxes mirror the markup of Engaging Networks checkboxes so they get styled the same, but their values are never saved or submitted as part of the form submission. If the pseudo checkbox contains the correct special `value` and `name`, when selected or unselected, this will cause the Donation Frequency to change from one-time to the defined recurrancy, or vice versa. In the example below `MONTHLY` is set as the value and name is set as `engrid.recurrfreq` which will cause the Recurring Frequency field to toggle between One Time and Monthly when the checkbox is toggled.
 
 These checkboxes can be combined with the Utility classes that hide/show a component based on giving frequency.
 

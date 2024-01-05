@@ -10,10 +10,16 @@
   }
 }
 
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+ 
+  font-weight: 500;
+ 
 
+}
 
 code {
   margin: 5px 5px;
+  font-weight: 500;
   background-color: rgba(30,41,59,0.08);
   padding: 5px;
   max-width: 100%;

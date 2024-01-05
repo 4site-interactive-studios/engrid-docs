@@ -8,7 +8,7 @@ description: A guide to Page Builder components and features. Learn how to set b
 
 ### Via Code Block 
 
-You can set `"data-engrid-"` attributes on the body using a code block using the `setEnGridBodyDataAttribute` function which is available globally via the page template.
+You can set `data-engrid-` attributes on the body using a code block using the `setEnGridBodyDataAttribute` function which is available globally via the page template.
 
 For example, to change the page layout you can make a code block like this: 
 
@@ -20,7 +20,7 @@ For example, to change the page layout you can make a code block like this:
 
 ### Via URL
 
-To set attributes via URL, any URL parameter that begins with `"data-engrid-"` will be updated or added to the body. For example, to change the page layout, you would add the URL parameter `data-engrid-layout=leftleft1col`
+To set attributes via URL, any URL parameter that begins with `data-engrid-` will be updated or added to the body. For example, to change the page layout, you would add the URL parameter `data-engrid-layout=leftleft1col`
 
 {% callout title="You should know!" %}
 Attributes set via the URL will take priority over those set via code blocks. This is to ensure that there is a predictable priority to how attributes are set: default > code block > URL parameter.
@@ -94,7 +94,7 @@ You can add video to the Body Banner or Page Background Image sections.
 
 ```javascript
 <video width="1680" height="692" style="aspect-ratio: 1680/692" poster="https://example.org/...poster.jpg">
-<source data-src="https://example.org/...video.mp4" type="video/mp4"
+    <source data-src="https://example.org/...video.mp4" type="video/mp4"
 </video>
 ```
 [https://pastebin.com/raw/KFMs1XKs](https://pastebin.com/raw/KFMs1XKs)

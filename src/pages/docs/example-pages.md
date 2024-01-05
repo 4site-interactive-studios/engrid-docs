@@ -14,9 +14,9 @@ description: Explore ENgrid's capabilities through detailed visualizations, unde
 ---
 ## Naming Patterns
 
-* Page Column `"pc"` or `"page-"` - The full width of the page.
-* Content Column `"cc"` or `"content-"` - The maximum width in which content is displayed, excluding edge to edge content (e.g Background Image).
-* Body Column `"bc"` or `"body-"` - Sits inside the content column, but can be positioned horizontally anywhere.
+* Page Column `pc` or `page-` - The full width of the page.
+* Content Column `cc` or `content-` - The maximum width in which content is displayed, excluding edge to edge content (e.g Background Image).
+* Body Column `bc` or `body-` - Sits inside the content column, but can be positioned horizontally anywhere.
 
 ----
 ## Example Pages

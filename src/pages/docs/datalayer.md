@@ -39,16 +39,16 @@ With the above implementation, in GTM you will be able to set up Custom Triggers
 
  Variable                              | Description                          |
 | ------------------------------------- | ------------------------------------ |
-| `"EN_PAGEJSON_TRANSACTIONTYPE": "FCS"` | Fundraising Credit/Debit Single      |
-| `"EN_PAGEJSON_TRANSACTIONTYPE": "FCR"` | Fundraising Credit/Debit Recurring   |
-| `"EN_PAGEJSON_TRANSACTIONTYPE": "FBS"` | Fundraising Bank Single              |
-| `"EN_PAGEJSON_TRANSACTIONTYPE": "FBR"` | Fundraising Bank Recurring           |
-| `"EN_PAGEJSON_TRANSACTIONTYPE": "FBR"` | Fundraising In Memoriam              |
-| `"EN_PAGEJSON_TRANSACTIONTYPE": "FCH"` | Fundraising Check                    |
-| `"EN_PAGEJSON_TRANSACTIONTYPE": "FOC"` | Fundraising One Click                |
-| `"EN_PAGEJSON_AMOUNT": 102`            |    |
-| `"EN_PAGEJSON_FEECOVER": 2`            |   |
-| `"EN_PAGEJSON_CURRENCY": "USD"`        |   |
+| `EN_PAGEJSON_TRANSACTIONTYPE: "FCS"` | Fundraising Credit/Debit Single       |
+| `EN_PAGEJSON_TRANSACTIONTYPE: "FCR"` | Fundraising Credit/Debit Recurring   |
+| `EN_PAGEJSON_TRANSACTIONTYPE: "FBS"` | Fundraising Bank Single              |
+| `EN_PAGEJSON_TRANSACTIONTYPE: "FBR"` | Fundraising Bank Recurring           |
+| `EN_PAGEJSON_TRANSACTIONTYPE: "FBR"` | Fundraising In Memoriam              |
+| `EN_PAGEJSON_TRANSACTIONTYPE: "FCH"` | Fundraising Check                    |
+| `EN_PAGEJSON_TRANSACTIONTYPE: "FOC"` | Fundraising One Click                |
+| `EN_PAGEJSON_AMOUNT: 102`            |                                      |
+| `EN_PAGEJSON_FEECOVER: 2`            |                                     |
+| `EN_PAGEJSON_CURRENCY: "USD"`        |                                     |
 
 
 ### On page load we trigger an event and record all the gift frequency options on the page 

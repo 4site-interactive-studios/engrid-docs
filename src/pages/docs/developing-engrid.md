@@ -4,16 +4,16 @@ description: Advanced development practices with ENgrid for Engaging Networks. L
 
 ---
 
-* **?assets=local** - Loads the uncompressed ENgrid CSS and JS from 
+* `?assets=local` - Loads the uncompressed ENgrid CSS and JS from 
 ```
 https://engrid-wwf.test/dist/engrid.[file-extension]
 ```
-* **?assets=[branch-name]** - Loads the uncompressed ENgrid CSS and JS from the Client Repo's feature branch 
+* `?assets=[branch-name]` - Loads the uncompressed ENgrid CSS and JS from the Client Repo's feature branch 
 ```
 https://github.com/4site-interactive-studios/engrid-[client-name]/[branch-name]
 ```
-* **?engridcss=false** - Unloads the ENgrid CSS and applies some base styles to make the ENgrid sections appear in a column
-* **?engridjs=false** - Unloads the ENgrid JS
+* `?engridcss=false` - Unloads the ENgrid CSS and applies some base styles to make the ENgrid sections appear in a column
+* `?engridjs=false` - Unloads the ENgrid JS
 
 
 ## Engaging Networks Buildout
