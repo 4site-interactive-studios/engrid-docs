@@ -23,11 +23,14 @@ export const navigation = [
   {
     title: 'Core concepts',
     links: [
-      { title: 'ENgrid theme code', href:'/docs/understanding-engrid-theme' },
+      { title: 'ENgrid theme code', href: '/docs/understanding-engrid-theme' },
       { title: 'Developing with ENgrid', href: '/docs/developing-engrid' },
-      { title: 'ENgrid Visualizations & Examples', href: '/docs/example-pages' },
-     /*  { title: '', href: '#' },
-      */
+      {
+        title: 'ENgrid Visualizations & Examples',
+        href: '/docs/example-pages',
+      },
+      /*  { title: '', href: '#' },
+       */
     ],
   },
   {
@@ -35,40 +38,46 @@ export const navigation = [
     links: [
       { title: 'ENgrid', href: '/docs/advanced-engrid-guide-index' },
       { title: 'ENgrid Lightbox', href: '/docs/upsell-lightbox' },
-      { title: 'Embedding ENgrid', href: '/docs/embedd-engrid' },
-      { title: 'Donation Form Reciepting', href: '/docs/donation-reciepting',},
-      { title: 'Integrating GTM', href: '/docs/datalayer' },
-     
-     
     ],
   },
+  {
+    title: 'ENgrid Deep Dive',
+    links: [
+      { title: 'Embedding ENgrid', href: '/docs/embedd-engrid' },
+      { title: 'Donation Form Reciepting', href: '/docs/donation-reciepting' },
+      { title: 'Integrating GTM', href: '/docs/datalayer' },
+      { title: 'Cookies & Session Storage', href: '/docs/storage' },
+    ],
+  },
+
   {
     title: 'Reference',
     links: [
-     { title: 'Native Custom Ask String & Swap Lists', href: '/docs/native-custom-ask-string', },
-    
+      {
+        title: 'Native Custom Ask String & Swap Lists',
+        href: '/docs/native-custom-ask-string',
+      },
     ],
   },
 
-
- {
-  //  title: 'API reference',
-   links: [
-    /* { title: 'ENgrid.predict()', href: '/docs/engrid-predict' },
+  {
+    //  title: 'API reference',
+    links: [
+      /* { title: 'ENgrid.predict()', href: '/docs/engrid-predict' },
       { title: 'ENgrid.flush()', href: '/docs/engrid-flush' },
       { title: 'ENgrid.revert()', href: '/docs/engrid-revert' },
       { title: 'ENgrid.regret()', href: '/docs/engrid-regret' }, */
-  ],
- },
+    ],
+  },
   {
-//    title: 'Contributing',
+    //    title: 'Contributing',
     links: [
-   /*   { title: 'How to contribute', href: '/docs/how-to-contribute' },
+      /*   { title: 'How to contribute', href: '/docs/how-to-contribute' },
       { title: 'Architecture guide', href: '/docs/architecture-guide' },
       { title: 'Design principles', href: '/docs/design-principles' }, */
     ],
- },
-] 
+  },
+]
 
 function GitHubIcon(props) {
   return (
