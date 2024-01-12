@@ -145,15 +145,15 @@ engrid_hide[element]=class
 
 ---
 
-### Hide any element based on the selected value of a select dropdown, checkbox, or radio select field
+### Hide any element based on the selected value of a checkbox or radio select field
 
 {% callout title="You should know!" %}
-Note that this does not work for other field types (e.g. Input, Textarea, etc..)
+Note that this does not work for other field types (e.g. Select, Input, Textarea, etc..)
 {% /callout %}
 
-By using this you can hide an element based on the value of another Select, Checkbox, or Radio select fields. To start you need to get the root name of the field you want to base this condition on. The easiest way to do this is to grab it from the top level Label.
+To start you need to get the root name of the field you want to base this condition on. The easiest way to do this is to grab it from the top level Label. By using this you can hide an element based on the value of another Checkbox or Radio select fields.
 
-Steps for creating a custom class to hide an element based on the value of another select, checkbox, or radio select field:
+Steps for creating a custom class:
 
 Example Label:
 
