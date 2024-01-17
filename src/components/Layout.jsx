@@ -47,6 +47,7 @@ export const navigation = [
       { title: 'Donation Form Reciepting', href: '/docs/donation-reciepting' },
       { title: 'Integrating GTM', href: '/docs/datalayer' },
       { title: 'Cookies & Session Storage', href: '/docs/storage' },
+      { title: 'ENgrid Pull Requests', href: '/docs/engrid-scripts-pr' },
     ],
   },
 
