@@ -48,6 +48,7 @@ export const navigation = [
       { title: 'Integrating GTM', href: '/docs/datalayer' },
       { title: 'Cookies & Session Storage', href: '/docs/storage' },
       { title: 'ENgrid Pull Requests', href: '/docs/engrid-scripts-pr' },
+      { title: 'Custom Lightboxes', href: '/docs/custom-lightboxes' },
     ],
   },
 
