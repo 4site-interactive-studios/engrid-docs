@@ -49,6 +49,7 @@ export const navigation = [
       { title: 'Cookies & Session Storage', href: '/docs/storage' },
       { title: 'ENgrid Pull Requests', href: '/docs/engrid-scripts-pr' },
       { title: 'Custom Lightboxes', href: '/docs/custom-lightboxes' },
+      { title: 'Welcome Back', href: '/docs/welcome-back' },
     ],
   },
 
