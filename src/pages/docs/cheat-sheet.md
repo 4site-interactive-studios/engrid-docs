@@ -167,10 +167,10 @@ Example Label:
    - `engrid__field_supporter_questions_600302`
 3. Remove the word `field_` and note the remaining double underscore after `engrid`
    - `engrid__supporter_questions_600302`
-4. Remove the `_` after `supporter`
-   - `engrid__supporterquestions_600302`
+4. Remove the `_` after `supporter` and anywhere else they appear
+   - `engrid__supporterquestions600302`
 5. Now you have your base class, and you can append the value that will be used so that the content with that class will only be visible when that value is selected. By appending a hyphen and the field value`-Y` this class will make it so the encapsulated is only visible when that corresponding field's value is `Y`, otherwise it will be hidden.
-   - `engrid__supporterquestions_600302-Y`
+   - `engrid__supporterquestions600302-Y`
 
 ---
 
