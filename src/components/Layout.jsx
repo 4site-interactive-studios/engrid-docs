@@ -50,6 +50,7 @@ export const navigation = [
       { title: 'ENgrid Pull Requests', href: '/docs/engrid-scripts-pr' },
       { title: 'Custom Lightboxes', href: '/docs/custom-lightboxes' },
       { title: 'Welcome Back', href: '/docs/welcome-back' },
+      { title: 'Ecard To Target', href: '/docs/ecard-to-target' },
     ],
   },
 
