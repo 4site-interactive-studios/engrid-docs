@@ -9,7 +9,7 @@ ENgrid can transform your standard eCard pages into a targeted advocacy action. 
 
 Creating an eCard to target page is simple. Just add a code block to your page that defines the `window.EngridEcardToTarget` variable.
 
-It looks like this;
+It looks like this:
 
 ```html
 <script>
@@ -33,6 +33,7 @@ Here are the full options, along with their default configuration:
     hideTarget: true, // OPTIONAL: hide the target field
     hideMessage: true, // OPTIONAL: hide the message field
     addSupporterNameToMessage: false, // OPTIONAL: automatically add the supporter's name to the end of the message
+  }
 </script>
 ```
 
