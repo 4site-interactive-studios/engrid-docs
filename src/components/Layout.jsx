@@ -51,6 +51,7 @@ export const navigation = [
       { title: 'Custom Lightboxes', href: '/docs/custom-lightboxes' },
       { title: 'Welcome Back', href: '/docs/welcome-back' },
       { title: 'Ecard To Target', href: '/docs/ecard-to-target' },
+      { title: 'Embedded Ecard', href: '/docs/embedded-ecard' },
     ],
   },
 
