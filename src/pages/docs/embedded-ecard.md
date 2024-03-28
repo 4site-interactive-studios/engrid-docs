@@ -7,7 +7,7 @@ Using ENgrid, you can embed an eCard page seamlessly into another ENgrid page, s
 
 ## Preparing an eCard page to be embedded
 
-Any eCard page using ENgrid can be embedded into another ENgrid page.  However, there are a couple things to note about form fields on the page and you will likely want to add some extra custom styles to the eCard page to make it look good when embedded.
+Any eCard page using ENgrid can be embedded into another ENgrid page.  However, there are a couple things to note about form fields on the page and you may want to add some extra custom styles to the eCard page to make it look optimal when embedded.
 
 For form fields:
 
@@ -15,21 +15,11 @@ For form fields:
 2. You must **not** have any form fields (except the ecard block) that don't also exist on the parent page.
 3. You must have a **submit button** on the eCard page.
 
-Some custom styling tips for preparing an eCard page to be embedded:
+For custom styling:
 
-1. **Hide all ENgrid sections except `body-main`** - this will clean up the page and make it look better when embedded, so that only the form is visible.
-2. **Hide all sections within `body-main` except the eCard block** - this will ensure that only the eCard form is visible. The supporter does not need to enter their personal details again, so we can hide those fields.
+1. By default ENgrid will **hide all ENgrid sections except `body-main`** and **hide all sections within `body-main` except the eCard block** - this will give you the cleanest look for the embedded eCard form.
+2. Double check how the embedded form looks to see if you need any more custom styling. In most cases you should not, but depending on your client theme you may need to add some extra styles.
 
-```css 
-/* Hide all page sections except body-main */
-body[data-engrid-page-type="e-card"][data-engrid-embedded] .en__component--advrow > div:not(.body-main) {
-  display: none;
-}
-/* Hide all sections within body-main except the eCard block */
-body[data-engrid-page-type="e-card"][data-engrid-embedded] .body-main > *:not(.en__component--ecardblock) {
-  display: none;
-}
-```
 
 ## Embedding an eCard page
 
@@ -58,5 +48,6 @@ There are some additional options for this code block that can be used to adjust
   };
 </script>
 ```
+## On your thank you page
 
-
+On the thank you page, you can use the custom class `showif-embedded-ecard-sent` to add some content that will only be visible if the eCard was sent. For example, a reminder for the supporter to check their emails and click the confirmation link.
