@@ -89,7 +89,6 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="4Site ENgrid" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image" content="" />
 
         <meta
           name="st:title"
