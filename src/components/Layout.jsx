@@ -52,6 +52,7 @@ export const navigation = [
       { title: 'Welcome Back', href: '/docs/welcome-back' },
       { title: 'Ecard To Target', href: '/docs/ecard-to-target' },
       { title: 'Embedded Ecard', href: '/docs/embedded-ecard' },
+      { title: 'Feature Branch', href: '/docs/feature-branch' },
     ],
   },
 
