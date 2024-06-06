@@ -29,6 +29,7 @@ export const navigation = [
         title: 'ENgrid Visualizations & Examples',
         href: '/docs/example-pages',
       },
+      { title: 'Contributing to ENgrid Scripts', href: '/docs/contributing-to-engrid-scripts' },
       /*  { title: '', href: '#' },
        */
     ],
