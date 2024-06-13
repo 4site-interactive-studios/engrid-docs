@@ -15,27 +15,29 @@ Click-to-expand
 
 You can add a second class to the same component (e.g., `click-to-expand click-to-expand-mobile` ), and this will cause this section to only appear as a "click-to-expand" on mobile. When viewed on desktop, the entire contents of the area will remain visible ( [recording](https://cln.sh/rsb696qg) ).
 
+Usable on thank you pages.
+
 ---
 
 ### Form Field Helper Classes (Up to 10 per form component)
 
 Utility classes to hide form fields (e.g "i1" = 1st field) in a component or just its label
 
-| Class           | Description                                                                |
-| --------------- | -------------------------------------------------------------------------- |
-| `i1-hide`       | Hides the entire 1st field both visually and from screen readers           |
-| `i1-hide-label` | Hides the 1st field's label visually but not for screen readers            |
-| `i1-start`      | Indicates the 1st field is at the start of its visual row in the form flow |
-| `i1-end`        | Indicates the 1st field is at the end of its visual row in the form flow   |
-| `i1-20`         | 20% width                                                                  |
-| `i1-25`         | 25% width                                                                  |
-| `i1-33`         | 33% width                                                                  |
-| `i1-50`         | 50% width                                                                  |
-| `i1-66`         | 66% width                                                                  |
-| `i1-75`         | 75% width                                                                  |
-| `i1-100`        | 100% width, does not need the iX-start or iX-end helper classes            |
-| `i1-m50`        | 50% width on the ENgrid Mobile breakpoint, not client theme                |
-| `i1-m100`       | 100% width on the ENgrid Mobile breakpoint, not client theme               |
+| Class           | Description                                                                | Usable on Thank You Pages |
+| --------------- | -------------------------------------------------------------------------- | ------------------------- |
+| `i1-hide`       | Hides the entire 1st field both visually and from screen readers           | Yes                       |
+| `i1-hide-label` | Hides the 1st field's label visually but not for screen readers            | Yes                       |
+| `i1-start`      | Indicates the 1st field is at the start of its visual row in the form flow | Yes                       |
+| `i1-end`        | Indicates the 1st field is at the end of its visual row in the form flow   | Yes                       |
+| `i1-20`         | 20% width                                                                  | Yes                       |
+| `i1-25`         | 25% width                                                                  | Yes                       |
+| `i1-33`         | 33% width                                                                  | Yes                       |
+| `i1-50`         | 50% width                                                                  | Yes                       |
+| `i1-66`         | 66% width                                                                  | Yes                       |
+| `i1-75`         | 75% width                                                                  | Yes                       |
+| `i1-100`        | 100% width, does not need the iX-start or iX-end helper classes            | Yes                       |
+| `i1-m50`        | 50% width on the ENgrid Mobile breakpoint, not client theme                | Yes                       |
+| `i1-m100`       | 100% width on the ENgrid Mobile breakpoint, not client theme               | Yes                       |
 
 ---
 
@@ -71,22 +73,22 @@ Giving frequency utility classes can also be used on thank you pages
 
 Utility classes to hide/show a component based on giving frequency.
 
-| Class                                  | Description                                                  |
-| -------------------------------------- | ------------------------------------------------------------ |
-| `recurring-frequency-y-hide`           | Hides component when recurring gift frequency is Y           |
-| `recurring-frequency-y-show`           | Shows component when recurring gift frequency is Y           |
-| `recurring-frequency-n-hide`           | Hides component when recurring gift frequency is N           |
-| `recurring-frequency-n-show`           | Shows component when recurring gift frequency is N           |
-| `recurring-frequency-annual-hide`      | Hides component when recurring gift frequency is Annual      |
-| `recurring-frequency-annual-show`      | Shows component when recurring gift frequency is Annual      |
-| `recurring-frequency-monthly-hide`     | Hides component when recurring gift frequency is Monthly     |
-| `recurring-frequency-monthly-show`     | Shows component when recurring gift frequency is Monthly     |
-| `recurring-frequency-onetime-hide`     | Hides component when recurring gift frequency is One-Time    |
-| `recurring-frequency-onetime-show`     | Shows component when recurring gift frequency is One-Time    |
-| `recurring-frequency-quarterly-hide`   | Hides component when recurring gift frequency is Quarterly   |
-| `recurring-frequency-quarterly-show`   | Shows component when recurring gift frequency is Quarterly   |
-| `recurring-frequency-semi-annual-hide` | Hides component when recurring gift frequency is Semi-Annual |
-| `recurring-frequency-semi-annual-show` | Shows component when recurring gift frequency is Semi-Annual |
+| Class                                  | Description                                                  | Usable on Thank You Pages |
+| -------------------------------------- | ------------------------------------------------------------ | ------------------------- |
+| `recurring-frequency-y-hide`           | Hides component when recurring gift frequency is Y           | Yes                       |
+| `recurring-frequency-y-show`           | Shows component when recurring gift frequency is Y           | Yes                       |
+| `recurring-frequency-n-hide`           | Hides component when recurring gift frequency is N           | Yes                       |
+| `recurring-frequency-n-show`           | Shows component when recurring gift frequency is N           | Yes                       |
+| `recurring-frequency-annual-hide`      | Hides component when recurring gift frequency is Annual      | Yes                       |
+| `recurring-frequency-annual-show`      | Shows component when recurring gift frequency is Annual      | Yes                       |
+| `recurring-frequency-monthly-hide`     | Hides component when recurring gift frequency is Monthly     | Yes                       |
+| `recurring-frequency-monthly-show`     | Shows component when recurring gift frequency is Monthly     | Yes                       |
+| `recurring-frequency-onetime-hide`     | Hides component when recurring gift frequency is One-Time    | Yes                       |
+| `recurring-frequency-onetime-show`     | Shows component when recurring gift frequency is One-Time    | Yes                       |
+| `recurring-frequency-quarterly-hide`   | Hides component when recurring gift frequency is Quarterly   | Yes                       |
+| `recurring-frequency-quarterly-show`   | Shows component when recurring gift frequency is Quarterly   | Yes                       |
+| `recurring-frequency-semi-annual-hide` | Hides component when recurring gift frequency is Semi-Annual | Yes                       |
+| `recurring-frequency-semi-annual-show` | Shows component when recurring gift frequency is Semi-Annual | Yes                       |
 
 ---
 
@@ -124,11 +126,11 @@ The Give by Select pseudo field has its own markup; if it has the `en__field--gi
 
 Utility classes to hide/show a component based on gift type.
 
-| Class                 | Description                                    |
-| --------------------- | ---------------------------------------------- |
-| `giveBySelect-Card`   | Show component when Give by Card is selected   |
-| `giveBySelect-ACH`    | Show component when Give by Check is selected  |
-| `giveBySelect-Paypal` | Show component when Give by Paypal is selected |
+| Class                 | Description                                    | Usable on Thank You Pages |
+| --------------------- | ---------------------------------------------- | ------------------------- |
+| `giveBySelect-Card`   | Show component when Give by Card is selected   | Yes                       |
+| `giveBySelect-ACH`    | Show component when Give by Check is selected  | Yes                       |
+| `giveBySelect-Paypal` | Show component when Give by Paypal is selected | Yes                       |
 
 ---
 
@@ -148,6 +150,10 @@ engrid_hide[element]=class
 ### Hide any element based on the selected value of a checkbox or radio select field
 
 {% callout title="You should know!" %}
+These classes can also be used on thank you pages
+{% /callout %}
+
+{% callout title="You should know!" %}
 Note that this does not work for other field types (e.g. Select, Input, Textarea, etc..)
 {% /callout %}
 
@@ -162,19 +168,23 @@ Example Label:
 ```
 
 1. Grab the `for` value from the label of the field you want to base this conditional class around
-   - `en__field_supporter_questions_600302`
+  - `en__field_supporter_questions_600302`
 2. Change `en` to `engrid`
-   - `engrid__field_supporter_questions_600302`
+  - `engrid__field_supporter_questions_600302`
 3. Remove the word `field_` and note the remaining double underscore after `engrid`
-   - `engrid__supporter_questions_600302`
+  - `engrid__supporter_questions_600302`
 4. Remove the `_` after `supporter` and anywhere else they appear
-   - `engrid__supporterquestions600302`
+  - `engrid__supporterquestions600302`
 5. Now you have your base class, and you can append the value that will be used so that the content with that class will only be visible when that value is selected. By appending a hyphen and the field value`-Y` this class will make it so the encapsulated is only visible when that corresponding field's value is `Y`, otherwise it will be hidden.
-   - `engrid__supporterquestions600302-Y`
+  - `engrid__supporterquestions600302-Y`
 
 ---
 
 ### Hide an element based on if other question(s) are present or absent on the page
+
+{% callout title="You should know!" %}
+These classes can also be used on thank you pages
+{% /callout %}
 
 Special classes can be used to hide elements if certain supporter questions are present or absent on the page.
 
@@ -280,6 +290,10 @@ Example: Image
 ---
 
 ### Dynamic Content Based on Amount (added as classes on content)
+
+{% callout title="You should know!" %}
+These classes can also be used on thank you pages
+{% /callout %}
 
 Utility classes to hide/show a component based on giving amount.
 
