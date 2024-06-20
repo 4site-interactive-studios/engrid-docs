@@ -26,7 +26,11 @@ function extractSections(node, sections, isRoot = true) {
   if (isRoot) {
     slugify.reset()
   }
-  if (node.type === 'heading' || node.type === 'paragraph') {
+  if (
+    node.type === 'heading' ||
+    node.type === 'paragraph' ||
+    node.type === 'text'
+  ) {
     let content = toString(node).trim()
     if (node.type === 'heading' && node.attributes.level <= 5) {
       let hash = node.attributes?.id ?? slugify(content)
@@ -55,7 +59,9 @@ export default function (nextConfig = {}) {
 
             let files = glob.sync('**/*.md', { cwd: pagesDir })
             // Filter out the specific file you don't want to index.
-            files = files.filter(file => !file.endsWith('docs/design-principles.md'))
+            files = files.filter(
+              (file) => !file.endsWith('docs/design-principles.md')
+            )
             let data = files.map((file) => {
               let url =
                 file === 'index.md' ? '/' : `/${file.replace(/\.md$/, '')}`
@@ -89,7 +95,7 @@ export default function (nextConfig = {}) {
                 document: {
                   id: 'url',
                   index: 'content',
-                  store: ['title', 'pageTitle'],
+                  store: ['title', 'pageTitle', 'content'],
                 },
                 context: {
                   resolution: 9,
@@ -123,6 +129,7 @@ export default function (nextConfig = {}) {
                   url: item.id,
                   title: item.doc.title,
                   pageTitle: item.doc.pageTitle,
+                  content: item.doc.content,
                 }))
               }
             `

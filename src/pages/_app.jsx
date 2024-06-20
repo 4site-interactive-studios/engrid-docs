@@ -21,12 +21,22 @@ function collectHeadings(nodes, slugify = slugifyWithCounter()) {
   let sections = []
 
   for (let node of nodes) {
-    if (node.name === 'h2' || node.name === 'h3') {
+    if (node.name === 'h2' || node.name === 'h3' || node.name === 'h4') {
       let title = getNodeText(node)
       if (title) {
         let id = slugify(title)
         node.attributes.id = id
-        if (node.name === 'h3') {
+        if (node.name === 'h4') {
+          if (!sections[sections.length - 1]?.children) {
+            throw new Error(
+              'Cannot add `h4` to table of contents without a preceding `h3`'
+            )
+          }
+          sections[sections.length - 1].children.push({
+            ...node.attributes,
+            title,
+          })
+        } else if (node.name === 'h3') {
           if (!sections[sections.length - 1]) {
             throw new Error(
               'Cannot add `h3` to table of contents without a preceding `h2`'

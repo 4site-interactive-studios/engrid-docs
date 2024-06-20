@@ -9,7 +9,7 @@ export function Navigation({ navigation, className }) {
     <nav className={clsx('text-base lg:text-sm', className)}>
       <ul role="list" className="space-y-9">
         {navigation.map((section) => (
-          <li key={section.title}>
+          <li key={`${section.title}-${Math.random()}`} className="space-y-2">
             <h2 className="font-display font-medium text-slate-900 dark:text-white">
               {section.title}
             </h2>
@@ -18,7 +18,7 @@ export function Navigation({ navigation, className }) {
               className="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
             >
               {section.links.map((link) => (
-                <li key={link.href} className="relative">
+                <li key={link.href} className="relative" role="listitem">
                   <Link
                     href={link.href}
                     className={clsx(

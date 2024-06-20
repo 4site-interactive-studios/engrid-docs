@@ -87,7 +87,7 @@ function LoadingIcon(props) {
 function HighlightQuery({ text, query }) {
   return (
     <Highlighter
-      highlightClassName="group-aria-selected:underline bg-transparent text-sky-600 dark:text-sky-400"
+      highlightClassName="group-aria-selected:underline bg-transparent text-sky-600 dark:text-sky-400 font-bold"
       searchWords={[query]}
       autoEscape={true}
       textToHighlight={text}
@@ -139,6 +139,18 @@ function SearchResult({ result, autocomplete, collection, query }) {
               </span>
             </Fragment>
           ))}
+        </div>
+      )}
+      {result.content.toLowerCase().includes(query.toLowerCase()) && (
+        <div className="mt-0.5 truncate text-xs text-slate-500 dark:text-slate-400">
+          ...
+          <HighlightQuery
+            text={result.content.substring(
+              result.content.indexOf(query) - 50,
+              result.content.indexOf(query) + 50
+            )}
+            query={query}
+          />
         </div>
       )}
     </li>
