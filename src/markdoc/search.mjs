@@ -11,7 +11,8 @@ const slugify = slugifyWithCounter()
 
 function toString(node) {
   let str =
-    node.type === 'text' && typeof node.attributes?.content === 'string'
+    ['text', 'code'].includes(node.type) &&
+    typeof node.attributes?.content === 'string'
       ? node.attributes.content
       : ''
   if ('children' in node) {
@@ -29,10 +30,15 @@ function extractSections(node, sections, isRoot = true) {
   if (
     node.type === 'heading' ||
     node.type === 'paragraph' ||
-    node.type === 'text'
+    node.type === 'text' ||
+    node.type === 'code' ||
+    node.type === 'item'
   ) {
     let content = toString(node).trim()
-    if (node.type === 'heading' && node.attributes.level <= 5) {
+    if (content === '') {
+      return
+    }
+    if (node.type === 'heading' && node.attributes.level <= 6) {
       let hash = node.attributes?.id ?? slugify(content)
       sections.push([content, hash, []])
     } else {
