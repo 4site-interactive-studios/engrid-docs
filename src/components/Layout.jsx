@@ -12,6 +12,92 @@ import { Search } from '@/components/Search'
 import { ThemeSelector } from '@/components/ThemeSelector'
 
 export const navigation = [
+  // New
+  {
+    title: 'ENgrid',
+    links: [
+      { title: 'Getting started', href: '/' },
+    ],
+  },
+  {
+    title: 'Developing with ENgrid',
+    links: [
+      { title: 'EN Account Buildout', href: '/docs/v2/en-account-buildout' },
+      { title: 'Creating an ENgrid theme', href: '/docs/v2/creating-an-engrid-theme' },
+      { title: 'Developing with ENgrid', href: '/docs/v2/developing-with-engrid' },
+      { title: 'Visualizing ENgrid grids', href: '/docs/v2/visualizing-engrid-grids' },
+      { title: 'ENgrid Page Template Example', href: '/docs/v2/engrid-page-template-example' },
+      { title: 'Submitting ENgrid Upstream Pull Requests', href: '/docs/v2/upstream-pull-requests' },
+    ],
+  },
+  {
+    title: 'All Pages',
+    links: [
+      { title: 'Form Field Helper Classes', href: '/docs/v2/form-field-helper-classes' },
+      { title: 'Conditionally Require Fields ', href: '/docs/v2/conditionally-require-fields' },
+      { title: 'Click to Expand Helper Classes', href: '/docs/v2/click-to-expand' },
+      { title: 'Replace Banner with Background', href: '/docs/v2/replace-banner-with-background' },
+      { title: 'International Form Addresses', href: '/docs/v2/international-form-addresses' },
+      { title: 'Exit Intent Lightbox', href: '/docs/v2/exit-intent-lightbox' },
+      { title: 'Conditional Content Helper Classes', href: '/docs/v2/conditional-content-helper-classes' },
+      { title: 'Dynamic Content based on URL arguments', href: '/docs/v2/dynamic-content-from-url-arguments' },
+      { title: 'Embed / iFrame', href: '/docs/v2/embedding-engrid' },
+      { title: 'Welcome Back', href: '/docs/v2/welcome-back' },
+      { title: 'Embedded eCard', href: '/docs/v2/embedded-ecard' },
+    ],
+  },
+  {
+    title: 'Donation Pages',
+    links: [
+      { title: 'Frequency', href: '/docs/v2/gift-frequency' },
+      { title: 'Amount', href: '/docs/v2/gift-amount' },
+      { title: 'Payment Types', href: '/docs/v2/payment-types' },
+      { title: 'In Memorial / In Honor Giving Helper Classes', href: '/docs/v2/in-memory-honor-helper-classes' },
+      { title: 'Upsells', href: '/docs/v2/upsells' },
+      { title: 'Donation: Receipting', href: '/docs/v2/donation-receipting' },
+    ],
+  },
+  {
+    title: 'Advocacy Pages',
+    links: [
+      { title: 'eCard to Target', href: '/docs/v2/ecard-to-target' },
+    ],
+  },
+  {
+    title: 'ENgrid Components',
+    links: [
+      { title: 'Custom Lightboxes', href: '/docs/v2/custom-lightboxes' },
+      { title: 'Remember Me', href: '/docs/v2/remember-me' },
+    ],
+  },
+  {
+    title: 'Analytics',
+    links: [
+      { title: 'GTM DataLayer', href: '/docs/v2/gtm-datalayer' },
+    ],
+  },
+  {
+    title: 'Cookies & Session Storage',
+    links: [
+      { title: 'Cookies', href: '/docs/v2/cookies' },
+      { title: 'Session Storage', href: '/docs/v2/session-storage' },
+    ],
+  },
+  {
+    title: 'WordPress Promotions Plugin',
+    links: [
+      { title: 'Overview', href: '/docs/v2/wordpress-promotions-plugin-overview' },
+    ],
+  },
+  {
+    title: 'Miscellaneous',
+    links: [
+      { title: 'Miscellaneous', href: '/docs/v2/miscellaneous' },
+    ],
+  },
+
+  /*
+  // Old
   {
     title: 'Introduction',
     links: [
@@ -30,8 +116,6 @@ export const navigation = [
         href: '/docs/example-pages',
       },
       { title: 'Contributing to ENgrid Scripts', href: '/docs/contributing-to-engrid-scripts' },
-      /*  { title: '', href: '#' },
-       */
     ],
   },
   {
@@ -56,7 +140,6 @@ export const navigation = [
       { title: 'Feature Branch', href: '/docs/feature-branch' },
     ],
   },
-
   {
     title: 'Reference',
     links: [
@@ -66,24 +149,7 @@ export const navigation = [
       },
     ],
   },
-
-  {
-    //  title: 'API reference',
-    links: [
-      /* { title: 'ENgrid.predict()', href: '/docs/engrid-predict' },
-      { title: 'ENgrid.flush()', href: '/docs/engrid-flush' },
-      { title: 'ENgrid.revert()', href: '/docs/engrid-revert' },
-      { title: 'ENgrid.regret()', href: '/docs/engrid-regret' }, */
-    ],
-  },
-  {
-    //    title: 'Contributing',
-    links: [
-      /*   { title: 'How to contribute', href: '/docs/how-to-contribute' },
-      { title: 'Architecture guide', href: '/docs/architecture-guide' },
-      { title: 'Design principles', href: '/docs/design-principles' }, */
-    ],
-  },
+  */
 ]
 
 function GitHubIcon(props) {
