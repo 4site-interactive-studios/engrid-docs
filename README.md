@@ -1,6 +1,6 @@
 # ENgrid Official Documentation
 
-This is the official documentation for the ENgrid library.
+This is the official documentation for 4Site's ENgrid library.
 
 ## Development
 
