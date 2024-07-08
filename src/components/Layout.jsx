@@ -27,6 +27,7 @@ export const navigation = [
       { title: 'Developing with ENgrid', href: '/docs/v2/developing-with-engrid' },
       { title: 'Visualizing ENgrid grids', href: '/docs/v2/visualizing-engrid-grids' },
       { title: 'ENgrid Page Template Example', href: '/docs/v2/engrid-page-template-example' },
+      { title: 'Contributing to ENgrid Scripts', href: '/docs/v2/contributing-to-engrid-scripts' },
       { title: 'Submitting ENgrid Upstream Pull Requests', href: '/docs/v2/upstream-pull-requests' },
     ],
   },
