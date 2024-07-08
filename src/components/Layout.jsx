@@ -89,12 +89,6 @@ export const navigation = [
       { title: 'Overview', href: '/docs/v2/wordpress-promotions-plugin-overview' },
     ],
   },
-  {
-    title: 'Miscellaneous',
-    links: [
-      { title: 'Miscellaneous', href: '/docs/v2/miscellaneous' },
-    ],
-  },
 
   /*
   // Old
