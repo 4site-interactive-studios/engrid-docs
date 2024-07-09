@@ -5,9 +5,13 @@ description: Learn about ENgrid Scripts and ENgrid Client Themes
 
 As you get started working with ENgrid, it is good to discuss what a "Client Theme" is and how it relates to the rest of the ENgrid upstream "ENgrid Scripts" code base.
 
+## What is a "Theme"?
+
+A "Theme" is the markup and code required to build an Engaging Networks Page Template (aka "Theme"). The Engaging Networks Page Templates are then used by Engaging Networks pages, loading the code and markup defined in them. Later on we'll discuss what a "Client Theme".
+
 ## What is "ENgrid Scripts"?
 
-We will start by discussing the ENgrid Scripts code base, as it is the core dependency that is a part of every ENgrid Client Theme. It contains two packages, one for styles ([@engrid-styles](https://www.npmjs.com/package/@4site/engrid-styles)) and one for scripts ([@engrid-common](https://www.npmjs.com/package/@4site/engrid-common)), and both are required to build an ENgrid theme. ENgrid Scipts is the code that all ENgrid clients share. Generally, if we do development on something that we think more than one client will benefit from, we do it in ENgrid Scripts so that can happen. Otherwise, we do it in the Client Theme so that only your client is impacted.
+We will start by discussing the ENgrid Scripts code base, as it is the core dependency that is a part of every ENgrid Client Theme. It contains two packages, one for styles ([@engrid-styles](https://www.npmjs.com/package/@4site/engrid-styles)) and one for scripts ([@engrid-common](https://www.npmjs.com/package/@4site/engrid-common)), and both are required to build an ENgrid theme. ENgrid Scipts is the code that all ENgrid clients share. Generally, if we do development on something that we think more than one client will benefit from, we do it in ENgrid Scripts so that can happen. Otherwise, we do it in the Client Theme so that only you theme is impacted.
 
 ## What is a "Client Theme"?
 
