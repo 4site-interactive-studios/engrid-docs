@@ -45,6 +45,14 @@ Whenever 4Site makes a code change that will be applied to all the EN page templ
 
 Additionally, we will flag any large code changes that are worthy of full re-testing. Typically our changes are much more limited in scope.
 
+The end-to-end- process is roughly:
+
+- Any new development is done on a ENgrid Client theme staging branch `?assets=june-2024`
+- If that work is dependent on upstream ENgrid changes, we pull in the latest version of ENgrid
+- We conduct our own internal QA
+- We create a way for you to test the feature branch changes (e.g., by appending `?assets=june-2024`) along with highlights about any notables either in EN, upstream ENgrid changes, or TNC Client Theme changes
+  `Once final approval is given, we will coordinate any rollout. Often, it’s just a code update, but other times, it might include form component or page template changes` We push the collectively QA’ed and approved changes live
+
 ## How can you QA test ENgrid Script or Client Theme changes?
 
 Any time you’ve seen `assets=` in the URL, that is an example of code changes being staged for testing before a broader rollout. And if there is a page level change, meaning a change in the page itself rather than just code, then we create a new page for QA testing. Sometimes updates it may be either or scenario, and other times it may be both.
