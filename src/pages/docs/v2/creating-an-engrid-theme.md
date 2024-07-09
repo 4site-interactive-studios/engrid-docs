@@ -1,4 +1,4 @@
 ---
-title: Creating an ENgrid theme
-description: How to create an ENgrid theme
+title: Creating an ENgrid client theme
+description: How to create an ENgrid client theme
 ---

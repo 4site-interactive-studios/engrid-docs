@@ -15,33 +15,74 @@ export const navigation = [
   // New
   {
     title: 'ENgrid',
-    links: [
-      { title: 'Getting started', href: '/' },
-    ],
+    links: [{ title: 'Getting started', href: '/' }],
   },
   {
     title: 'Developing with ENgrid',
     links: [
       { title: 'EN Account Buildout', href: '/docs/v2/en-account-buildout' },
-      { title: 'Creating an ENgrid theme', href: '/docs/v2/creating-an-engrid-theme' },
-      { title: 'Developing with ENgrid', href: '/docs/v2/developing-with-engrid' },
-      { title: 'Visualizing ENgrid grids', href: '/docs/v2/visualizing-engrid-grids' },
-      { title: 'ENgrid Page Template Example', href: '/docs/v2/engrid-page-template-example' },
-      { title: 'Contributing to ENgrid Scripts', href: '/docs/v2/contributing-to-engrid-scripts' },
-      { title: 'Submitting ENgrid Upstream Pull Requests', href: '/docs/v2/upstream-pull-requests' },
+      {
+        title: 'ENgrid Scripts and Client Themes',
+        href: '/docs/v2/what-is-engrid-scipts-and-client-theme',
+      },
+      {
+        title: 'Creating an ENgrid theme',
+        href: '/docs/v2/creating-an-engrid-theme',
+      },
+      {
+        title: 'Developing with ENgrid',
+        href: '/docs/v2/developing-with-engrid',
+      },
+      {
+        title: 'Visualizing ENgrid grids',
+        href: '/docs/v2/visualizing-engrid-grids',
+      },
+      {
+        title: 'ENgrid Page Template Example',
+        href: '/docs/v2/engrid-page-template-example',
+      },
+      {
+        title: 'Contributing to ENgrid Scripts',
+        href: '/docs/v2/contributing-to-engrid-scripts',
+      },
+      {
+        title: 'Submitting ENgrid Upstream Pull Requests',
+        href: '/docs/v2/upstream-pull-requests',
+      },
     ],
   },
   {
     title: 'All Pages',
     links: [
-      { title: 'Form Field Helper Classes', href: '/docs/v2/form-field-helper-classes' },
-      { title: 'Conditionally Require Fields ', href: '/docs/v2/conditionally-require-fields' },
-      { title: 'Click to Expand Helper Classes', href: '/docs/v2/click-to-expand' },
-      { title: 'Replace Banner with Background', href: '/docs/v2/replace-banner-with-background' },
-      { title: 'International Form Addresses', href: '/docs/v2/international-form-addresses' },
+      {
+        title: 'Form Field Helper Classes',
+        href: '/docs/v2/form-field-helper-classes',
+      },
+      {
+        title: 'Conditionally Require Fields ',
+        href: '/docs/v2/conditionally-require-fields',
+      },
+      {
+        title: 'Click to Expand Helper Classes',
+        href: '/docs/v2/click-to-expand',
+      },
+      {
+        title: 'Replace Banner with Background',
+        href: '/docs/v2/replace-banner-with-background',
+      },
+      {
+        title: 'International Form Addresses',
+        href: '/docs/v2/international-form-addresses',
+      },
       { title: 'Exit Intent Lightbox', href: '/docs/v2/exit-intent-lightbox' },
-      { title: 'Conditional Content Helper Classes', href: '/docs/v2/conditional-content-helper-classes' },
-      { title: 'Dynamic Content based on URL arguments', href: '/docs/v2/dynamic-content-from-url-arguments' },
+      {
+        title: 'Conditional Content Helper Classes',
+        href: '/docs/v2/conditional-content-helper-classes',
+      },
+      {
+        title: 'Dynamic Content based on URL arguments',
+        href: '/docs/v2/dynamic-content-from-url-arguments',
+      },
       { title: 'Embed / iFrame', href: '/docs/v2/embedding-engrid' },
       { title: 'Welcome Back', href: '/docs/v2/welcome-back' },
       { title: 'Embedded eCard', href: '/docs/v2/embedded-ecard' },
@@ -53,16 +94,17 @@ export const navigation = [
       { title: 'Frequency', href: '/docs/v2/gift-frequency' },
       { title: 'Amount', href: '/docs/v2/gift-amount' },
       { title: 'Payment Types', href: '/docs/v2/payment-types' },
-      { title: 'In Memorial / In Honor Giving Helper Classes', href: '/docs/v2/in-memory-honor-helper-classes' },
+      {
+        title: 'In Memorial / In Honor Giving Helper Classes',
+        href: '/docs/v2/in-memory-honor-helper-classes',
+      },
       { title: 'Upsells', href: '/docs/v2/upsells' },
       { title: 'Donation: Receipting', href: '/docs/v2/donation-receipting' },
     ],
   },
   {
     title: 'Advocacy Pages',
-    links: [
-      { title: 'eCard to Target', href: '/docs/v2/ecard-to-target' },
-    ],
+    links: [{ title: 'eCard to Target', href: '/docs/v2/ecard-to-target' }],
   },
   {
     title: 'ENgrid Components',
@@ -73,9 +115,7 @@ export const navigation = [
   },
   {
     title: 'Analytics',
-    links: [
-      { title: 'GTM DataLayer', href: '/docs/v2/gtm-datalayer' },
-    ],
+    links: [{ title: 'GTM DataLayer', href: '/docs/v2/gtm-datalayer' }],
   },
   {
     title: 'Cookies & Session Storage',
@@ -87,7 +127,10 @@ export const navigation = [
   {
     title: 'WordPress Promotions Plugin',
     links: [
-      { title: 'Overview', href: '/docs/v2/wordpress-promotions-plugin-overview' },
+      {
+        title: 'Overview',
+        href: '/docs/v2/wordpress-promotions-plugin-overview',
+      },
     ],
   },
 
