@@ -9,7 +9,7 @@ To view your templates, and to edit and create new ones, go to Pages > Component
 
 ![Alt text](https://www.engagingnetworks.support/wp-content/uploads/2019/03//PB_Templates_02.png)
 
-## ENGrid Template Structure
+## ENgrid Template Structure
 
 The order of content and assets in the page template is intentional. Below is the breakdown of the logic and reasoning for everything.
 
@@ -98,7 +98,7 @@ Detect if the page is being served in an iFrame and add the corresponding class 
 </script>
 ```
 
-#### Load ENGrid's CSS file
+#### Load ENgrid's CSS file
 
 We load our CSS file here so that it comes after Engaging Network's CSS file which is inserted in `<head>`. If our CSS file in added right before `</head>`, Engaging Network's file will still come after it requiring you to use !important or other methods for winning CSS specificity when applying your styles.
 
@@ -133,7 +133,7 @@ Like the other default meta tags, this exact setup is required for the optimal c
 <meta name="description" content="Up to 255 character long description" />
 ```
 
-#### Load ENGrid's JS file
+#### Load ENgrid's JS file
 
 Loaded asynchronously and loaded here so our JS file here so it comes after all page content.
 
