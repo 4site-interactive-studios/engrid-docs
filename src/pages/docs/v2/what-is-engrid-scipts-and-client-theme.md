@@ -15,7 +15,9 @@ We will start by discussing the ENgrid Scripts code base, as it is the core depe
 
 ## What is a "Client Theme"?
 
-Put simply, a "Client Theme" is an extension of the previously mentioned "ENgrid Scripts" code base that you then customize and expand upon based on your specific needs. When you do this, the upstream "ENgrid Scripts" code base becomes a dependency in your project. Think of it in the same way your website might be built on WordPress or uses jQuery. Once you start using it, they become dependencies in your project that you build and customize upon, while those projects themselves continue active development.
+Put simply, a "Client Theme" is an extension of the previously mentioned "ENgrid Scripts" code base that you then customize and expand upon based on your specific needs; every client using ENgrid gets their own unique "Client Theme". When you do this, the upstream "ENgrid Scripts" code base becomes a dependency in your Client Theme project. Think of it in the same way your website might be built on WordPress or uses jQuery. Once you start using it, they become dependencies in your project that you build and customize upon, while those projects themselves continue active development.
+
+Roughly speaking it’s EN > ENgrid Scripts > ENgrid Client Theme > 3rd Party Code (e.g. GTM)
 
 ## Pulling in regular updates from "ENgrid Scirpts" aka "engrid-scripts" and "upstream changes"
 
@@ -41,6 +43,18 @@ Whenever 4Site makes a code change that will be applied to all the EN page templ
 - what this version adds
 - what this version removes
 
+Additionally, we will flag any large code changes that are worthy of full re-testing. Typically our changes are much more limited in scope.
+
 ## How can you QA test ENgrid Script or Client Theme changes?
 
 Any time you’ve seen `assets=` in the URL, that is an example of code changes being staged for testing before a broader rollout. And if there is a page level change, meaning a change in the page itself rather than just code, then we create a new page for QA testing. Sometimes updates it may be either or scenario, and other times it may be both.
+
+## What happens if something does break on live?
+
+We have three options we go between depending on the issue and any timing considerations
+
+- We investigate the issue and either stage a fix for further QA or deploy the fix to live. It all depends on the level of code change required to resolve the issue.
+
+- We revert the change, which is quick because all our code is version-controlled.
+
+- If it's minor enough (e.g, small styling issue), we might just wait until the next planned release
