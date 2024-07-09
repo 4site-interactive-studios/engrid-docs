@@ -15,7 +15,7 @@ We will start by discussing the ENgrid Scripts code base, as it is the core depe
 
 ## What is a "Client Theme"?
 
-Put simply, a "Client Theme" is an extension of the previously mentioned "Ngrid Scripts" code base that you then customize and expand upon based on your specific needs. When you do this, the upstream "ENgrid Scripts" code base becomes a dependency in your project. Think of it in the same way your website might be built on WordPress or uses jQuery. Once you start using it, they become dependencies in your project that you build and customize upon, while those projects themselves continue active development.
+Put simply, a "Client Theme" is an extension of the previously mentioned "ENgrid Scripts" code base that you then customize and expand upon based on your specific needs. When you do this, the upstream "ENgrid Scripts" code base becomes a dependency in your project. Think of it in the same way your website might be built on WordPress or uses jQuery. Once you start using it, they become dependencies in your project that you build and customize upon, while those projects themselves continue active development.
 
 ## Pulling in regular updates from "ENgrid Scirpts" aka "engrid-scripts" and "upstream changes"
 
