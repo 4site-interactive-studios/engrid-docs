@@ -1,5 +1,5 @@
 ---
-title: What is ENgrid Scripts and Client Theme?
+title: What are ENgrid Scripts and Client Themes?
 description: Learn about ENgrid Scripts and ENgrid Client Themes
 ---
 
