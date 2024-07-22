@@ -100,6 +100,7 @@ export const navigation = [
       },
       { title: 'Upsells', href: '/docs/v2/upsells' },
       { title: 'Donation: Receipting', href: '/docs/v2/donation-receipting' },
+      { title: 'Single-Page Multistep Form', href: '/docs/v2/single-page-multistep' },
     ],
   },
   {
