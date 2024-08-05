@@ -20,6 +20,22 @@ For custom styling:
 1. By default ENgrid will **hide all ENgrid sections except `body-main`** and **hide all sections within `body-main` except the eCard block** - this will give you the cleanest look for the embedded eCard form.
 2. Double check how the embedded form looks to see if you need any more custom styling. In most cases you should not, but depending on your client theme you may need to add some extra styles.
 
+### Single recipient eCards
+
+If you're only allowing a single recipient for the eCard, then you can optionally add CSS to hide the "add recipient" or "+" button. This will make the form look cleaner and more intuitive for the user.
+
+The Embedded Ecard component will then take the values of the "Name" and "Email" fields and use them as the recipient's name and email address, without the user needing to click the "Add recipient" button.
+
+Below is an example of how to hide the "Add recipient" button with a code block:
+
+```html
+<style>
+  .en__ecarditems__addrecipient {
+    display: none;
+  }
+</style>
+```
+
 
 ## Embedding an eCard page
 
@@ -50,4 +66,4 @@ There are some additional options for this code block that can be used to adjust
 ```
 ## On your thank you page
 
-On the thank you page, you can use the custom class `showif-embedded-ecard-sent` to add some content that will only be visible if the eCard was sent. For example, a reminder for the supporter to check their emails and click the confirmation link.
+On the thank you page, you can use the custom class `showif-embedded-ecard-sent` to add some content that will only be visible if the eCard was sent.
