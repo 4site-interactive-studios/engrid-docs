@@ -19,7 +19,7 @@ Put simply, a "Client Theme" is an extension of the previously mentioned "ENgrid
 
 Roughly speaking it’s EN > ENgrid Scripts > ENgrid Client Theme > 3rd Party Code (e.g. GTM)
 
-## Pulling in regular updates from "ENgrid Scirpts" aka "engrid" and "upstream changes"
+## Pulling in regular updates from "ENgrid Scripts" aka "engrid" and "upstream changes"
 
 As you continue work on your client theme, adding in any customizations or enhancements, you will want to regularly pull in upstream changes being made on ENgrid Scripts. Work is happening there regularly, with many code commits per month spanning bug fixes, enhancements, and all new features. You can read the code repo's commit log ([@engrid](https://github.com/4site-interactive-studios/engrid/commits/main/)) or read our regularly updated [release notes](https://www.4sitestudios.com/engrid-release-notes/). Both the @engrid-styles and @engrid-scripts dependencies are versioned to help you understand the version you're using, the version being referenced in the change logs, and the latest published version available for upgrading.
 

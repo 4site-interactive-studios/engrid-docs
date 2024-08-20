@@ -46,7 +46,7 @@ That code is hosted on [Github here](https://github.com/4site-interactive-studio
 To bring in new features, you can run this command to upgrade the engrid-script package to the latest version and rebuild your assets:
 
 ```shell
-npm run update
+npm run rebuild
 ```
 
 If you need to use a specific engrid version you can run:

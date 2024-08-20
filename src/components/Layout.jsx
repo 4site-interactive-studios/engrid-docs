@@ -49,6 +49,10 @@ export const navigation = [
         title: 'Submitting ENgrid Upstream Pull Requests',
         href: '/docs/v2/upstream-pull-requests',
       },
+      {
+        title: 'Upgrading from engrid-common',
+        href: '/docs/v2/upgrading-from-engrid-common',
+      },
     ],
   },
   {
