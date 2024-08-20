@@ -13,7 +13,7 @@ To view your templates, and to edit and create new ones, go to Pages > Component
 
 The order of content and assets in the page template is intentional. Below is the breakdown of the logic and reasoning for everything.
 
-### Header Template ([example markup](https://github.com/4site-interactive-studios/engrid-scripts/blob/main/reference-materials/html/page-template-example/page-template-header-example.html))
+### Header Template ([example markup](https://github.com/4site-interactive-studios/engrid/blob/main/reference-materials/html/page-template-example/page-template-header-example.html))
 
 #### Initialize the GTM Data Layer (assumes GTM is needed)
 
@@ -116,7 +116,7 @@ Download render critical fonts without the need to read our CSS file first
 
 ---
 
-## Footer ([example markup](https://github.com/4site-interactive-studios/engrid-scripts/blob/main/reference-materials/html/page-template-example/page-template-footer-example.html))
+## Footer ([example markup](https://github.com/4site-interactive-studios/engrid/blob/main/reference-materials/html/page-template-example/page-template-footer-example.html))
 
 #### Additional Default meta tags
 

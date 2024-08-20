@@ -23,7 +23,7 @@ export const navigation = [
       { title: 'EN Account Buildout', href: '/docs/v2/en-account-buildout' },
       {
         title: 'ENgrid Scripts and Client Themes',
-        href: '/docs/v2/what-is-engrid-scipts-and-client-theme',
+        href: '/docs/v2/what-is-engrid-and-client-theme',
       },
       {
         title: 'Creating an ENgrid theme',
@@ -43,7 +43,7 @@ export const navigation = [
       },
       {
         title: 'Contributing to ENgrid Scripts',
-        href: '/docs/v2/contributing-to-engrid-scripts',
+        href: '/docs/v2/contributing-to-engrid',
       },
       {
         title: 'Submitting ENgrid Upstream Pull Requests',
@@ -100,7 +100,10 @@ export const navigation = [
       },
       { title: 'Upsells', href: '/docs/v2/upsells' },
       { title: 'Donation: Receipting', href: '/docs/v2/donation-receipting' },
-      { title: 'Single-Page Multistep Form', href: '/docs/v2/single-page-multistep' },
+      {
+        title: 'Single-Page Multistep Form',
+        href: '/docs/v2/single-page-multistep',
+      },
     ],
   },
   {
@@ -154,7 +157,7 @@ export const navigation = [
         title: 'ENgrid Visualizations & Examples',
         href: '/docs/example-pages',
       },
-      { title: 'Contributing to ENgrid Scripts', href: '/docs/contributing-to-engrid-scripts' },
+      { title: 'Contributing to ENgrid Scripts', href: '/docs/contributing-to-engrid' },
     ],
   },
   {
@@ -171,7 +174,7 @@ export const navigation = [
       { title: 'Donation Form Reciepting', href: '/docs/donation-reciepting' },
       { title: 'Integrating GTM', href: '/docs/datalayer' },
       { title: 'Cookies & Session Storage', href: '/docs/storage' },
-      { title: 'ENgrid Pull Requests', href: '/docs/engrid-scripts-pr' },
+      { title: 'ENgrid Pull Requests', href: '/docs/engrid-pr' },
       { title: 'Custom Lightboxes', href: '/docs/custom-lightboxes' },
       { title: 'Welcome Back', href: '/docs/welcome-back' },
       { title: 'Ecard To Target', href: '/docs/ecard-to-target' },
@@ -237,7 +240,7 @@ function Header({ navigation }) {
       <div className="relative flex basis-0 justify-end gap-6 sm:gap-8 md:flex-grow">
         <ThemeSelector className="relative z-10" />
         <Link
-          href="https://github.com/4site-interactive-studios/engrid-scripts"
+          href="https://github.com/4site-interactive-studios/engrid"
           className="group"
           aria-label="GitHub"
         >

@@ -3,11 +3,12 @@ title: EN Account Buildout
 description: How to set up your account for ENgrid
 ---
 
-## Client Theme Dependent on [4Site's Page Template Framework (ENgrid)](https://github.com/4site-interactive-studios/engrid-scripts)
+## Client Theme Dependent on [4Site's Page Template Framework (ENgrid)](https://github.com/4site-interactive-studios/engrid)
 
 ### EN Pages
 
 #### Folder Names
+
 - `Ω1. 4Site Live - Reference Pages for Duplication`
 - `Ω1. 4Site Live Legacy - Live pages on Legacy Code`
 - `Ω2. 4Site Staging - Quality Assurance Testing`
@@ -16,6 +17,7 @@ description: How to set up your account for ENgrid
 - `ΩΩ. Archive - XYZ`
 
 #### Page Names
+
 - `ENGRID - Theming Brand Guide`
 - `ENGRID - Left Left 1 Column`
 - `ENGRID - Center Left 1 Column`
@@ -29,12 +31,14 @@ description: How to set up your account for ENgrid
 ### EN Uploaded Assets
 
 #### Folders Names
+
 - `Ω1. 4Site Live Templates`
 - `Ω2. 4Site Live Legacy Templates`
 - `ΩΩ. Archive`
 - `ΩΩ. Archive - XYZ`
 
 #### File Names
+
 - `Ω 4Site Live Templates > engrid.min.css`
 - `Ω 4Site Live Templates > engrid.min.js`
 - `Ω 4Site Live Templates > loader.js`
@@ -43,6 +47,7 @@ description: How to set up your account for ENgrid
 ### EN Component Library
 
 #### Folder Names
+
 - `Ω1. 4Site Live - ENgrid Page Template and Components`
 - `Ω1. 4Site Live Legacy - ENgrid Page Template and Components`
 - `Ω2. 4Site Staging - ENgrid Page Template and Components`
@@ -51,6 +56,7 @@ description: How to set up your account for ENgrid
 - `ΩΩ. Archive - XYZ`
 
 #### Component Names
+
 - `4Site Page Template - Center Left 1 Column`
 - `General: Copy: Placeholder Title (Lorem Ipsum)`
 - `General: Copy: Placeholder Paragraph (Lorem Ipsum)`

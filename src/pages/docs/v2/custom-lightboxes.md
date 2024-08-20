@@ -33,26 +33,27 @@ The Modal styling can be found at `/packages/styles/src/_engrid-modal.scss`
 In your client theme, create a new TypeScript file in the `/src/scripts` folder, import the Modal component and create a new Class that extends `Modal`:
 
 ```ts
-import { Modal } from "@4site/engrid-common";
+import { Modal } from '@4site/engrid-scripts'
 
 export class MyLightbox extends Modal {}
 ```
 
 In your Constructor, call the `super()` method and pass in an object that configures the Modal component. The following options are available:
-   - `onClickOutside` - Configures the behaviour when the area outside of the lightbox is clicked. Can be set to `close` or `bounce` (which does a quick scaling animation). Defaults to `close`.
-   - `addCloseButton` - Configures whether a close button should be added to the lightbox. Can be set to `true` or `false`. Defaults to `false`.
-   - `closeButtonLabel` - Configures the label of the close button.
+
+- `onClickOutside` - Configures the behaviour when the area outside of the lightbox is clicked. Can be set to `close` or `bounce` (which does a quick scaling animation). Defaults to `close`.
+- `addCloseButton` - Configures whether a close button should be added to the lightbox. Can be set to `true` or `false`. Defaults to `false`.
+- `closeButtonLabel` - Configures the label of the close button.
 
 ```ts
-import { Modal } from "@4site/engrid-common";
+import { Modal } from '@4site/engrid-scripts'
 
 export class MyLightbox extends Modal {
   constructor() {
     super({
-      onClickOutside: "close",
+      onClickOutside: 'close',
       addCloseButton: true,
-      closeButtonLabel: "Close",
-    });
+      closeButtonLabel: 'Close',
+    })
   }
 }
 ```
@@ -74,42 +75,41 @@ Now, you can call the `open()` method to open the lightbox. In this simple examp
 Here is our full component:
 
 ```ts
-import { Modal } from "@4site/engrid-common";
+import { Modal } from '@4site/engrid-scripts'
 
 export class MyLightbox extends Modal {
   constructor() {
     super({
-      onClickOutside: "close",
+      onClickOutside: 'close',
       addCloseButton: true,
-      closeButtonLabel: "Close",
-    });
-    
-    this.open();
+      closeButtonLabel: 'Close',
+    })
+
+    this.open()
   }
 
   public getModalContent(): NodeListOf<Element> | HTMLElement | String {
-    return "<h1>My Lightbox Content</h1>";
+    return '<h1>My Lightbox Content</h1>'
   }
 }
 ```
+
 ### Adding your component to your client theme
 
 To add the component to your client theme, import it into your `/src/index.ts` file and initialize it in your onLoad function of your ENgrid Options:
 
 ```ts
 // Other imports
-import { MyLightbox } from "./scripts/my-lightbox";
+import { MyLightbox } from './scripts/my-lightbox'
 
 const options: Options = {
   // Other options
   onLoad: () => {
     // Other onLoad code
-    new MyLightbox();
-  }
+    new MyLightbox()
+  },
   // Other options
 }
 
-new App(options);
+new App(options)
 ```
-
-

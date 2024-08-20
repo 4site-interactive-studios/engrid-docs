@@ -10,9 +10,7 @@ ENgrid is our battle-tested framework for supercharging Engaging Networks page t
 
 #### Account Build out
 
-Client theme dependent on [4Site's Page Template Framework (ENgrid)](https://github.com/4site-interactive-studios/engrid-scripts)
-
-
+Client theme dependent on [4Site's Page Template Framework (ENgrid)](https://github.com/4site-interactive-studios/engrid)
 
 ### About 4Site Interactive Studios
 
@@ -47,6 +45,7 @@ This guide will take you through the essential steps and best practices to lever
 ## Quick Steps for ENgrid Technical Documentation
 
 ### Setting Up a Local Environment
+
 Begin with the right tools - obtain your ENgrid template from GitHub and set up your development environment with Node.js and a preferred IDE.
 
 - Obtain your ENgrid template code [(available on your Github repository)](https://github.com/4site-interactive-studios).
@@ -54,11 +53,12 @@ Begin with the right tools - obtain your ENgrid template from GitHub and set up 
 - Choose an IDE or text editor like VSCode with Prettier support for code formatting.
 - Use a method to locally serve your ENgrid assets, such as Laravel Valet or Herd​.
 
-
 ### Familiarizing Yourself With ENgrid
+
 - Understand the functionalities and features of ENgrid for efficient usage and customization​.
 
 ### Working on Your ENgrid Theme Code
+
 Personalize your theme with SCSS or JS adjustments, and tweak component functionality as needed.
 
 - Customize your theme by making changes to the SCSS or JS files.
@@ -67,6 +67,7 @@ Personalize your theme with SCSS or JS adjustments, and tweak component function
 - Modify options for component functionality in the `/src/index.ts` entry point.
 
 ### Previewing Your Changes
+
 Easily preview local or remote changes to ensure everything looks perfect.
 
 - To preview local changes, add `?assets=local` to your URL.
@@ -74,6 +75,7 @@ Easily preview local or remote changes to ensure everything looks perfect.
   `?assets=your-branch-name` to load assets.
 
 ### Building and Deploying Production Files
+
 Compile, test, and deploy your customizations for an enhanced user experience.
 
 - Compile final assets with `npm run build`.

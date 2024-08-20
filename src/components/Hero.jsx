@@ -18,7 +18,7 @@ const code = `export default {
 }`
 
 const tabs = [
-  { name: 'engrid-scripts.config.js', isActive: true },
+  { name: 'engrid.config.js', isActive: true },
   { name: 'package.json', isActive: false },
 ]
 
@@ -59,7 +59,7 @@ export function Hero() {
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <Button href="docs/before-you-begin">Get started</Button>
                 <Button
-                  href="https://github.com/4site-interactive-studios/engrid-scripts"
+                  href="https://github.com/4site-interactive-studios/engrid"
                   variant="secondary"
                 >
                   View on GitHub
