@@ -84,6 +84,12 @@ To preview remote changes on a Github repository, first create a Git branch with
 
 Then, you can use the assets URL parameter `?assets=your-branch-name` to load in those assets from Github without needing to deploy them elsewhere.
 
+You can also add a code block to the page which prevents the need for a URL arugment. This is preferable when moving between pages or when sharing a link to the public for testing.
+
+```javascript
+<script>window.EngridLoader = { assets: 'branch-name'};</script>
+```
+
 ---
 
 ## Building and deploying production files
