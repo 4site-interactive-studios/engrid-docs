@@ -141,6 +141,15 @@ export const navigation = [
       },
     ],
   },
+  {
+    title: 'Native EN',
+    links: [
+      {
+        title: 'Transaction Field Values',
+        href: '/docs/v2/transaction-field-values',
+      },
+    ],
+  },
 
   /*
   // Old

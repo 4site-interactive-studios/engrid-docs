@@ -1,0 +1,3756 @@
+---
+title: Transaction Field Values
+description: A flat version of EN's Transaction Database Schema
+---
+Source: [EXPORT_TRANSACTION_DATA_07_17_2019 4.06.18 PM.xlsx](https://knowledge.engagingnetworks.net/datareports/exporting-data-transactions-user-data-and-hybrid-f)
+
+## Advocacy Email: 'ETT'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Advocacy Email: 'ETT'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status as registered or participated: 'R' or 'P'
+- **Campaign Data 1**: contact first name:  'contact name value'
+- **Campaign Data 2**: contact last name: 'contact last name value'
+- **Campaign Data 3**: contact organisation:  'contact organisation value'
+- **Campaign Data 4**: contact type: 'contact database name'
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: * If the variables below are seen on the URL, they will be stored against the transaction in the respective columns
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: * External ref 6 -10 can be added to the 'Admin settings'  of donation and advocacy pages
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Advocacy Email: 'TWT'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Advocacy Email: 'TWT'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status as registered or participated: 'R' or 'P'
+- **Campaign Data 1**: contact first name:  'contact name value'
+- **Campaign Data 2**: contact last name: 'contact last name value'
+- **Campaign Data 3**: contact organisation:  'contact organisation value'
+- **Campaign Data 4**: contact type: 'contact database name'
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: * If the variables below are seen on the URL, they will be stored against the transaction in the respective columns
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: * External ref 6 -10 can be added to the 'Admin settings'  of donation and advocacy pages
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Advocacy Petition:  'PET'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Advocacy Petition:  'PET'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: 'P' indicates participation
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: utm_source
+- **External Reference 2**: utm_medium
+- **External Reference 3**: utm_campaign
+- **External Reference 4**: utm_content
+- **External Reference 5**: utm_term
+- **External Reference 6**: en_txn6
+- **External Reference 7**: en_txn7
+- **External Reference 8**: en_txn8
+- **External Reference 9**: en_txn9
+- **External Reference 10**: en_txn10
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Amplify Attendee: "ATA"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Amplify Attendee: "ATA"
+- **Campaign ID**: Amplify Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: attendee status ('Attending')
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: Registration Page Reference Name
+- **Campaign Data 3**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 4**: ID
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: Attendee Email address
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Amplify Cash or Check Offline Gift: "ACC" 
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Amplify Cash or Check Offline Gift: "ACC" 
+- **Campaign ID**: Amplify Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘assigned unique ID’
+- **Campaign Data 3**: N/A
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘cash or check’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Amplify Credit Recurring: "ACR"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Amplify Credit Recurring: "ACR"
+- **Campaign ID**: Amplify Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (recurring):  ‘R’
+- **Campaign Data 8**: transaction recurring date:  ‘monthly payment day’
+- **Campaign Data 9**: transaction recurring frequency:  ‘gateway dependent value’
+- **Campaign Data 10**: transaction recurring status:  ‘active’ ‘suspended’ ‘cancelled’
+- **Campaign Data 11**: parent transaction ID:  gateway transaction ID
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: the supporter id of the corresponding supporter
+- **Campaign Data 15**: the name and email of the corresponding supporter
+- **Campaign Data 16**: recurring start date
+- **Campaign Data 17**: recurring end date
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Amplify Credit Single: "ACS"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Amplify Credit Single: "ACS"
+- **Campaign ID**: Amplify Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: the supporter id of the corresponding supporter
+- **Campaign Data 15**: the name and email of the corresponding supporter
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Amplify Fee Purchase: "ACF"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Amplify Fee Purchase: "ACF"
+- **Campaign ID**: Amplify Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Amplify Order: "ATK"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Amplify Order: "ATK"
+- **Campaign ID**: Amplify Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: Registration Page Reference Name
+- **Campaign Data 3**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: quantity (of tickets bought for this type)
+- **Campaign Data 7**: ticket type ('Single' or 'Group')
+- **Campaign Data 8**: N/A
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Amplify Registration: "AMR"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Fundraiser's peer-to-peer page id
+- **Campaign Type**: Amplify Registration: "AMR"
+- **Campaign ID**: Fundraiser's Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: peer-to-peer site ID
+- **Campaign Data 2**: peer-to-peer site reference name
+- **Campaign Data 3**: EN donation page ID
+- **Campaign Data 4**: peer-to-peer campaign name
+- **Campaign Data 5**: peer-to-peer campaign id
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: supporter id: blank if 'new' but populated if already exists in EN
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Broadcast Email: 'EBC'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Broadcast Email: 'EBC'
+- **Campaign ID**: Broadcast Send Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: received: 'R'
+- **Campaign Data 1**: Opened: 'open'
+- **Campaign Data 2**: click through any link: 'click'
+- **Campaign Data 3**: completion: 'formsub'
+- **Campaign Data 4**: hard bounce: 'hbounce'
+- **Campaign Data 5**: soft bounce: 'sbounce'
+- **Campaign Data 6**: unsubscribe: 'unsub'
+- **Campaign Data 7**: supporter marks email as spam or junk: fbloop
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: Reference ID of Email
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Click to Call: 'CTT'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Click to Call: 'CTT'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status as registered or participated: 'R' or 'P'
+- **Campaign Data 1**: contact first name:  'contact name value'
+- **Campaign Data 2**: contact last name: 'contact last name value'
+- **Campaign Data 3**: contact organisation:  'contact organisation value'
+- **Campaign Data 4**: contact type: 'contact database name'
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: * If the variables below are seen on the URL, they will be stored against the transaction in the respective columns
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: * External ref 6 -10 can be added to the 'Admin settings'  of donation and advocacy pages
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Data Capture:  'DCF'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Data Capture:  'DCF'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: 'P' indicates participation
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## E-Commerce Item :  'ETM'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: E-Commerce Item :  'ETM'
+- **Campaign ID**: Product Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: Product SKU
+- **Campaign Data 1**: Order ID
+- **Campaign Data 2**: Donation Page Reference Name
+- **Campaign Data 3**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 4**: Product Cost
+- **Campaign Data 5**: Shipping Title
+- **Campaign Data 6**: Shipping First name
+- **Campaign Data 7**: Shipping Last name
+- **Campaign Data 8**: Shipping Email address
+- **Campaign Data 9**: Shipping Address 1
+- **Campaign Data 10**: Shipping Address 2
+- **Campaign Data 11**: Shipping City
+- **Campaign Data 12**: Shipping Region
+- **Campaign Data 13**: Shipping Postcode
+- **Campaign Data 14**: Shipping Country
+- **Campaign Data 15**: Shipping Phone number
+- **Campaign Data 16**: Shipping Notes
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Delivery type : ECARD / POSTCARD / NOCARD
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## ENS - Supporter Service Create : 'SSC'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: N/A
+- **Campaign Type**: ENS - Supporter Service Create : 'SSC'
+- **Campaign ID**: BLANK
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## ENS - Supporter Service Update : 'SSU'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: N/A
+- **Campaign Type**: ENS - Supporter Service Update : 'SSU'
+- **Campaign ID**: BLANK
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Ecard: 'ECF'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Ecard: 'ECF'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: 'P' indicates participation
+- **Campaign Data 1**: name of ecard's receipent
+- **Campaign Data 2**: email of ecard's receipent
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Email Subscribe:  'EMS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Email Subscribe:  'EMS'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: 'P' indicates participation
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Email-a-Friend: 'TAF'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Email-a-Friend: 'TAF'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: 'P' indicates participation
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: Please note that 'External Reference' fields are not enabled by default, so may not show on the export file.
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Event Purchase - Bank Single 'EBS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Event Purchase - Bank Single 'EBS'
+- **Campaign ID**: Event Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code - if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Event Purchase - Credit/Debit Single 'ECS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Event Purchase - Credit/Debit Single 'ECS'
+- **Campaign ID**: Event Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code - if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: additional gift amount (from ticket block)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Event Purchase Free/Cash tickets -  'ECC'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Event Purchase Free/Cash tickets -  'ECC'
+- **Campaign ID**: Event Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code - if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: the supporter id of the corresponding supporter
+- **Campaign Data 15**: the name and email of the corresponding supporter
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: additional gift amount (from ticket block)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Event Ticket Attendee :  'ETA'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Event Ticket Attendee :  'ETA'
+- **Campaign ID**: Ticket Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: attendee status ('Attending',  'Attended' or 'Refunded')
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: Event Page Reference Name
+- **Campaign Data 3**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 4**: Event Ticket Id
+- **Campaign Data 5**: Attendee Title
+- **Campaign Data 6**: Attendee First name
+- **Campaign Data 7**: Attendee Last name
+- **Campaign Data 8**: Attendee Email address
+- **Campaign Data 9**: Attendee Address 1
+- **Campaign Data 10**: Attendee Address 2
+- **Campaign Data 11**: Attendee City
+- **Campaign Data 12**: Attendee Region
+- **Campaign Data 13**: Attendee Postcode
+- **Campaign Data 14**: Attendee Country
+- **Campaign Data 15**: Attendee Phone number
+- **Campaign Data 16**: Attendee Dietary preferences
+- **Campaign Data 17**: Attendee Mobility requirements
+- **Campaign Data 18**: Attendee Custom 1
+- **Campaign Data 19**: Attendee Custom 2
+- **Campaign Data 20**: Attendee Custom 3
+- **Campaign Data 21**: Attendee Custom 4
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Event Ticket Purchase :  'ETK'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Event Ticket Purchase :  'ETK'
+- **Campaign ID**: Ticket Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: Event Page Reference Name
+- **Campaign Data 3**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 4**: Ticket(s) purchased cost
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: quantity (of tickets bought for this type)
+- **Campaign Data 7**: ticket type ('Single' or 'Group')
+- **Campaign Data 8**: discount code
+- **Campaign Data 9**: is during a ticket sale period ('Y' or 'BLANK')
+- **Campaign Data 10**: Event Ticket Id
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Bank Recurring 'FBR'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Fundraising - Bank Recurring 'FBR'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘bank method’
+- **Campaign Data 7**: transaction frequency (recurring):  ‘R’
+- **Campaign Data 8**: transaction recurring date:  ‘monthly payment day’
+- **Campaign Data 9**: transaction recurring frequency:  ‘gateway dependent value’
+- **Campaign Data 10**: transaction recurring status:  ‘active’ ‘suspended’ ‘cancelled’
+- **Campaign Data 11**: parent transaction ID:  gateway transaction ID
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: recurring start date
+- **Campaign Data 17**: recurring end date
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Bank Single 'FBS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Fundraising - Bank Single 'FBS'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘bank method’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Cash 'FCA'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Fundraising - Cash 'FCA'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: Cheque Number
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  'form data'
+- **Campaign Data 6**: transaction payment method:  ‘cash/cheque’
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Check 'FCH'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Unique ID assigned to a campaign
+- **Campaign Type**: Fundraising - Check 'FCH'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject' or 'refund'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  'form data'
+- **Campaign Data 6**: transaction payment method:  ‘check’ or 'refund'
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Credit/Debit Recurring 'FCR'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Fundraising - Credit/Debit Recurring 'FCR'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (recurring):  ‘R’
+- **Campaign Data 8**: transaction recurring date:  ‘monthly payment day’
+- **Campaign Data 9**: transaction recurring frequency:  ‘gateway dependent value’
+- **Campaign Data 10**: transaction recurring status:  ‘active’ 'first_retry' 'final_retry' ‘suspended’ ‘cancelled’
+- **Campaign Data 11**: parent transaction ID:  gateway transaction ID
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: recurring start date
+- **Campaign Data 17**: recurring end date
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Credit/Debit Single 'FCS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Fundraising - Credit/Debit Single 'FCS'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code - if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Credit/Debit Unmanaged Recurring 'FUR'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Fundraising - Credit/Debit Unmanaged Recurring 'FUR'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (recurring):  ‘R’
+- **Campaign Data 8**: transaction recurring date:  ‘monthly payment day’
+- **Campaign Data 9**: transaction recurring frequency:  ‘gateway dependent value’
+- **Campaign Data 10**: transaction recurring status:  ‘active’ ‘suspended’ ‘cancelled’
+- **Campaign Data 11**: parent transaction ID:  gateway transaction ID
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: recurring start date
+- **Campaign Data 17**: recurring end date
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - In Memoriam 'FIM'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Fundraising - In Memoriam 'FIM'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: In Memoriam (form value Y or N)
+- **Campaign Data 7**: transaction frequency (recurring / single):  ‘R’ or 'S'
+- **Campaign Data 8**: Recognize Gift (form value Y or N)
+- **Campaign Data 9**: Tribute Options (form value)
+- **Campaign Data 10**: Reason for Gift (form value)
+- **Campaign Data 11**: Honoree Name
+- **Campaign Data 12**: Inform Name (form value)
+- **Campaign Data 13**: Inform Email Address
+- **Campaign Data 14**: Inform Address 1
+- **Campaign Data 15**: Inform Address 2
+- **Campaign Data 16**: Inform City
+- **Campaign Data 17**: Inform Region
+- **Campaign Data 18**: Inform Postcode
+- **Campaign Data 19**: Inform Country
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - One-click 'FOC'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Unique ID assigned to a campaign
+- **Campaign Type**: Fundraising - One-click 'FOC'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code - if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Fundraising - Refund Single/Recurring 'RFD'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Unique ID assigned to a campaign
+- **Campaign Type**: Fundraising - Refund Single/Recurring 'RFD'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: refund amount:  ‘-amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘bank method’
+- **Campaign Data 7**: transaction frequency (recurring / single):  ‘R’ or 'S'
+- **Campaign Data 8**: transaction recurring date:  ‘monthly payment day’/BLANK
+- **Campaign Data 9**: transaction recurring frequency:  ‘gateway dependent value’/BLANK
+- **Campaign Data 10**: transaction recurring status:  ‘active’ ‘suspended’ ‘cancelled’/BLANK
+- **Campaign Data 11**: parent transaction ID:  gateway transaction ID/BLANK
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: apply to pledge:  ‘pledge ID’
+- **Campaign Data 16**: recurring start date/BLANK
+- **Campaign Data 17**: recurring end date/BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## HUB Supporter Update: "HSU"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: BLANK
+- **Campaign Type**: HUB Supporter Update: "HSU"
+- **Campaign ID**: BLANK
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Manual Supporter Create: "MSC"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: BLANK
+- **Campaign Type**: Manual Supporter Create: "MSC"
+- **Campaign ID**: BLANK
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Manual Supporter Update: "MSU"
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: BLANK
+- **Campaign Type**: Manual Supporter Update: "MSU"
+- **Campaign ID**: BLANK
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Marketing Automation Email: 'MBC'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Marketing Automation Email: 'MBC'
+- **Campaign ID**: Automation Email Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: received: 'R'
+- **Campaign Data 1**: Opened: 'open'
+- **Campaign Data 2**: click through any link: 'click'
+- **Campaign Data 3**: completion: 'formsub'
+- **Campaign Data 4**: hard bounce: 'hbounce'
+- **Campaign Data 5**: soft bounce: 'sbounce'
+- **Campaign Data 6**: unsubscribe: 'unsub'
+- **Campaign Data 7**: supporter marks email as spam or junk: fbloop
+- **Campaign Data 8**: Automation Name
+- **Campaign Data 9**: Reference ID of Email
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Membership 'MEM' (legacy)
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Membership 'MEM' (legacy)
+- **Campaign ID**: Data Capture or Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: transaction type:  'new membership' or 'renewal term' or 'lapsed'
+- **Campaign Data 1**: membership status:  'active' or 'lapsed'
+- **Campaign Data 2**: Membership ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 3**: Alternate Membersip ID
+- **Campaign Data 4**: Transaction ID 2  (only if associated with donation page):  ‘gateway assigned unique ID’
+- **Campaign Data 5**: transaction amount (only if associated with donation page):  ‘amount ’
+- **Campaign Data 6**: transaction currency  (only if associated with doantion page):  ‘gateway assigned currency / form data’
+- **Campaign Data 7**: transaction frequency ('single' or 'recurring' and only if associated with donation page):  'S' or 'R'
+- **Campaign Data 8**: membership type: value derived from submitted form data
+- **Campaign Data 9**: number of members:  value derived from submitted form
+- **Campaign Data 10**: membership start date:  yyyy-mm-dd
+- **Campaign Data 11**: current term start date:  yyyy-mm-dd
+- **Campaign Data 12**: current term end date:  yyyy-mm-dd
+- **Campaign Data 13**: current term length:  number of days between current term start date and end date
+- **Campaign Data 14**: number of renewal terms: count of renewal terms
+- **Campaign Data 15**: membership cost:  client value submitted via form
+- **Campaign Data 16**: membership amount paid to date:  total amount of single and recurring payments applied to this membership
+- **Campaign Data 17**: membership reconciliation:  'Y' or 'N' value to indicate if the membership is fully paid
+- **Campaign Data 18**: member name 1:  value from submitted form data
+- **Campaign Data 19**: member name 2:  value from submitted form data
+- **Campaign Data 20**: member name 3:  value from submitted form data
+- **Campaign Data 21**: member name 4:  value from submitted form data
+- **Campaign Data 22**: member name 5:  value from submitted form data
+- **Campaign Data 23**: member name 6:  value from submitted form data
+- **Campaign Data 24**: member name 7:  value from submitted form data
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Membership 'MSP'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Membership 'MSP'
+- **Campaign ID**: Membership Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: transaction type:  'new membership' or 'renewal term' or 'lapsed'
+- **Campaign Data 1**: membership status:  'active' or 'lapsed'
+- **Campaign Data 2**: Membership ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 3**: Alternate Membersip ID
+- **Campaign Data 4**: Transaction ID 2  (only if associated with donation page):  ‘gateway assigned unique ID’
+- **Campaign Data 5**: transaction amount (only if associated with donation page):  ‘amount ’
+- **Campaign Data 6**: transaction currency  (only if associated with doantion page):  ‘gateway assigned currency / form data’
+- **Campaign Data 7**: transaction frequency ('single' or 'recurring' and only if associated with donation page):  'S' or 'R'
+- **Campaign Data 8**: membership type: value derived from submitted form data
+- **Campaign Data 9**: number of members:  value derived from submitted form
+- **Campaign Data 10**: membership start date:  yyyy-mm-dd
+- **Campaign Data 11**: current term start date:  yyyy-mm-dd
+- **Campaign Data 12**: current term end date:  yyyy-mm-dd
+- **Campaign Data 13**: current term length:  number of days between current term start date and end date
+- **Campaign Data 14**: number of renewal terms: count of renewal terms
+- **Campaign Data 15**: membership cost:  client value submitted via form
+- **Campaign Data 16**: membership amount paid to date:  total amount of single and recurring payments applied to this membership
+- **Campaign Data 17**: membership reconciliation:  'Y' or 'N' value to indicate if the membership is fully paid
+- **Campaign Data 18**: N/A
+- **Campaign Data 19**: N/A
+- **Campaign Data 20**: N/A
+- **Campaign Data 21**: N/A
+- **Campaign Data 22**: N/A
+- **Campaign Data 23**: N/A
+- **Campaign Data 24**: N/A
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Membership Member Association :  'MMR'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Membership Member Association :  'MMR'
+- **Campaign ID**: Membership Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: BLANK
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: Membership Page Reference Name
+- **Campaign Data 3**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 4**: Membership Reference Id
+- **Campaign Data 5**: Associated Member Title
+- **Campaign Data 6**: Associated Member First name
+- **Campaign Data 7**: Associated Member Last name
+- **Campaign Data 8**: Associated Member Email address
+- **Campaign Data 9**: Associated Member Address 1
+- **Campaign Data 10**: Associated Member Address 2
+- **Campaign Data 11**: Associated Member City
+- **Campaign Data 12**: Associated Member Region
+- **Campaign Data 13**: Associated Member Postcode
+- **Campaign Data 14**: Associated Member Country
+- **Campaign Data 15**: Associated Member Phone number
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Associated Member Custom 1
+- **Campaign Data 19**: Associated Member Custom 2
+- **Campaign Data 20**: Associated Member Custom 3
+- **Campaign Data 21**: Associated Member Custom 4
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## P2P Fundraising - Cash/Cheque 'PFC'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: P2P Fundraising - Cash/Cheque 'PFC'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: Cheque Number
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  'form data'
+- **Campaign Data 6**: transaction payment method:  ‘cash/cheque’
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: Fundraiser Page ID
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## P2P Fundraising Credit/Debit Recurring 'PFR'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: P2P Fundraising Credit/Debit Recurring 'PFR'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (recurring):  ‘R’
+- **Campaign Data 8**: transaction recurring date:  ‘monthly payment day’
+- **Campaign Data 9**: transaction recurring frequency:  ‘gateway dependent value’
+- **Campaign Data 10**: transaction recurring status:  ‘active’ ‘suspended’ ‘cancelled’
+- **Campaign Data 11**: parent transaction ID:  gateway transaction ID
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: Fundraiser Page ID
+- **Campaign Data 16**: recurring start date
+- **Campaign Data 17**: recurring end date
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## P2P Fundraising Credit/Debit Single 'PFS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: P2P Fundraising Credit/Debit Single 'PFS'
+- **Campaign ID**: Donation Page Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'success' or 'reject'
+- **Campaign Data 1**: transaction ID 1:  ‘Oracle assigned unique ID’
+- **Campaign Data 2**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 3**: transaction error:  ‘gateway assigned error code - if reject’
+- **Campaign Data 4**: transaction amount:  ‘amount ’
+- **Campaign Data 5**: transaction currency:  ‘gateway assigned currency / form data’
+- **Campaign Data 6**: transaction payment method:  ‘credit card name’
+- **Campaign Data 7**: transaction frequency (single):  ‘S’
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: transaction refunded:  ‘Y’
+- **Campaign Data 12**: transaction gateway:  ‘gateway name’
+- **Campaign Data 13**: transaction card expiry:  ‘MM/YYYY’
+- **Campaign Data 14**: tax deduction status:  ‘Y’ or ‘N’
+- **Campaign Data 15**: Fundraiser Page ID
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: Receipt ID
+- **Campaign Data 19**: Cardholder Name
+- **Campaign Data 20**: direct my gift (form value)
+- **Campaign Data 21**: Other 1
+- **Campaign Data 22**: Other 2
+- **Campaign Data 23**: Other 3
+- **Campaign Data 24**: Other 4
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: Amount USD
+- **Campaign Data 27**: Amount GBP
+- **Campaign Data 28**: Amount EUR
+- **Campaign Data 29**: Amount CDN
+- **Campaign Data 30**: Amount AUS
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## P2P Registration 'PRG'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: P2P Registration 'PRG'
+- **Campaign ID**: P2P Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status:  'P' pending or 'Y' registered
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: Target amount (can we add this progressively?)
+- **Campaign Data 4**: Total amount raised (can we add this progressively?)
+- **Campaign Data 5**: Fundraiser Type:  Individual / Team Member / Team Leader
+- **Campaign Data 6**: Team Name
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: Fundraiser Page ID
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Premium Item :  'PTM'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Premium Item :  'PTM'
+- **Campaign ID**: Product Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: Product SKU
+- **Campaign Data 1**: Order ID
+- **Campaign Data 2**: Donation Page Reference Name
+- **Campaign Data 3**: transaction ID 2:  ‘gateway assigned unique ID’
+- **Campaign Data 4**: Product Cost
+- **Campaign Data 5**: Shipping Title
+- **Campaign Data 6**: Shipping First name
+- **Campaign Data 7**: Shipping Last name
+- **Campaign Data 8**: Shipping Email address
+- **Campaign Data 9**: Shipping Address 1
+- **Campaign Data 10**: Shipping Address 2
+- **Campaign Data 11**: Shipping City
+- **Campaign Data 12**: Shipping Region
+- **Campaign Data 13**: Shipping Postcode
+- **Campaign Data 14**: Shipping Country
+- **Campaign Data 15**: Shipping Phone number
+- **Campaign Data 16**: Shipping Notes
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Question Checkbox: 'QCB'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Question Checkbox: 'QCB'
+- **Campaign ID**: Question Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: ticked or not: 'Y' or 'N'
+- **Campaign Data 1**: Associated campaign name
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Question Confirmation "CQS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Question Confirmation "CQS'
+- **Campaign ID**: Question Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: status: 'Y' or 'P' or 'N' or 'D'
+- **Campaign Data 1**: Associated campaign name
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: BLANK
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: BLANK
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Question Multiple Reponse: 'QMR'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Question Multiple Reponse: 'QMR'
+- **Campaign ID**: Question Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: reponded with any selection: 'Y'
+- **Campaign Data 1**: question value 1  
+- **Campaign Data 2**: question value 2  
+- **Campaign Data 3**: question value 3  
+- **Campaign Data 4**: question value 4  
+- **Campaign Data 5**: question value 5  
+- **Campaign Data 6**: question value 6  
+- **Campaign Data 7**: question value 7  
+- **Campaign Data 8**: question value 8  
+- **Campaign Data 9**: question value 9  
+- **Campaign Data 10**: question value 10  
+- **Campaign Data 11**: question value 11  
+- **Campaign Data 12**: question value 12  
+- **Campaign Data 13**: question value 13  
+- **Campaign Data 14**: question value 14  
+- **Campaign Data 15**: question value 15  
+- **Campaign Data 16**: question value 16  
+- **Campaign Data 17**: question value 17  
+- **Campaign Data 18**: question value 18
+- **Campaign Data 19**: question value 19
+- **Campaign Data 20**: question value 20
+- **Campaign Data 21**: question value 21
+- **Campaign Data 22**: question value 22
+- **Campaign Data 23**: question value 23
+- **Campaign Data 24**: question value 24
+- **Campaign Data 25**: question value 25
+- **Campaign Data 26**: question value 26
+- **Campaign Data 27**: question value 27
+- **Campaign Data 28**: question value 28
+- **Campaign Data 29**: question value 29
+- **Campaign Data 30**: question value 30
+- **Campaign Data 31**: question value 31
+- **Campaign Data 32**: BLANK
+- **Campaign Data 33**: BLANK
+- **Campaign Data 34**: BLANK
+- **Campaign Data 35**: BLANK
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
+## Subscriptions manage/unsubscribe:  'UNS'
+
+- **Account ID**: Identifies subaccount
+- **Supporter ID**: Identifies unique supporter record id
+- **Supporter Email**: Email address associated with unique record
+- **Date Record Created**: yyyy-mm-dd
+- **Date Record Modified**: yyyy-mm-dd
+- **Campaign Number**: Campaign Number
+- **Campaign Type**: Subscriptions manage/unsubscribe:  'UNS'
+- **Campaign ID**: Campaign Reference Name
+- **Transaction Date**: yyyy-mm-dd
+- **Transaction Time**: hhhh:mm:ss (EST)
+- **Campaign Status**: 'P' indicates participation
+- **Campaign Data 1**: BLANK
+- **Campaign Data 2**: BLANK
+- **Campaign Data 3**: BLANK
+- **Campaign Data 4**: BLANK
+- **Campaign Data 5**: BLANK
+- **Campaign Data 6**: BLANK
+- **Campaign Data 7**: BLANK
+- **Campaign Data 8**: BLANK
+- **Campaign Data 9**: BLANK
+- **Campaign Data 10**: BLANK
+- **Campaign Data 11**: BLANK
+- **Campaign Data 12**: BLANK
+- **Campaign Data 13**: BLANK
+- **Campaign Data 14**: BLANK
+- **Campaign Data 15**: BLANK
+- **Campaign Data 16**: BLANK
+- **Campaign Data 17**: BLANK
+- **Campaign Data 18**: BLANK
+- **Campaign Data 19**: BLANK
+- **Campaign Data 20**: BLANK
+- **Campaign Data 21**: BLANK
+- **Campaign Data 22**: BLANK
+- **Campaign Data 23**: BLANK
+- **Campaign Data 24**: BLANK
+- **Campaign Data 25**: additional comments
+- **Campaign Data 26**: BLANK
+- **Campaign Data 27**: BLANK
+- **Campaign Data 28**: BLANK
+- **Campaign Data 29**: BLANK
+- **Campaign Data 30**: BLANK
+- **Campaign Data 31**: Referrer ID
+- **Campaign Data 32**: User Agent Details (Browser name, version, build etc)
+- **Campaign Data 33**: Referral URL
+- **Campaign Data 34**: Tracking value (if supporter clicked through a tracking link)
+- **Campaign Data 35**: appeal code submitted as form field value
+- **External Reference 1**: N/A
+- **External Reference 2**: N/A
+- **External Reference 3**: N/A
+- **External Reference 4**: N/A
+- **External Reference 5**: N/A
+- **External Reference 6**: N/A
+- **External Reference 7**: N/A
+- **External Reference 8**: N/A
+- **External Reference 9**: N/A
+- **External Reference 10**: N/A
+- **Email Address**: N/A
+- **Title**: N/A
+- **First Name**: N/A
+- **Middle Name**: N/A
+- **Last Name**: N/A
+- **Address 1**: N/A
+- **Address 2**: N/A
+- **Address 3**: N/A
+- **City**: N/A
+- **Region**: N/A
+- **Postcode**: N/A
+- **Country**: N/A
+- **Phone Number**: N/A
+
+
+---
+
