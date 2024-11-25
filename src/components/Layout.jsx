@@ -118,6 +118,7 @@ export const navigation = [
     title: 'ENgrid Components',
     links: [
       { title: 'Custom Lightboxes', href: '/docs/v2/custom-lightboxes' },
+      { title: 'Opt-In Ladder', href: '/docs/v2/opt-in-ladder' },
       { title: 'Remember Me', href: '/docs/v2/remember-me' },
     ],
   },
@@ -144,8 +145,14 @@ export const navigation = [
   {
     title: 'Native EN',
     links: [
-      { title: 'Transaction Field Values', href: '/docs/v2/transaction-field-values',},
-      { title: 'Multivariate and A/B Testing', href: '/docs/v2/native-testing' },
+      {
+        title: 'Transaction Field Values',
+        href: '/docs/v2/transaction-field-values',
+      },
+      {
+        title: 'Multivariate and A/B Testing',
+        href: '/docs/v2/native-testing',
+      },
     ],
   },
 
