@@ -144,10 +144,8 @@ export const navigation = [
   {
     title: 'Native EN',
     links: [
-      {
-        title: 'Transaction Field Values',
-        href: '/docs/v2/transaction-field-values',
-      },
+      { title: 'Transaction Field Values', href: '/docs/v2/transaction-field-values',},
+      { title: 'Multivariate and A/B Testing', href: '/docs/v2/native-testing' },
     ],
   },
 
