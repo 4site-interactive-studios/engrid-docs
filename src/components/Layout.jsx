@@ -15,7 +15,10 @@ export const navigation = [
   // New
   {
     title: 'ENgrid',
-    links: [{ title: 'Getting started', href: '/' }],
+    links: [
+      { title: 'Getting started', href: '/' },
+      { title: 'Training', href: '/docs/v2/training' },
+    ],
   },
   {
     title: 'Developing with ENgrid',
