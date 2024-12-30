@@ -80,7 +80,6 @@ export const navigation = [
         title: 'Embed / iFrame',
         href: '/docs/v2/embedding-engrid' 
       },
-      { title: 'Embedded Ecard', href: '/docs/v2/embedded-ecard' },
     ],
   },
   {
@@ -115,6 +114,7 @@ export const navigation = [
         href: '/docs/v2/in-memory-honor-helper-classes',
       },
       { title: 'Upsells', href: '/docs/v2/upsells' },
+      { title: 'Embedded Ecard', href: '/docs/v2/embedded-ecard' },
       { title: 'Donor Receipting', href: '/docs/v2/donation-receipting' },
 
     ],
