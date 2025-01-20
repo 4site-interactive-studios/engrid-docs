@@ -56,6 +56,8 @@ If the user loading the Opt-In ladder page has already completed all the steps, 
 
 ## Adding the Opt-in Ladder to your Thank You Page
 
+### Method 1: Manualy Embed the Opt-in Ladder on the Thank You page
+
 To add the Opt-in Ladder to your Thank You page, follow these steps:
 
 1. Open your Donation or Advocacy page.
@@ -79,6 +81,33 @@ To add the Opt-in Ladder to your Thank You page, follow these steps:
 4. Save the page.
 
 That's it! Now, when a user completes the donation or advocacy form, they will see the Opt-in Ladder on the Thank You page.
+
+### Method 2: Use the Opt-in Ladder Component Options
+
+If you want to auto-inject the Opt-in Ladder on all your Thank You pages, you can use the Opt-in Ladder component options. To do this, follow these steps:
+
+1. Open your theme's `index.ts` file.
+2. Add this attribute to your `const options` object (the values are just examples):
+   ```ts
+   OptInLadder: {
+    iframeUrl:
+      "https://{URL_TO_OPTIN_LADDER_PAGE}/data/1?chain&engrid_hide[body-headerOutside]=class&engrid_hide[body-banner]=class&engrid_hide[content-footer]=class&engrid_hide[page-backgroundImage]=class",
+    excludePageIDs: ["{PAGE_ID_1}", "{PAGE_ID_2}"],
+    placementQuerySelector: ".any-class",
+   },
+   ```
+3. Replace `{URL_TO_OPTIN_LADDER_PAGE}` with the URL of the Opt-in Ladder Data Capture page.
+4. Replace `{PAGE_ID_1}` and `{PAGE_ID_2}` with the IDs of the pages where you don't want to show the Opt-in Ladder (that option is optional).
+5. Replace `.any-class` with the CSS class of the element where you want to inject the Opt-in Ladder (that option is optional and defaults to `.body-top`).
+
+That's it! Now, the Opt-in Ladder will be automatically injected into all your Thank You pages.
+
+**Notes:**
+
+- We will not inject the iFrame if there's a hardcoded iframe with the `opt-in-ladder-iframe` CSS class. This is useful if you want to manually add the iFrame to a specific page.
+- We will not inject the iFrame if the page ID is in the `excludePageIDs` array.
+- We will not inject the iFrame if the current ENgrid page is already embedded as an iFrame.
+- We will **only** inject the iFrame to Thank You pages.
 
 {% callout type="warning" title="IMPORTANT!" %}
 You need to keep the `?chain` parameter in the URL of the iFrame. This parameter is used to load the supporter's data from the parent page to the iFrame, and it will populate the E-mail field on the Opt-in Ladder page.
