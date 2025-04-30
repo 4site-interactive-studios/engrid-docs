@@ -19,6 +19,24 @@ It looks like this:
   }
 </script>
 ```
+It is also possible to add multiple targets to the page. They will all receive the same eCard.
+
+```html
+<script>
+  window.EngridEcardToTarget = {
+    targets: [
+      {
+        targetName: "Michael Thomas",
+        targetEmail: "MichaelT@4sitestudios.com",
+      },
+      {
+        targetName: "Bryan Casler",
+        targetEmail: "Bryan@4sitestudios.com",
+      },
+    ]
+  }
+</script>
+```
 
 There are also some additional options you can set to customise the behaviour and look of the page. 
 
@@ -33,6 +51,7 @@ Here are the full options, along with their default configuration:
     hideTarget: true, // OPTIONAL: hide the target field
     hideMessage: true, // OPTIONAL: hide the message field
     addSupporterNameToMessage: false, // OPTIONAL: automatically add the supporter's name to the end of the message
+    targets: [] // OPTIONAL: an array of targets to send the eCard to when you have multiple targets.  Each target should have a targetName and targetEmail property
   }
 </script>
 ```
