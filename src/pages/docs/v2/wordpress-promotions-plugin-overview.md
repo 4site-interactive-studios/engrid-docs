@@ -36,13 +36,13 @@ The Promotions Plugin evolved from the need to create various types of on-site p
 - Provides a Gutenberg block and shortcode to embed an Engaging Networks form. The block can be found under the "Embeds" category.
 - The shortcode is `[en-form]`. Refer to `en-form/README.md` for more information.
 - Parameters which can be used with the shortcode are:
-  - `url` - The URL of the donation form.
-  - `form-color` - The theme color of the form.
-  - `height` - The min-height of the form.
-  - `border-radius` - The border radius of the form.
-  - `loading-color` - The color of the loading animation.
-  - `bounce-color` - The color of the bounce animation.
-  - `append-url-params` - Whether to append the current URL parameters to the iFrame URL.
+    - `url` - The URL of the donation form.
+    - `form-color` - The theme color of the form.
+    - `height` - The min-height of the form.
+    - `border-radius` - The border radius of the form.
+    - `loading-color` - The color of the loading animation.
+    - `bounce-color` - The color of the bounce animation.
+    - `append-url-params` - Whether to append the current URL parameters to the iFrame URL.
 
 **Advanced Features**
 
