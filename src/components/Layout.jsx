@@ -165,6 +165,15 @@ export const navigation = [
     ],
   },
   {
+    title: 'AdBlocker Helper Script',
+    links: [
+      {
+        title: 'Uncovering AdBlockers',
+        href: '/docs/v2/adblocker-helper-script',
+      },
+    ],
+  },
+  {
     title: 'Native EN',
     links: [
       {
