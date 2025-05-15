@@ -131,6 +131,7 @@ export const navigation = [
       { title: 'Remember Me', href: '/docs/v2/remember-me' },
       { title: 'Multi-step Forms', href: '/docs/v2/single-page-multistep' },
       { title: 'Exit Intent Lightbox', href: '/docs/v2/exit-intent-lightbox' },
+      { title: 'Frequency Upsell Modal', href: '/docs/v2/frequency-upsell' },
     ],
   },
   {
