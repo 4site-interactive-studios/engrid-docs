@@ -9,6 +9,8 @@ The typical use for this modal is to encourage supporters to make an annual dona
 
 {% callout title="Information" %}
 The Frequency Upsell Modal won't run if you have an Engaging Networks Upsell or ENgrid Upsell Modal on the page. If you want to use the Frequency Upsell Modal, you need to remove any other upsell modals from your page.
+
+The Frequency Upsell Modal does not run for Digital Wallet payments. This is the same limitation as Engaging Networks' own upsell lightbox feature.
 {% /callout %}
 
 ## Adding a Frequency Upsell Modal
