@@ -9,12 +9,12 @@ In the 4Site GitHub (https://github.com/orgs/4site-interactive-studios/), there 
 
 1. Go to the engrid-template main page: https://github.com/4site-interactive-studios/engrid-template
 2. Select **Use this template**, then choose **Create a new repository**.
-!(https://engrid.4sitestudios.com/images/create-engrid-theme-1.png)
+![Alt text](https://engrid.4sitestudios.com/images/create-engrid-theme-1.png)
 3. Choose the name for your new repository. An example is shown below. This will generally follow along with the abbreviation of the client that you are creating the repository for example, for SPCAI, the repository name would be **engrid-spcai**. 
 4. If 4Site is to be the owner of the repository, click the **Owner** dropdown and select **4site-interactive-studios** as the owner. Otherwise, set it to whoever will be the owner. 
 5. Enter a description of the repository if you wish - this is completely optional and can be left blank if you prefer.
 6. Ensure the “Copy the main branch only” checkbox is checked.
-!(https://engrid.4sitestudios.com/images/create-engrid-theme-2.png) 
+![Alt text](https://engrid.4sitestudios.com/images/create-engrid-theme-2.png) 
 
 Select **Create Repository**. Your new client theme and repository have now been created!
 
@@ -127,7 +127,7 @@ On **Page 2** of your Donation page, which will be the “Thank You” page that
 The autoresponder is the email that each of your donors will receive after making a successful donation. In order to set up this email for your donors:
 
 1. In the right-hand menu, click on Auto-responders and select Thank you email.
-!(https://engrid.4sitestudios.com/images/create-engrid-theme-3.png)
+![Alt text](https://engrid.4sitestudios.com/images/create-engrid-theme-3.png)
 2. Create a subject line for your email in the **Subject** field. 
 3. Choose a sender from the **Sender** drop-down.
 4. Choose a receipt, if any, from the **Receipt** drop-down.
