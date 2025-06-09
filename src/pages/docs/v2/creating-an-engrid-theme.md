@@ -8,16 +8,12 @@ The first step will be to create your new Client Theme, which will also create y
 In the 4Site GitHub [title](https://github.com/orgs/4site-interactive-studios/), there is a repository called **engrid-template**. This is the repository you’ll use as a base for your new client repository.
 
 1. Go to the engrid-template main page: https://github.com/4site-interactive-studios/engrid-template
-2. Select **Use this template**, then choose **Create a new repository**.
-
-![Creating a repository](https://engrid.4sitestudios.com/create-engrid-theme-1.png)
+2. Select **Use this template**, then choose **Create a new repository**. ![Creating a repository](https://engrid.4sitestudios.com/create-engrid-theme-1.png)
 
 3. Choose the name for your new repository. An example is shown below. This will generally follow along with the abbreviation of the client that you are creating the repository for example, for SPCAI, the repository name would be **engrid-spcai**. 
 4. If 4Site is to be the owner of the repository, click the **Owner** dropdown and select **4site-interactive-studios** as the owner. Otherwise, set it to whoever will be the owner. 
 5. Enter a description of the repository if you wish - this is completely optional and can be left blank if you prefer.
-6. The **“Include all branches”** checkbox should remain unchecked.
-
-![Creating a repository](https://engrid.4sitestudios.com/create-engrid-theme-2.png) 
+6. The **“Include all branches”** checkbox should remain unchecked. ![Creating a repository](https://engrid.4sitestudios.com/create-engrid-theme-2.png) 
 
 7. Select **Create Repository**. Your new client theme and repository have now been created!
 
