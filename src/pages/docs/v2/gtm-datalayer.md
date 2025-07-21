@@ -23,6 +23,22 @@ Note, that values are in all caps, and we replace spaces in the `pageJson` value
 
 With the above implementation, in GTM you will be able to set up Custom Triggers and Variables to fire the corresponding logic based on the different giving and form conditions.
 
+### GTM Custom Variables to Add to Your Container
+
+To ensure your GTM container receives all the data that your ENGrid page will push via the data layer, you'll need to add the values in the table as custom variables in GTM. They should be configured as "Data Layer Variables." To check that your changes are working as expected, [preview your workspace](https://support.google.com/tagmanager/answer/6107056?hl=en) by testing a live page in Tag Manager and ensure all the variables are passing correctly to GTM.
+
+
+| GTM Variable Name | Data Layer Variable Name     |
+|-------------------|------------------------------|
+| pageType          | pageJson.pageType            |
+| pageName          | pageJson.pageName            |
+| amount            | pageJson.amount              |
+| donationLogId     | pageJson.donationLogId       |
+| recurring         | pageJson.recurring           |
+| currency          | pageJson.currency            |
+| appealCode        | pageJson.appealCode          |
+| giftProcess       | pageJson.giftProcess         |
+
 
 ### Examples of Donation Custom Events
 
