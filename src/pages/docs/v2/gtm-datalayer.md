@@ -274,7 +274,7 @@ dataLayer.push({
 Note: Triggered when the current pageNumber is equal to the pageCount. \
 GTM Event: `EN_SUBMISSION_SUCCESS_{Page Type}`
 
-For example, if you submit an Email Subscription page type and land on its thank you page., this event will be triggered.
+For example, if you submit an Email Subscription page type and land on its thank you page, this event will be triggered.
 
 
 ```
