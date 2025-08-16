@@ -51,7 +51,7 @@ function extractSections(node, sections, isRoot = true) {
   }
 }
 
-export default function (nextConfig = {}) {
+export default function markdocSearch(nextConfig = {}) {
   let cache = new Map()
 
   return Object.assign({}, nextConfig, {
