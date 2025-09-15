@@ -1,4 +1,5 @@
 import { Callout } from '@/components/Callout'
+import { Button } from '@/components/Button'
 import { QuickLink, QuickLinks } from '@/components/QuickLinks'
 
 const tags = {
@@ -13,6 +14,47 @@ const tags = {
       },
     },
     render: Callout,
+  },
+  Button: {
+    attributes: {
+      href: { type: String, required: true },
+      variant: {
+        type: String,
+        default: 'primary',
+        matches: ['primary', 'secondary', 'tertiary'],
+        errorLevel: 'critical',
+      },
+      size: {
+        type: String,
+        default: 'md',
+        matches: ['sm', 'md', 'lg'],
+        errorLevel: 'critical',
+      },
+      target: { type: String, default: '_self' },
+      rel: { type: String, default: undefined },
+    },
+    render: Button,
+  },
+  // Lowercase alias to allow {% button %} in Markdown
+  button: {
+    attributes: {
+      href: { type: String, required: true },
+      variant: {
+        type: String,
+        default: 'primary',
+        matches: ['primary', 'secondary', 'tertiary'],
+        errorLevel: 'critical',
+      },
+      size: {
+        type: String,
+        default: 'md',
+        matches: ['sm', 'md', 'lg'],
+        errorLevel: 'critical',
+      },
+      target: { type: String, default: '_self' },
+      rel: { type: String, default: undefined },
+    },
+    render: Button,
   },
   figure: {
     selfClosing: true,

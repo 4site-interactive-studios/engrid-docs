@@ -18,6 +18,7 @@ export const navigation = [
       { title: 'Introduction', href: '/' },
       { title: 'Training', href: '/docs/v2/training' },
       { title: 'EN Account Buildout', href: '/docs/v2/en-account-buildout' },
+      { title: 'PCI Compliance', href: '/docs/v2/pci-compliance' },
     ],
   },
   {
