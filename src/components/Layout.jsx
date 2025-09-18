@@ -138,6 +138,8 @@ export const navigation = [
       { title: 'Exit Intent Lightbox', href: '/docs/v2/exit-intent-lightbox' },
       { title: 'Frequency Upsell Modal', href: '/docs/v2/frequency-upsell' },
       { title: 'Homepage Takeover', href: '/docs/v2/homepage-takeover' },
+      { title: 'Sticky NSG', href: '/docs/v2/sticky-nsg' },
+      { title: 'Sticky Pre-population', href: '/docs/v2/sticky-prepopulation' },
     ],
   },
   {
