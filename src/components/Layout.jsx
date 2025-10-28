@@ -115,6 +115,10 @@ export const navigation = [
         href: '/docs/v2/payment-types',
       },
       {
+        title: 'Preferred Payment Method',
+        href: '/docs/v2/preferred-payment-method',
+      },
+      {
         title: 'In Honor/Memorial Giving',
         href: '/docs/v2/in-memory-honor-helper-classes',
       },
