@@ -36,6 +36,8 @@ window.EngridPageOptions = {
 - Accepts the **name attribute** of any field on the page (hidden or visible).
 - When the field contains a value that matches an available give-by-select option (case-insensitive), that option becomes the first choice.
 - Useful when personalization scripts populate supporter preferences (for example a CRM-stored “preferred payment type”).
+- When the field exists on the page, ENgrid keeps it synchronized with every give-by-select change so the stored preference always reflects the supporter’s latest choice.
+- Existing field values are respected on load; ENgrid only writes the radio selection back when the field starts empty or after the supporter makes a new choice.
 
 ```html
 <script>
