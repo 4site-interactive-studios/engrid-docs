@@ -20,12 +20,12 @@ If the chosen option is available, the component triggers the corresponding give
 
 ## Configuration
 
-`PreferredPaymentMethod` is configured through `window.EngridOptions` / `window.EngridPageOptions` with two optional properties. Both properties are optional—if you do nothing, ENgrid will continue to default to card.
+`PreferredPaymentMethod` is configured through `window.EngridOptions` / `window.EngridPageOptions` with two optional properties.
 
 ```ts
 window.EngridPageOptions = {
   PreferredPaymentMethod: {
-    preferredPaymentMethodField: '', // Optional form field name
+    preferredPaymentMethodField: '{supporter.field.paymentPreference}', // Optional form field name
     defaultPaymentMethod: ['card'], // Ordered list, first available wins
   },
 }
