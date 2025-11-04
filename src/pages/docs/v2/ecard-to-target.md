@@ -38,22 +38,50 @@ It is also possible to add multiple targets to the page. They will all receive t
 </script>
 ```
 
-There are also some additional options you can set to customise the behaviour and look of the page. 
+## Configuration Options
 
-Here are the full options, along with their default configuration:
+There are additional options you can set to customize the behavior and appearance of the page:
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `targetName` | string | `""` | **Required** (if `targets` not provided): The target's full name. Either provide `targetName` and `targetEmail`, or use the `targets` array |
+| `targetEmail` | string | `""` | **Required** (if `targets` not provided): The target's email address. Either provide `targetName` and `targetEmail`, or use the `targets` array |
+| `targets` | Array<{targetName: string, targetEmail: string}> | `[]` | **Required** (if `targetName`/`targetEmail` not provided): An array of target objects. Each target should have a `targetName` and `targetEmail` property. All targets will receive the same eCard |
+| `hideSendDate` | boolean | `true` | If `true`, hides the send date field on the form |
+| `hideTarget` | boolean | `true` | If `true`, hides the target field on the form |
+| `hideMessage` | boolean | `true` | If `true`, hides the message field on the form |
+| `addSupporterNameToMessage` | boolean | `false` | If `true`, automatically adds the supporter's name to the end of the message |
+
+### Complete Configuration Example
 
 ```html
 <script>
   window.EngridEcardToTarget = {
-    targetName: "", // your target's full name
-    targetEmail: "", // your target's email 
-    hideSendDate: true, // OPTIONAL: hide the send date field
-    hideTarget: true, // OPTIONAL: hide the target field
-    hideMessage: true, // OPTIONAL: hide the message field
-    addSupporterNameToMessage: false, // OPTIONAL: automatically add the supporter's name to the end of the message
-    targets: [] // OPTIONAL: an array of targets to send the eCard to when you have multiple targets.  Each target should have a targetName and targetEmail property
+    // Single target approach
+    targetName: "Michael Thomas",
+    targetEmail: "MichaelT@4sitestudios.com",
+    
+    // OR multiple targets approach
+    targets: [
+      {
+        targetName: "Michael Thomas",
+        targetEmail: "MichaelT@4sitestudios.com",
+      },
+      {
+        targetName: "Bryan Casler",
+        targetEmail: "Bryan@4sitestudios.com",
+      },
+    ],
+    
+    // Optional customization
+    hideSendDate: true,
+    hideTarget: true,
+    hideMessage: true,
+    addSupporterNameToMessage: false,
   }
 </script>
 ```
+
+**Note:** You can use either the single target approach (`targetName` + `targetEmail`) or the multiple targets approach (`targets` array), or both. If both are provided, all targets (including the single target) will be added to the recipients list. Duplicate targets are automatically removed.
 
 

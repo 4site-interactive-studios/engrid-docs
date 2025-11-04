@@ -14,24 +14,12 @@ With this component, you can embed an opt-in ladder on your Thank You pages, inv
 
 ## How to enable the Opt-in Ladder to your ENgrid Theme
 
-Before setting up the Opt-in Ladder, you need to enable this component in your theme. To do this, follow these steps:
+The Opt-in Ladder component is automatically enabled in ENgrid and will run automatically based on page conditions. It will:
+- Store opt-in field values to sessionStorage when forms are submitted (on parent pages)
+- Display the ladder in embedded iframes on Thank You pages
+- Auto-inject the iframe on Thank You pages if configured in Options (Method 2)
 
-1. Open your theme's `index.ts` file.
-2. Add the following code to the top of the file:
-
-   ```ts
-   import { OptInLadder } from '@4site/engrid-scripts'
-   ```
-
-3. Add the following code to the `onLoad` property of the `options` object:
-
-   ```ts
-   new OptInLadder()
-   ```
-
-4. Save the file.
-5. Run the `npm run build` command to build your theme.
-6. Upload the new assets to your Engaging Networks account.
+You don't need to manually import or instantiate it in your theme code.
 
 ## Creating an Opt-in Ladder Page on Engaging Networks
 

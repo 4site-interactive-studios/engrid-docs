@@ -39,24 +39,47 @@ data-processing-fee-fixed-amount-added=".30"
 
 Drop this Code Block into your donation page to trigger an Upsell Lightbox whenever a one-time gift is made.
 
-## Options
-| Property        | Description                                                                   |
-| --------------- | ----------------------------------------------------------------------------- |
-| `image`         | Image URL to load on the Upsell Lightbox.                                     |
-| `imagePosition` | You can set "left" or "right" to choose the position of the image.             |
-| `title`         | Title of the Upsell Lightbox. Variables allowed (see below).                  |
-| `paragraph`     | Sub-title of the Upsell Lightbox. Variables allowed (see below).              |
-| `yesLabel`      | Label used on the "Yes" button. Variables allowed (see below).                |
-| `noLabel`       | Label used on the "No" button. Variables allowed (see below).                 |
-| `otherAmount`   | Set it to true if you want to show the "other amount" field on the Upsell Lightbox. false otherwise. |
-| `otherLabel`    | Label used on the "other amount" field.                                       |
-| `upsellOriginalGiftAmountFieldName`     | The field "name" to record the original gift amount into when the donor is successfully converted by the upsell lightbox from a one-time to recurring gift. Useful for calculating the conversion / lifetime value gained through the use of the upsell lightbox. The field does not need to be present on the page via page builder, it is automatically added via Javascript. And it is best to use the Other 1, Other 2, Other 3, or Other 4 field as these fields live on the transaction record rather than the supporter record. 
-|    | E.g. transaction.othamt1  |
-|   | Screenshot: [https://d.pr/i/tqciIF](https://d.pr/i/tqciIF) |
-| `amountRange`      | Array with the amount suggestions range. It follows this format:     | 
+## Configuration Options
+
+The Upsell Lightbox is configured via `window.EngridUpsell`. All options are optional and will use defaults if not specified.
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `image` | string | `"https://picsum.photos/480/650"` | Image URL to load on the Upsell Lightbox |
+| `imagePosition` | `"left"` \| `"right"` | `"left"` | Position of the image on the lightbox |
+| `title` | string | See defaults | Title of the Upsell Lightbox. Variables allowed (see Variables section below) |
+| `paragraph` | string | See defaults | Sub-title/body text of the Upsell Lightbox. Variables allowed |
+| `yesLabel` | string | See defaults | Label used on the "Yes" button. Variables allowed |
+| `noLabel` | string | See defaults | Label used on the "No" button. Variables allowed |
+| `otherAmount` | boolean | `true` | If `true`, shows the "other amount" field on the Upsell Lightbox. Set to `false` to hide it |
+| `otherLabel` | string | `"Or enter a different monthly amount:"` | Label used on the "other amount" field |
+| `upsellOriginalGiftAmountFieldName` | string | `""` | The field "name" to record the original gift amount into when the donor is successfully converted by the upsell lightbox from a one-time to recurring gift. Useful for calculating conversion/lifetime value. The field does not need to be present on the page via page builder, it is automatically added via Javascript. Best to use Other 1, Other 2, Other 3, or Other 4 field (e.g., `transaction.othamt1`) as these fields live on the transaction record rather than the supporter record. [Screenshot reference](https://d.pr/i/tqciIF) |
+| `amountRange` | Array<{max: number, suggestion: number \| string}> | See defaults | Array with the amount suggestions range. The donation amount is compared to each `max` property and, when it's lower or equal, returns the equivalent `suggestion` value. If the suggested amount is 0, the lightbox will not display. You can use JavaScript code as the `suggestion` property (inside quotes) - use the special word `amount` which will be replaced by the dynamic one-time amount |
+| `minAmount` | number | `0` | Never accept less than this amount |
+| `canClose` | boolean | `true` | If `true`, enables the close functions/button. If `true`, you can close the lightbox by clicking the close button (top right), pressing ESC, or clicking outside the lightbox |
+| `submitOnClose` | boolean | `false` | If `true`, enables form submission when closing the lightbox. Only works if `canClose` is `true` |
+| `oneTime` | boolean | `true` | If `true`, the upsell only runs for one-time donations |
+| `annual` | boolean | `false` | If `true`, the upsell also runs for annual donations |
+| `disablePaymentMethods` | string[] | `[]` | Array of payment method values to disable when the upsell is accepted |
+| `skipUpsell` | boolean | `false` | If `true`, skips the upsell entirely. Useful to disable the upsell programmatically |
+| `conversionField` | string | `""` | The field name to store the upsell conversion data |
+| `upsellCheckbox` | `false` \| {label: string, location: string, cssClass: string} | `false` | If not `false`, shows a checkbox to upsell. Use this to show a checkbox option instead of (or in addition to) the lightbox |
+
+### Default Values
+
 ```javascript
-amountRange: [
-    { max: 10, suggestion: 0 },
+window.EngridUpsell = {
+  image: "https://picsum.photos/480/650",
+  imagePosition: "left",
+  title: "Will you change your gift to just {new-amount} a month to boost your impact?",
+  paragraph: "Make a monthly pledge today to support us with consistent, reliable resources during emergency moments.",
+  yesLabel: "Yes! Process My <br> {new-amount} monthly gift",
+  noLabel: "No, thanks. Continue with my <br> {old-amount} one-time gift",
+  otherAmount: true,
+  otherLabel: "Or enter a different monthly amount:",
+  upsellOriginalGiftAmountFieldName: "",
+  amountRange: [
+    { max: 10, suggestion: 5 },
     { max: 15, suggestion: 7 },
     { max: 20, suggestion: 8 },
     { max: 25, suggestion: 9 },
@@ -68,24 +91,40 @@ amountRange: [
     { max: 200, suggestion: 19 },
     { max: 300, suggestion: 29 },
     { max: 500, suggestion: "Math.ceil((amount / 12)/5)*5" },
-    ],
+  ],
+  minAmount: 0,
+  canClose: true,
+  submitOnClose: false,
+  oneTime: true,
+  annual: false,
+  disablePaymentMethods: [],
+  skipUpsell: false,
+  conversionField: "",
+  upsellCheckbox: false,
+}
 ```
 
-The donation amount is compared to each `max` property and, when it's lower or equal, we'll return the equivalent `suggestion` value. If the suggested amount is 0 the lightbox will not display.
+### Amount Range
 
-As you can see in the example above, you can also use javascript code as the **"suggestion"** property. When using javascript code (inside quotes) to calculate your suggestion, use the special word `amount`. That word will get replaced by the dynamic one-time amount.
+The `amountRange` array determines the suggested upsell amount based on the current donation amount. The donation amount is compared to each `max` property, and when it's lower or equal, the corresponding `suggestion` value is returned. If the suggested amount is 0, the lightbox will not display.
 
-* **canClose** - `true` or `false` to enable/disable the close functions/button.
+You can use JavaScript code as the `suggestion` property (inside quotes). When using JavaScript code, use the special word `amount` which will be replaced by the dynamic one-time amount.
 
-* **submitOnClose** - `true` or `false` to enable/disable the form submission when closing the lightbox. It only works if **canClose** is `true`.
-
-* **debug** - `true` or `false` to enable/disable console notifications.
-
-You can omit any option that you don't need to change the default value.
+Example:
+```javascript
+amountRange: [
+  { max: 10, suggestion: 0 },  // No upsell for donations $10 or less
+  { max: 15, suggestion: 7 },
+  { max: 20, suggestion: 8 },
+  { max: 25, suggestion: 9 },
+  { max: 30, suggestion: 10 },
+  { max: 500, suggestion: "Math.ceil((amount / 12)/5)*5" },  // Calculated suggestion
+]
+```
 
 ## Variables
 
-Some options allows variables, that will get replaced by dynamic values:
+Some options allow variables, that will get replaced by dynamic values:
 
 * `{new-amount}` - Will get replaced by the current suggested upsell amount based on the `amountRange` option.
 

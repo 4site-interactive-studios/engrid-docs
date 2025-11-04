@@ -51,16 +51,28 @@ On your parent page, in the custom code section, add a code block with the follo
 
 Now reload your page and you should see a checkbox that, when selected, will display the eCard form.
 
-There are some additional options for this code block that can be used to adjust the position of the checkbox and its copy:
+## Configuration Options
+
+There are additional options for this code block that can be used to adjust the position of the checkbox and its copy:
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `pageUrl` | string | `""` | **Required**: The full URL of the eCard page to embed |
+| `headerText` | string | `"Send an Ecard notification of your gift"` | The header text for the eCard section |
+| `checkboxText` | string | `"Yes, I would like to send an ecard to announce my gift."` | The text displayed next to the checkbox |
+| `anchor` | string | `".en__field--donationAmt"` | The CSS selector for the element where you want to place the eCard section relative to |
+| `placement` | `"beforebegin"` \| `"afterbegin"` \| `"beforeend"` \| `"afterend"` | `"afterend"` | The placement of the eCard section relative to the anchor element. Options: `"beforebegin"` (before the anchor), `"afterbegin"` (inside the anchor, before its content), `"beforeend"` (inside the anchor, after its content), `"afterend"` (after the anchor) |
+
+### Complete Configuration Example
 
 ```html
 <script>
   window.EngridEmbeddedEcard = {
-    pageUrl: "", // The full URL of the eCard page
-    headerText: "Send an Ecard notification of your gift", // The header text for the eCard section
-    checkboxText: "Yes, I would like to send an ecard to announce my gift.", // The text next to the checkbox
-    anchor: ".en__field--donationAmt", // The CSS selector for the element which we want to place the eCard section relative to
-    placement: "afterend", // The placement of the eCard section relative to the anchor element: beforebegin, afterbegin, beforeend, afterend
+    pageUrl: "https://example.org/page/1234/ecard/1", // Required: The full URL of the eCard page
+    headerText: "Send an Ecard notification of your gift",
+    checkboxText: "Yes, I would like to send an ecard to announce my gift.",
+    anchor: ".en__field--donationAmt",
+    placement: "afterend",
   };
 </script>
 ```
