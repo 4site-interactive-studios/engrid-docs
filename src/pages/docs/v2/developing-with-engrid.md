@@ -186,13 +186,15 @@ You can combine these parameters to completely disable ENgrid when troubleshooti
 
 ## Global Variables
 
-### EngridAmounts
+### EngridAmounts (SwapAmounts Component)
+
+The `SwapAmounts` component allows you to define different donation amount options for different frequencies. When a supporter changes the donation frequency, the available amount options automatically swap to match that frequency.
 
 With that variable you can set dynamic amounts at the page level.
 
 Example:
 
-```
+```javascript
 window.EngridAmounts = {
   "onetime": {
     amounts: {
@@ -203,6 +205,7 @@ window.EngridAmounts = {
       "Other": "other",
     },
     default: 30,
+    stickyDefault: false, // Optional - see below
   },
   "monthly": {
     amounts: {
@@ -213,15 +216,48 @@ window.EngridAmounts = {
       "Other": "other",
     },
     default: 15,
+    stickyDefault: true, // Optional - see below
   },
 };
 ```
+
+#### Configuration Options
+
+- `amounts`: Object mapping labels to values. Keys are display labels, values are numeric amounts or `"other"`
+- `default`: The default amount to select for this frequency (required)
+- `stickyDefault`: If `true`, forces the default amount to be re-selected every time the frequency changes. If `false` (default), preserves the user's selected amount when possible
+
+#### Behavior
 
 When you're using the `window.EngridAmounts` option, the user-selected amount will persist when changing frequencies if:
 
 1. We're coming from a backend error.
 2. We have an amount defined via URL.
 3. The user selected a non-default amount.
+
+When `stickyDefault` is `false` (default):
+- If the user has selected a non-default amount, it will be preserved when changing frequencies (if that amount exists in the new frequency's list)
+- If the user selected the default amount, the new frequency's default will be selected
+- If the selected amount doesn't exist in the new frequency's list, the new default is selected
+
+When `stickyDefault` is `true`:
+- The default amount is always selected when the frequency changes, regardless of user's previous selection
+
+#### URL-Based Amount Loading
+
+You can also load amounts from URL parameters:
+
+```
+https://example.org/page/1234/donate/1?engrid-amounts=10,25,50,100,other
+```
+
+#### Important Notes
+
+1. **Remove Swap Lists**: You need to remove any Swap List from the donation amount field. If you don't there will be race conditions between the swap list and our code which will create unpredictable and inconsistent behaviors.
+
+2. **"Other" Required**: The last option in each frequency's `amounts` object should always be `"Other": "other"` to allow users to enter custom amounts.
+
+3. **Default Values**: Always ensure the `default` value exists in the `amounts` object for that frequency.
 
 **Known Limitations**
 

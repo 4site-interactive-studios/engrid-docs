@@ -152,16 +152,93 @@ showifamount-between-10-100
 
 ## Hide / Show based on URL arguments
 
+The `DataHide` component allows you to hide page elements by adding URL parameters. This is useful for creating cleaner embedded iframe experiences or hiding specific sections when embedding pages.
+
 ### Hide any element via URL arguments using a Class or ID
 
 By using one of the following you can hide any content based on its class or ID with a URL argument.
 
-Example: [https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id](https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id)
+Add URL parameters in the format:
 
 ```
-engrid_hide[element]=id
-engrid_hide[element]=class
+?engrid_hide[element-name]=type
 ```
+
+Where:
+- `element-name` is the ID or class name of the element you want to hide
+- `type` is either `"id"` or `"class"` (defaults to `"class"` if not specified)
+
+Example: [https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id](https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id)
+
+### Examples
+
+#### Hide by Class Name
+
+To hide all elements with a specific class name:
+
+```
+https://example.org/page/1234/donate/1?engrid_hide[body-headerOutside]=class
+```
+
+This will hide all elements with the class `body-headerOutside`.
+
+#### Hide by ID
+
+To hide an element by its ID:
+
+```
+https://example.org/page/1234/donate/1?engrid_hide[header]=id
+```
+
+This will hide the element with the ID `header`.
+
+#### Hide Multiple Elements
+
+You can hide multiple elements by adding multiple parameters:
+
+```
+https://example.org/page/1234/donate/1?engrid_hide[body-headerOutside]=class&engrid_hide[body-banner]=class&engrid_hide[content-footer]=class
+```
+
+### Common Use Cases
+
+#### Embedding Pages in iFrames
+
+When embedding an ENgrid page in an iframe, you often want to hide certain sections to create a cleaner embedded experience:
+
+```html
+<iframe
+  src="https://example.org/page/1234/donate/1?chain&engrid_hide[body-headerOutside]=class&engrid_hide[body-banner]=class&engrid_hide[content-footer]=class"
+  width="100%"
+  scrolling="no"
+  class="engrid-iframe"
+  frameborder="0"
+></iframe>
+```
+
+#### Selective Content Display
+
+Hide specific sections based on campaign parameters or user preferences:
+
+```
+https://example.org/page/1234/donate/1?campaign=email&engrid_hide[page-backgroundImage]=class
+```
+
+### How It Works Technically
+
+1. The component reads URL parameters that start with `engrid_hide[]`
+2. It extracts the element identifier and type (id or class)
+3. It finds matching elements in the DOM
+4. It adds the `hidden-via-url-argument` attribute to hide the elements
+5. CSS rules in ENgrid styles hide elements with this attribute
+
+### Notes
+
+- Elements are hidden using the `hidden-via-url-argument` attribute
+- The component works automatically - no configuration needed
+- Hidden elements can be shown again in debug mode
+- Multiple elements can be hidden in a single URL
+- Both class names and IDs are supported
 
 ---
 
@@ -171,40 +248,122 @@ engrid_hide[element]=class
 These classes can also be used on thank you pages
 {% /callout %}
 
-Special classes can be used to hide elements if certain supporter questions are present or absent on the page.
+The `ShowIfPresent` component allows you to show or hide content based on whether specific supporter questions (opt-in fields) are present on the page. This is particularly useful when opt-in questions are conditionally rendered by Engaging Networks based on supporter status.
 
-Typically, this can be used to hide elements, such as lead-in copy, when an opt-in question is not rendered on the page because the supporter came from a campaign link and is already opted in, so EN doesn't render the question on the page. But it can be used in other ways too.
+### How It Works
 
-The class format looks like this:
+When a supporter comes from a campaign link and is already opted in, Engaging Networks may not render the opt-in question on the page. The `ShowIfPresent` component detects whether these questions are present and shows or hides content accordingly.
 
-- Show this element when the supporter question is present:
+Special classes can be used to hide elements if certain supporter questions are present or absent on the page. Typically, this can be used to hide elements, such as lead-in copy, when an opt-in question is not rendered on the page because the supporter came from a campaign link and is already opted in, so EN doesn't render the question on the page. But it can be used in other ways too.
+
+### Usage
+
+Add special CSS classes to elements you want to conditionally show/hide:
+
+#### Single Question
 
 ```
 engrid__supporterquestions{id}-present
-```
-
-- Show this element when the supporter question is absent:
-
-```
 engrid__supporterquestions{id}-absent
+```
+
+Where `{id}` is the ID of the supporter question field.
+
+#### Multiple Questions (OR Logic)
+
+```
+engrid__supporterquestions{id1}__supporterquestions{id2}-present
+engrid__supporterquestions{id1}__supporterquestions{id2}-absent
+```
+
+When using multiple questions, the element will show if **any** of the specified questions is present (for `-present`) or absent (for `-absent`).
+
+### Finding the Question ID
+
+To find the supporter question ID:
+
+1. Inspect the opt-in field on the page
+2. Look for the `name` attribute, which will be in the format `supporter.questions.{id}`
+3. Use just the numeric `{id}` part in the class name
+
+Example: If the field name is `supporter.questions.12345`, use `12345` in the class:
+
+```html
+<div class="engrid__supporterquestions12345-present">
+  This content shows when question 12345 is present
+</div>
 ```
 
 {% callout title="You should know!" %}
 The `{id}` is the id of the supporter question. This can be found by inspecting the element on the page
 {% /callout %}
 
-It's also possible to combine multiple questions using the following format. These examples show 2 questions, but you can use as many as you like:
+### Examples
 
-- Show this element when EITHER question is present:
+#### Show Content When Question is Present
 
-```
-engrid__supporterquestions{id1}__supporterquestions{id2}-present
+```html
+<div class="engrid__supporterquestions12345-present">
+  <p>You can opt in to receive our newsletter!</p>
+</div>
 ```
 
-- Show this element when EITHER question is absent:
+This content will only display if supporter question 12345 is rendered on the page.
 
+#### Hide Content When Question is Present
+
+```html
+<div class="engrid__supporterquestions12345-absent">
+  <p>This message shows when the opt-in question is NOT on the page.</p>
+  <p>This might happen if the supporter is already opted in.</p>
+</div>
 ```
-engrid__supporterquestions{id1}__supporterquestions{id2}-absent
+
+#### Multiple Questions
+
+```html
+<!-- Show if EITHER question 12345 OR 67890 is present -->
+<div class="engrid__supporterquestions12345__supporterquestions67890-present">
+  <p>At least one of these opt-ins is available.</p>
+</div>
+
+<!-- Show if EITHER question is absent -->
+<div class="engrid__supporterquestions12345__supporterquestions67890-absent">
+  <p>Neither opt-in question is available on this page.</p>
+</div>
 ```
+
+### Common Use Cases
+
+#### Conditional Opt-In Messaging
+
+Show different messaging based on whether opt-in questions are available:
+
+```html
+<!-- Show if newsletter opt-in is available -->
+<div class="engrid__supporterquestions12345-present">
+  <p>Check the box below to receive our monthly newsletter!</p>
+</div>
+
+<!-- Show if newsletter opt-in is NOT available (already opted in) -->
+<div class="engrid__supporterquestions12345-absent">
+  <p>You're already subscribed to our newsletter. Thank you!</p>
+</div>
+```
+
+### Technical Details
+
+- The component automatically detects elements with these classes
+- It checks for the presence of supporter question fields by their `name` attribute
+- Elements are hidden using `display: none` when conditions are not met
+- For multiple questions with `-present`, content shows if **any** question is present
+- For multiple questions with `-absent`, content shows if **any** question is absent
+
+### Notes
+
+- Question IDs must match exactly (case-sensitive)
+- The component uses AND logic within each class (all specified questions must meet the condition)
+- Multiple classes can be combined on the same element for complex conditions
+- Works automatically - no configuration needed
 
 ---

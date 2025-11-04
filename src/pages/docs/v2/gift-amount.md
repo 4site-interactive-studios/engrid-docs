@@ -135,13 +135,17 @@ This is documentation about managing the ask string swap list in Engaging Networ
 
 ## Custom Ask String / Swap Lists
 
-### EngridAmounts
+### EngridAmounts (SwapAmounts Component)
+
+The `SwapAmounts` component allows you to define different donation amount options for different frequencies (one-time, monthly, annual, etc.). When a supporter changes the donation frequency, the available amount options automatically swap to match that frequency.
 
 Using the `window.EngridAmounts` variable you can set dynamic amounts at the page level.
 
-Example:
+#### Configuration
 
-```
+Define `window.EngridAmounts` with amount configurations for each frequency:
+
+```javascript
 <script>
 window.EngridAmounts = {
   "onetime": {
@@ -153,6 +157,7 @@ window.EngridAmounts = {
       "Other": "other",
     },
     default: 30,
+    stickyDefault: false, // Optional
   },
   "monthly": {
     amounts: {
@@ -163,7 +168,96 @@ window.EngridAmounts = {
       "Other": "other",
     },
     default: 15,
+    stickyDefault: true, // Optional
+  },
+  "annual": {
+    amounts: {
+      "100": 100,
+      "250": 250,
+      "500": 500,
+      "1000": 1000,
+      "Other": "other",
+    },
+    default: 100,
   },
 };
 </script>
 ```
+
+#### Configuration Options
+
+| Property | Type | Required | Description |
+|----------|------|----------|-------------|
+| `amounts` | Object | Yes | Object mapping labels to values. Keys are display labels, values are numeric amounts or `"other"` |
+| `default` | number | Yes | The default amount to select for this frequency |
+| `stickyDefault` | boolean | No | If `true`, forces the default amount to be re-selected every time the frequency changes. If `false` (default), preserves the user's selected amount when possible |
+
+#### Frequency Values
+
+Supported frequency values:
+- `"onetime"` - One-time donations
+- `"monthly"` - Monthly recurring donations
+- `"quarterly"` - Quarterly recurring donations
+- `"semi_annual"` - Semi-annual recurring donations
+- `"annual"` - Annual recurring donations
+
+#### URL-Based Amount Loading
+
+You can also load amounts from URL parameters:
+
+```
+https://example.org/page/1234/donate/1?engrid-amounts=10,25,50,100,other
+```
+
+This will create a temporary amount configuration for the current frequency.
+
+#### Behavior
+
+**Amount Persistence**
+
+When `stickyDefault` is `false` (default):
+- If the user has selected a non-default amount, it will be preserved when changing frequencies (if that amount exists in the new frequency's list)
+- If the user selected the default amount, the new frequency's default will be selected
+- If the selected amount doesn't exist in the new frequency's list, the new default is selected
+
+When `stickyDefault` is `true`:
+- The default amount is always selected when the frequency changes, regardless of user's previous selection
+
+**Coming from Backend Error**
+
+If the user is returning from a backend error:
+- The previously selected amount is preserved if it exists in the current frequency's list
+- Otherwise, the default is selected
+
+**URL Parameter Amount**
+
+If an amount is specified via URL parameter:
+- That amount takes precedence and is selected if it exists in the current frequency's list
+
+#### Important Notes
+
+1. **Remove Swap Lists**: You must remove any Swap List configuration from the donation amount field in Engaging Networks. Having both can cause race conditions and unpredictable behavior.
+
+2. **"Other" Required**: The last option in each frequency's `amounts` object should always be `"Other": "other"` to allow users to enter custom amounts.
+
+3. **Default Values**: Always ensure the `default` value exists in the `amounts` object for that frequency.
+
+4. **Known Limitations**: This option does not work with NSG or other similar native EN features.
+
+When you're using the `window.EngridAmounts` option, the user-selected amount will persist when changing frequencies if:
+1. We're coming from a backend error.
+2. We have an amount defined via URL.
+3. The user selected a non-default amount.
+
+#### Troubleshooting
+
+**Amounts Not Swapping**
+- Verify `window.EngridAmounts` is defined before ENgrid loads
+- Check that frequency values match exactly (case-sensitive)
+- Ensure Swap Lists are removed from the Engaging Networks field configuration
+- Check browser console for errors
+
+**Wrong Default Selected**
+- Verify the `default` value exists in the `amounts` object
+- Check that `stickyDefault` is set as intended
+- Ensure the configuration is loaded before the page initializes
