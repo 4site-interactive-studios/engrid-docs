@@ -5,7 +5,7 @@ description: Maximize your Engaging Networks platform's tracking capabilities by
 
 4Site's ENgrid automatically takes all of the available data from your Engaging Networks pages and pushes it to Google Tag Manager's as GTM Custom Events and GTM Custom Variables. In order to take advantage of this data and use it in your reporting in Google Analytics, Google Ads, Meta, and more, you'll need to create a set of variables, triggers, and tags in your Google Tag Manager (GTM) container that will capture the data when a user lands on and interacts with your page.
 
-When your Engaging Networks page loads on a user's screen, it pushes the entire Engaging Networks `pageJson` into the DataLayer as GTM Custom Events and GTM Custom Variables. This allows you to see details like donation amount, donation frequency, currency, and more in GTM, GA4, Meta, and other analytics platforms you might use.
+When your Engaging Networks page loads on a user's screen, ENgrid automatically pushes all available data to the DataLayer in a single event called `pageJsonVariablesReady`. This event contains all `pageJson` properties (prefixed with `EN_PAGEJSON_*`), URL parameters (prefixed with `EN_URLPARAM_*`), recurring frequencies (for donation pages), and submission success variables. This allows you to see details like donation amount, donation frequency, currency, and more in GTM, GA4, Meta, and other analytics platforms you might use.
 
 **Key Benefits:**
 
@@ -50,9 +50,10 @@ In GTM, **variables** are used to pull dynamic values from your site—like dona
 
 **Important Notes:**
 
-- All of the variables listed below are **already being pushed into the Data Layer** as part of various events (like successful donations, recurring page loads, and errors)
+- All of the variables listed below are **already being pushed into the Data Layer** as part of the `pageJsonVariablesReady` event that fires on every page load
 - You do **not** need to write custom JavaScript to define them—they're there, and we're just telling GTM how to listen for them
 - You will create "Data Layer Variable" types, setting the Data Layer Variable Name exactly as provided
+- The `pageJsonVariablesReady` event fires once per page load and contains all the variables listed below
 
 ### To add each EN variable:
 
@@ -68,7 +69,7 @@ Here are the variables you need to create:
 | :--------------------------------------- | :---------------------------- |
 | ENgrid pageJson \- Transaction ID        | `EN_PAGEJSON_TRANSACTIONID`   |
 | ENgrid pageJson \- Supporter ID          | `EN_PAGEJSON_SUPPORTERID`     |
-| ENgrid pageJson \- Recurring Frequency   | `EN_RECURRING_FREQUENCIES`    |
+| ENgrid pageJson \- Recurring Frequency   | `EN_RECURRING_FREQUENCIES` _(array of frequency values)_ |
 | ENgrid pageJson \- Recurring             | `EN_PAGEJSON_RECURRING`       |
 | ENgrid pageJson \- Receipt Number        | `EN_PAGEJSON_RECEIPTNUMBER`   |
 | ENgrid pageJson \- Payment Type          | `EN_PAGEJSON_PAYMENTTYPE`     |
@@ -92,7 +93,7 @@ Here are the variables you need to create:
 
 ## Step 2: Add EN Triggers
 
-Triggers tell GTM _when_ to run a tag—like right after a successful donation or when a form loads.
+Triggers tell GTM _when_ to run a tag—like right after a successful donation, when a form loads, or when a user interacts with form fields.
 
 These are **Custom Event Triggers**, meaning they fire based on named events your EN page is already sending to the GTM Data Layer.
 
@@ -109,12 +110,20 @@ These are **Custom Event Triggers**, meaning they fire based on named events you
 
 Here are the EN triggers to add:
 
-| Trigger Name              | Event Name                     |
-| :------------------------ | :----------------------------- |
-| EN Successful Donation    | `EN_SUCCESSFUL_DONATION`       |
-| EN_SUBMISSION_SUCCESS\_\* | `^EN_SUBMISSION_SUCCESS_(.+)$` |
+| Trigger Name                     | Event Name                        |
+| :------------------------------- | :-------------------------------- |
+| EN pageJson Variables Ready      | `pageJsonVariablesReady`           |
+| EN Form Value Updated             | `EN_FORM_VALUE_UPDATED`            |
+| EN Submission With Email Opt-In   | `EN_SUBMISSION_WITH_EMAIL_OPTIN`   |
+| EN Submission Without Email Opt-In | `EN_SUBMISSION_WITHOUT_EMAIL_OPTIN` |
 
-Each of these events also sends the EN variables listed above into the Data Layer—so the triggers and variables work hand in hand depeding on your need.
+**Important Notes:**
+
+- The `pageJsonVariablesReady` event fires on every page load and contains all `EN_PAGEJSON_*` variables, `EN_URLPARAM_*` variables, `EN_RECURRING_FREQUENCIES` (for donation pages), and `EN_SUBMISSION_SUCCESS_{PAGETYPE}` variables when on the final page
+- To detect a successful donation, use the `pageJsonVariablesReady` trigger with a condition: `EN_PAGEJSON_GIFTPROCESS` equals `"TRUE"`
+- The `EN_SUBMISSION_SUCCESS_{PAGETYPE}` is a variable (not an event) that appears in the `pageJsonVariablesReady` event payload when `pageNumber` equals `pageCount` (i.e., on the final page)
+- `EN_FORM_VALUE_UPDATED` fires whenever a user changes a form field value (blur for text inputs, change for checkboxes/radios/selects)
+- The submission opt-in/out events fire when a form is submitted, indicating whether the user checked an email opt-in checkbox
 
 ---
 
@@ -151,7 +160,12 @@ This tag tells Facebook when someone completes a donation.
 3. Choose **Tag Type "Facebook Pixel" from the Gallery of built-in tags**.
 4. Paste in your Meta Pixel base code (tip: create a variable with your Meta Pixel ID and enter it into this tag as a variable. That way, if your Pixel ID ever changes, you can update it on the variable and not have to do so across all your tags in GTM).
 5. Make sure object properties "value" and "currency" are added (screenshot: [https://cln.sh/660bJHLP](https://cln.sh/660bJHLP))
-6. Make sure this tag is associated with the firing trigger "EN Successful Donation" as in the screenshot above.
+6. For the **Trigger**, create a custom trigger:
+   - Select **Trigger Type: Custom Event**
+   - Event name: `pageJsonVariablesReady`
+   - Add a condition: `EN_PAGEJSON_GIFTPROCESS` equals `"TRUE"`
+   - Name it: `EN Successful Donation` (or similar)
+   - Save the trigger, then assign it to this tag
 
 ---
 
@@ -183,11 +197,16 @@ This tag sends a conversion event to Google Analytics 4 whenever a donation is s
 | ENgrid pageJson \- Transaction ID                                                   | `{{ENgrid pageJson - Transaction ID}}`        |
 | ENgrid pageJson \- Supporter ID _(note: this can be listed under "User properties)_ | `{{ENgrid pageJson - Supporter ID}}`          |
 
-8. For the **Trigger**, choose: `EN Successful Donation`
+8. For the **Trigger**, create a custom trigger:
+   - Select **Trigger Type: Custom Event**
+   - Event name: `pageJsonVariablesReady`
+   - Add a condition: `EN_PAGEJSON_GIFTPROCESS` equals `"TRUE"`
+   - Name it: `EN Successful Donation` (or similar)
+   - Save the trigger, then assign it to this tag
 
 9. Click **Save**
 
-Tip: The variables listed above are already being pushed to the data layer when the `EN_SUCCESSFUL_DONATION` event fires, so this tag will automatically pull the correct values at the right time.
+Tip: The variables listed above are already being pushed to the data layer as part of the `pageJsonVariablesReady` event, so this tag will automatically pull the correct values at the right time when the gift process condition is met.
 
 ---
 
@@ -269,6 +288,7 @@ Some fields are excluded from the DataLayer for privacy/security reasons:
 
 - String values are transformed to uppercase, spaces replaced with dashes, and `:-` replaced with `-`.
 - Boolean values are transformed to `"TRUE"` or `"FALSE"`.
+- Numeric values are preserved as numbers (not converted to strings) to allow analytics platforms to properly infer number vs string types.
 
 ---
 
@@ -286,6 +306,47 @@ When the field name is `en__pg` (premium gift), the `EN_FORM_VALUE_UPDATED` even
 # End of Gift Process Events (Advanced)
 
 ENgrid stores certain events in sessionStorage at the end of the gift process and replays them on the next page load. This is an advanced feature for tracking multi-step flows and ensuring all events are captured.
+
+## Developer API
+
+If you need to add custom events or variables that should be pushed to the DataLayer after a successful donation (when the gift process page loads), you can use these public methods:
+
+### `addEndOfGiftProcessEvent(eventName, eventProperties)`
+
+Adds a custom event that will be pushed to the DataLayer when the gift process page loads.
+
+**Parameters:**
+- `eventName` (string): The name of the event to push
+- `eventProperties` (object, optional): Additional properties to include with the event
+
+**Example:**
+```javascript
+window._dataLayer.addEndOfGiftProcessEvent('custom_donation_event', {
+  donationSource: 'email_campaign',
+  campaignName: 'Summer Appeal'
+});
+```
+
+### `addEndOfGiftProcessVariable(variableName, variableValue)`
+
+Adds a custom variable that will be pushed to the DataLayer when the gift process page loads.
+
+**Parameters:**
+- `variableName` (string): The name of the variable (will be converted to uppercase)
+- `variableValue` (any, optional): The value of the variable
+
+**Example:**
+```javascript
+window._dataLayer.addEndOfGiftProcessVariable('custom_donation_source', 'email_campaign');
+```
+
+**How it works:**
+
+1. When you call these methods during the donation flow, the events/variables are stored in `sessionStorage`
+2. When the gift process page loads (detected by `ENGrid.getGiftProcess()` returning `true`), all stored events/variables are automatically pushed to the DataLayer
+3. The stored data is then cleared from `sessionStorage`
+
+This ensures that events and variables captured during the donation process are available on the confirmation/thank you page for proper tracking.
 
 ---
 
