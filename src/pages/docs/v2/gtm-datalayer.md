@@ -196,6 +196,7 @@ This tag sends a conversion event to Google Analytics 4 whenever a donation is s
 | ENgrid pageJson \- Recurring Frequency                                              | `{{ENgrid pageJson - Recurring Frequency}}`   |
 | ENgrid pageJson \- Transaction ID                                                   | `{{ENgrid pageJson - Transaction ID}}`        |
 | ENgrid pageJson \- Supporter ID _(note: this can be listed under "User properties)_ | `{{ENgrid pageJson - Supporter ID}}`          |
+| ENgrid pageJson \- Donation Amount                                                  | `{{ENgrid pageJson - Donation Amount}}`        |
 
 8. For the **Trigger**, create a custom trigger:
    - Select **Trigger Type: Custom Event**
