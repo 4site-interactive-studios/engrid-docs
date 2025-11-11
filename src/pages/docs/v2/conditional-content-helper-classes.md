@@ -12,6 +12,12 @@ A utility class to hide/show a component based on in memorial / in honor giving.
 
 - `inmem-Y` = Show component if tribute giving option is checked and value is `Y`
 
+### Shipping Fields
+
+A utility class to hide/show a component based on if the supporter has a separate shipping address (for Premium Gifts).
+
+- `shipenabled-Y` = Show component if Shipping is checked and value is `Y`
+
 ---
 
 ### Giving Frequency
