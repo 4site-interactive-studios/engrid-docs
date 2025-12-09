@@ -30,13 +30,13 @@ The cookie is automatically deleted when the gift process is complete (after a s
 
 The following order of precedence applies when determining which donation amounts to display:
 
-1. **Form Dependencies** - If Form Dependencies are configured to set default amounts, these will take precedence over all other sources
+1. **Form Dependencies & Swap Lists** - If Form Dependencies or Swap Lists are configured to set default amounts, these will take precedence over all other sources
 2. **Engaging Networks NSG values** - Values from campaign links with NSGs enabled
 3. **StickyNSG cookie values** - Values saved from previous visits
 4. **Default page values** - Standard default amounts configured on the page
 
 {% callout title="Important" %}
-If you have Form Dependencies configured to set default donation amounts, they will override StickyNSG values. If you want default amounts for cold visitors that get overwritten by StickyNSG when applicable, consider using ENgrid's Custom Swap List definitions instead of Form Dependencies.
+If you have Form Dependencies or Swap Lists configured to set default donation amounts, they will override NSG values set by Engaging Networks. If you want default amounts for cold visitors that get overwritten by NSGs when applicable, consider using ENgrid's Custom Donation Amounts definitions instead of Form Dependencies or Swap Lists.
 {% /callout %}
 
 ## Testing
@@ -47,7 +47,7 @@ To verify that a supporter has NSG values configured, check the "Previous Contri
 
 ### Testing without email blasts
 
-You can test StickyNSG functionality without sending email blasts by chaining from a data capture page. Create a data capture page that redirects to your StickyNSG-enabled donation page using the `?chain` parameter. When you submit the data capture page with a supporter's email address, it will chain to the donation page and trigger the NSG experience, allowing you to test the StickyNSG behavior.
+You can test StickyNSG functionality without sending email blasts by chaining from a data capture page. Create a data capture page that redirects to your StickyNSG-enabled donation page using the `?chain` parameter. When you submit the data capture page with a supporter's email address, it will chain to the donation page and trigger the NSG experience, allowing you to test the StickyNSG behavior. Remember to remove the `?chain` parameter on subsequent visits to see the effect of the StickyNSG cookie.
 
 ## FAQs
 
@@ -70,11 +70,11 @@ If you have a specific campaign where you don't want StickyNSG to be active, you
 
 You can add the query parameter `skipstickynsg=true` to your link. This will prevent StickyNSG from setting a cookie when the supporter clicks the link.
 
-### How do Form Dependencies interact with StickyNSG?
+### How do Form Dependencies and Swap Lists interact with StickyNSG?
 
-Form Dependencies that set default donation amounts will take precedence over StickyNSG values. If you have Form Dependencies configured to set default amounts, those defaults will override any StickyNSG cookie values.
+Form Dependencies and Swap Lists that set default donation amounts will take precedence over NSG values - both EN's NSG values and StickyNSG values. If you have Form Dependencies or Swap Lists configured to set default amounts, those defaults will override any NSG values.
 
-If you want to have default amounts for cold visitors (those without StickyNSG cookies) while still allowing StickyNSG values to take precedence when available, consider using Swap List definitions instead of Form Dependencies. Swap Lists allow you to define default amounts that will be overwritten by StickyNSG values when applicable, providing the best of both worlds.
+If you want to have default amounts for cold visitors while still allowing NSG values to take precedence when available, consider using the Donation Amounts functionality of ENgrid instead of Form Dependencies or Swap Lists. This allows you to define default amounts that will be overwritten by NSG values when applicable, providing the best of both worlds.
 
 ## Technical details
 
