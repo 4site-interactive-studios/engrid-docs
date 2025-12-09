@@ -13,11 +13,18 @@ StickyNSG is a feature that retains a supporter's Next Suggested Gift (NSG) valu
 
 ## How it works
 
-When a supporter visits a page from a campaign link that has NSGs enabled in Engaging Networks, we save their NSG values in a cookie.
+When a supporter visits a page from a campaign link that has NSGs enabled in Engaging Networks, we save their NSG values in a cookie. The cookie stores both one-time and recurring donation amounts, along with the default selected amount based on the `nextSuggestedGift` property.
 
-On subsequent visits to donation pages, we check for the presence of this cookie. If it exists, we automatically populate the Donation Amounts on the page with the values from the cookie.
+On subsequent visits to donation pages where NSG is not active (i.e., not from a campaign link with NSGs), we check for the presence of this cookie. If it exists, we automatically populate `window.EngridAmounts` with the values from the cookie, which populates the Donation Amounts on the page.
 
-The next time a supporter completes a gift, we delete the cookie.
+The cookie is automatically deleted when the gift process is complete (after a successful donation).
+
+### Cookie details
+
+- **Cookie name**: `engrid-sticky-nsg`
+- **Expiration**: 30 days
+- **Path**: `/` (available site-wide)
+- **Storage format**: JSON containing both `onetime` and `monthly` amount objects with their respective amounts and default values
 
 ## Value precedence
 
@@ -46,7 +53,7 @@ You can test StickyNSG functionality without sending email blasts by chaining fr
 
 ### What if the supporter visits a page with EN NSGs and they also have a StickyNSG cookie?
 
-In this case, the values from EN will take precedence over the values in the cookie.
+In this case, the values from EN will take precedence over the values in the cookie. The StickyNSG cookie will not be applied when NSG is active on the page, ensuring that campaign-specific NSG values always take priority. Additionally, if NSG is active on the page, a new StickyNSG cookie will be created with the current NSG values, overwriting any previous cookie.
 
 ### StickyNSG is enabled on my theme, but I don't want the values to be used on a specific page. How can I do that?
 
@@ -68,3 +75,39 @@ You can add the query parameter `skipstickynsg=true` to your link. This will pre
 Form Dependencies that set default donation amounts will take precedence over StickyNSG values. If you have Form Dependencies configured to set default amounts, those defaults will override any StickyNSG cookie values.
 
 If you want to have default amounts for cold visitors (those without StickyNSG cookies) while still allowing StickyNSG values to take precedence when available, consider using Swap List definitions instead of Form Dependencies. Swap Lists allow you to define default amounts that will be overwritten by StickyNSG values when applicable, providing the best of both worlds.
+
+## Technical details
+
+### Cookie creation and application logic
+
+- **Cookie creation**: The StickyNSG cookie is only created when NSG is active on the page (i.e., when `window.EngagingNetworks.suggestedGift` exists and contains values). This ensures the cookie is only set when a supporter visits from a campaign link with NSGs enabled.
+
+- **Cookie application**: The StickyNSG cookie is only applied when NSG is NOT active on the page. If NSG is active, the EN NSG values take precedence and the cookie is not used.
+
+- **Cookie structure**: The cookie stores a JSON object with the following structure:
+
+  ```json
+  {
+    "onetime": {
+      "amounts": { "25": "25", "50": "50", "100": "100" },
+      "default": 100,
+      "stickyDefault": false
+    },
+    "monthly": {
+      "amounts": { "10": "10", "25": "25", "50": "50" },
+      "default": 25,
+      "stickyDefault": false
+    }
+  }
+  ```
+
+- **Value application**: When the cookie is applied, its values are set to `window.EngridAmounts`, which populates the donation form amounts and default selections.
+
+### Debugging
+
+To debug StickyNSG behavior, you can check:
+
+- Browser cookies for `engrid-sticky-nsg`
+- Browser console for StickyNSG logger messages (prefixed with 📌)
+- `window.EngridAmounts` to see what values are being applied
+- `window.EngagingNetworks.suggestedGift` to see if NSG is active on the page
