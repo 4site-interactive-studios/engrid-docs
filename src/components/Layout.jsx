@@ -45,6 +45,10 @@ export const navigation = [
         href: '/docs/v2/engrid-page-template-example',
       },
       {
+        title: 'Template Scaffolding Checklist',
+        href: '/docs/v2/engrid-template-scaffolding-checklist',
+      },
+      {
         title: 'Contributing to ENgrid',
         href: '/docs/v2/contributing-to-engrid',
       },
