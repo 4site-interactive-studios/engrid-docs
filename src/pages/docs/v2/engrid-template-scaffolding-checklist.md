@@ -3,7 +3,7 @@ title: ENgrid Template Scaffolding Checklist
 description: A comprehensive checklist for scaffolding and building new EN templates in a new client account, especially when copying code from another client EN account.
 ---
 
-Use this checklist when scaffolding/building new EN templates in a new client account, *especially* if you're copying code over from another client EN account.
+Use this checklist when scaffolding/building new EN templates in a new client account, _especially_ if you're copying code over from another client EN account.
 
 [Vanilla template code for reference here.](https://github.com/4site-interactive-studios/engrid/tree/main/reference-materials/html/page-template-example)
 
@@ -12,15 +12,21 @@ Use this checklist when scaffolding/building new EN templates in a new client ac
 ### 1. Prep the codebase / theme (usually done by dev first)
 
 - [ ] Create a new GitHub repo for the new org using the ENGrid template.
+  - [ ] **Option A (Recommended):** Use the [engrid-template repository](https://github.com/4site-interactive-studios/engrid-template) as a template via GitHub's "Use this template" feature.
+  - [ ] **Option B (Alternative):** Copy all files from an existing client ENGrid repo (ex: SPCAI `main` branch) into the new repo.
   - [ ] Naming convention: `engrid-<clientAbbreviation>` (example: `engrid-ats`).
   - [ ] Public repo is fine; ENGrid compiles front-end assets into static code used on pages.
 - [ ] Clone that repo locally via GitHub Desktop ("Open in GitHub Desktop").
-- [ ] Copy all files from an existing client ENGrid repo (ex: SPCAI `main` branch) into the new repo.
+- [ ] If using Option B (copying from existing client):
   - [ ] Commit that as the initial copy.
 - [ ] In the codebase:
   - [ ] Do a global find/replace for the old client abbrev (e.g. `SPCAI`) → new client abbrev (e.g. `ATS`).
   - [ ] Swap in the new brand colors.
   - [ ] Try to run/build locally with Node/npm.
+- [ ] Upload compiled assets to Engaging Networks:
+  - [ ] In Engaging Networks, go to **Pages/Components** → **Images and Files**.
+  - [ ] Create folder: **Ω1. 4Site Live Templates** (if it doesn't exist).
+  - [ ] Upload `engrid.min.css` and `engrid.min.js` from the `dist` folder to this location.
 - [ ] If the build/compile step fails or you can't generate a new branded theme:
   - [ ] You can still proceed with page scaffolding using the source client's compiled assets (SPCAI look/feel) and swap branding later.
 
@@ -56,11 +62,15 @@ You're going to visually copy from source → target.
 
 - [ ] In the target org:
   - [ ] Go to **Pages**.
+  - [ ] Create the standard folder structure if it doesn't exist:
+    - [ ] **Ω1. 4Site Live - Reference Pages for Duplication**
+    - [ ] **Ω2. 4Site Staging - Quality Assurance Testing**
+    - [ ] **Ω3. 4Site Development - Code Development**
   - [ ] Create a new folder that mirrors the structure/naming convention from the source (same Ω prefix and number if applicable).
 - [ ] Inside that folder, create a **new Donation Page**.
   - [ ] Page naming: follow existing conventions from ENGrid internal examples (e.g. `reference - donation page - test gateway`). Clarity beats clever.
 - [ ] In the new donation page settings:
-  - [ ] In the "Template" field, choose the correct ENGrid layout template (often named something like "ENGrid", "center-center-2-column", etc.).
+  - [ ] In the "Template" field, choose the correct ENGrid layout template (often named something like "4Site Page Template - Center Left 1 Column", "4Site Page Template - Center Center 2 Column", etc.).
 - [ ] Go to **Donation Settings** (left nav):
   - [ ] Add a payment gateway.
   - [ ] Pick the test gateway if one exists (the one literally labeled "test").
@@ -75,15 +85,34 @@ At this point you have an empty ENGrid donation page in the new org with the rig
 ### 5. Install the helper script to generate the ENGrid sections
 
 - [ ] Install the TamperMonkey browser extension in Chrome (if you don't already have it).
-- [ ] Go to the ENGrid documentation site: `engrid.4sitestudios.com`
-  - [ ] In the left nav under **Core Concepts**, review "Creating an ENGrid Theme" and "Creating a One-Column Page Template."
-  - [ ] Scroll to the section about "Build a generic donation page."
-- [ ] There is a TamperMonkey script in that documentation:
-  - [ ] Open the script.
-  - [ ] Click **Raw**.
-  - [ ] Approve the TamperMonkey install.
+- [ ] Install the ENGrid TamperMonkey script:
+  - [ ] Direct link: [ENgrid - Populate 18 Semantic Sections into Advanced Row.user.js](https://github.com/4site-interactive-studios/bryans-tampermonkey-scripts/blob/main/ENgrid%20-%20Populate%2018%20Semantic%20Sections%20into%20Advanced%20Row.user.js)
+  - [ ] Click **Raw** to view the script source.
+  - [ ] TamperMonkey should automatically prompt you to install it. Approve the installation.
+  - [ ] Alternatively, you can find this script referenced in the "Creating an ENGrid Theme" documentation under **Core Concepts**.
 
 That script automates adding all 18 ENGrid sections (Advanced Columns layout) so you don't have to build them by hand.
+
+**The 18 ENGrid semantic sections (in order):**
+
+1. `page-alert`
+2. `content-header`
+3. `body-headerOutside`
+4. `body-header`
+5. `body-title`
+6. `body-banner`
+7. `body-bannerOverlay`
+8. `body-top`
+9. `body-main`
+10. `body-bottom`
+11. `body-footer`
+12. `body-footerOutside`
+13. `content-footerSpacer`
+14. `content-preFooter`
+15. `content-footer`
+16. `page-backgroundImage`
+17. `page-backgroundImageOverlay`
+18. `page-customCode`
 
 This script replaces a previously painful manual copy/paste process.
 
@@ -125,9 +154,9 @@ This script replaces a previously painful manual copy/paste process.
   - [ ] spacers (for vertical rhythm),
   - [ ] image overlay areas.
 - [ ] Hero images:
-  - [ ] `body-banner` and `page-background-image` handle desktop hero vs background.
+  - [ ] `body-banner` and `page-backgroundImage` handle desktop hero vs background.
   - [ ] ENGrid includes logic to reuse/crop the right image on mobile.
-- [ ] `custom-code` lives at the very bottom:
+- [ ] `page-customCode` lives at the very bottom:
   - [ ] All JS/CSS overrides should ideally sit here.
   - [ ] Benefits:
     - [ ] Your code runs after the page content is present.
@@ -145,9 +174,10 @@ This script replaces a previously painful manual copy/paste process.
 
 - [ ] In the source org, open the donation page in **Edit** mode.
 - [ ] In DevTools on that page (optional trick):
-  - [ ] Find layout classes like `left-left`.
-  - [ ] Temporarily change them in the inspector to match the target layout class (e.g. `center-center-2-col`) purely for visual comparison.
-  - [ ] This just changes what *you* see, not production.
+  - [ ] Find the `data-engrid-layout` attribute on the `<body>` tag (e.g., `leftleft1col`, `centercenter2col`).
+  - [ ] Temporarily change it in the inspector to match the target layout class (e.g., `centercenter2col`) purely for visual comparison.
+  - [ ] This just changes what _you_ see, not production.
+  - [ ] Note: Valid layout values are: `leftleft1col`, `centerleft1col`, `centercenter1col`, `centercenter2col`, `centerright1col`, `rightright1col`.
 - [ ] Now, top to bottom, clone the page into the target org:
   - [ ] For each visible content block (hero/title, intro copy, trust badges, side column appeal text, etc.):
     1. Click **Edit** on the block in SPCAI.
@@ -209,7 +239,7 @@ If the two pages look the same, the scaffold is correct.
   - [ ] Replace SPCAI logos/images/text with the new org's assets.
   - [ ] Update mission copy, tax/legal copy, etc.
 - [ ] Check all code:
-  - [ ] In the `custom-code` section at the bottom, move over any JS/CSS you need.
+  - [ ] In the `page-customCode` section at the bottom, move over any JS/CSS you need.
   - [ ] Make sure you are NOT accidentally firing the source org's Google Tag Manager container or analytics in the new org. Comment out the old GTM code until you have the new org's container.
 - [ ] Save reusable blocks into the new org's Component Library in Engaging Networks (header blocks, legal language blocks, etc.), once you're confident they're stable.
 - [ ] Keep a short punch list of:
@@ -229,7 +259,7 @@ If the two pages look the same, the scaffold is correct.
    - Create a new Donation Page with the right ENGrid template.
    - Add a test gateway under Donation Settings.
    - Save + reopen.
-5. Install TamperMonkey and the ENGrid script from `engrid.4sitestudios.com`.
+5. Install TamperMonkey and the ENGrid script from [GitHub](https://github.com/4site-interactive-studios/bryans-tampermonkey-scripts/blob/main/ENgrid%20-%20Populate%2018%20Semantic%20Sections%20into%20Advanced%20Row.user.js).
 6. In the new Donation Page:
    - Delete default row.
    - Add Advanced Row / Custom Layout.
@@ -241,4 +271,3 @@ If the two pages look the same, the scaffold is correct.
    - Rebuild the form with the same classes, fields, defaults, and hidden fields.
 9. Preview both pages (SPCAI vs ATS) side by side.
 10. If they look the same, you're scaffolded. Branding/content/analytics swaps come next.
-
