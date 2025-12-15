@@ -7,7 +7,7 @@ Engaging Network's Page Buidler Templates are the HTML wrapper for your pages.
 
 To view your templates, and to edit and create new ones, go to Pages > Components > Templates.
 
-![Alt text](https://www.engagingnetworks.support/wp-content/uploads/2019/03//PB_Templates_02.png)
+![Alt text](https://raw.githubusercontent.com/4site-interactive-studios/engrid-docs/refs/heads/main/src/images/PB_Templates_02.png)
 
 ## ENgrid Template Structure
 
