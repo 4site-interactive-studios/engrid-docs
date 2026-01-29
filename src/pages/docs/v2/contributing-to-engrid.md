@@ -1,6 +1,6 @@
 ---
 title: Contributing to ENgrid Scripts
-description: How to contribute how to the ENgrid Scripts library
+description: How to contribute to the ENgrid Scripts library
 ---
 
 ## What is ENgrid Scripts?
