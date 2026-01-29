@@ -87,6 +87,7 @@ At this point you have an empty ENGrid donation page in the new org with the rig
 - [ ] Install the TamperMonkey browser extension in Chrome (if you don't already have it).
 - [ ] Install the ENGrid TamperMonkey script:
   - [ ] Direct link: [ENgrid - Populate 18 Semantic Sections into Advanced Row.user.js](https://github.com/4site-interactive-studios/bryans-tampermonkey-scripts/blob/main/ENgrid%20-%20Populate%2018%20Semantic%20Sections%20into%20Advanced%20Row.user.js)
+    Note: This repository is private. You must be logged into GitHub and have 4Site staff access to view it.
   - [ ] Click **Raw** to view the script source.
   - [ ] TamperMonkey should automatically prompt you to install it. Approve the installation.
   - [ ] Alternatively, you can find this script referenced in the "Creating an ENGrid Theme" documentation under **Core Concepts**.
@@ -260,6 +261,7 @@ If the two pages look the same, the scaffold is correct.
    - Add a test gateway under Donation Settings.
    - Save + reopen.
 5. Install TamperMonkey and the ENGrid script from [GitHub](https://github.com/4site-interactive-studios/bryans-tampermonkey-scripts/blob/main/ENgrid%20-%20Populate%2018%20Semantic%20Sections%20into%20Advanced%20Row.user.js).
+   - Note: This repository is private. You must be logged into GitHub and have 4Site staff access to view it.
 6. In the new Donation Page:
    - Delete default row.
    - Add Advanced Row / Custom Layout.
