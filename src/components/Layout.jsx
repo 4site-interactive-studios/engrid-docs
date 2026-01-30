@@ -60,6 +60,10 @@ export const navigation = [
         title: 'Upgrading from engrid-common',
         href: '/docs/v2/upgrading-from-engrid-common',
       },
+      {
+        title: '4Site SOP: ENgrid Development & Code Deployment',
+        href: '/docs/v2/4site-sop-engrid-development-code-deployment',
+      },
     ],
   },
   {

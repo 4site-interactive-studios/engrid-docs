@@ -68,7 +68,7 @@ Let's run through the whole process of making and testing a change to your ENgri
 ## Upstream ENgrid Scripts Changes
 
 * Clone the ENgrid Scripts repository [https://github.com/4site-interactive-studios/engrid/](https://github.com/4site-interactive-studios/engrid/) and make a new branch.
-* Update your "/src/index.ts" and and "/src/sass/main.scss" to point to the local assets instead of the NPM assets.
+* Update your "/src/index.ts" and "/src/sass/main.scss" to point to the local assets instead of the NPM assets.
 * Run "npm run watch" in your engrid-scripts directory, and "npm run start" in your theme directory.
 * Make any necessary changes
 * Push your code to Github and open a Pull Request, tagging Fernando as a reviewer. 

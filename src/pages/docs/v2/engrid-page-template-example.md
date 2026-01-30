@@ -1,9 +1,9 @@
 ---
-title: ENgrid and Page BuilderTemplate Structure and Optimization
-description: Learn about the intricacies Engaging Network's Page Builder and ENgrid templates. This guide provides a detailed breakdown of template structures, optimization techniques, and best practices to supercharge your page's performance and design.
+title: ENgrid and Page Builder Template Structure and Optimization
+description: Learn about the intricacies of Engaging Network's Page Builder and ENgrid templates. This guide provides a detailed breakdown of template structures, optimization techniques, and best practices to supercharge your page's performance and design.
 ---
 
-Engaging Network's Page Buidler Templates are the HTML wrapper for your pages.
+Engaging Network's Page Builder Templates are the HTML wrapper for your pages.
 
 To view your templates, and to edit and create new ones, go to Pages > Components > Templates.
 
@@ -29,11 +29,11 @@ Usually copied directly from organizational website
 
 #### Meta Tags
 
-    These tags are here to provide Page Template level defaults for social sharing that can then be overwritten when Social Sharing Settings are configured on an individual page. This was extensively tested, no tags more / no tags less should be used. See: [GitHub Issue #12](https://github.com/4site-interactive-studios/en-wishlist/issues/12)
+These tags are here to provide Page Template level defaults for social sharing that can then be overwritten when Social Sharing Settings are configured on an individual page. This was extensively tested, no tags more / no tags less should be used. See: [GitHub Issue #12](https://github.com/4site-interactive-studios/en-wishlist/issues/12)
 
 ```javascript
 <!-- Sharing Meta Tags Used by Facebook-->
-<title>${page~title} | TBD-ORG-NAME - TBD-ORG-TAGLINE>/title>
+<title>${page~title} | TBD-ORG-NAME - TBD-ORG-TAGLINE</title>
 <meta property="og:type" content="website">
 <meta property="fb:app_id" content="1234567890"><!-- Optional -->
 

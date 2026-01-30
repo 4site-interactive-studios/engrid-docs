@@ -86,7 +86,7 @@ Now it’s time to create a Donation page!
 2. In the **Home/Ω3. 4Site Development - Code Development** folder, click on **+New Page**.
 3. Select **Donation page**, then click **Next**.
 4. Enter a name for your page in the **Name** field.
-5. In the **Template** dropdown, select the **4Site Page Template - Center Left 1 Colum** template which you created earlier.
+3. In the **Template** dropdown, select the **4Site Page Template - Center Left 1 Column** template which you created earlier.
 6. Click on **Next** - this will take you to the **Donation Settings** for your page.
 7. Select the Test version of the payment gateway being used by the client. When you are ready for production, you can change this to the Live version.
 8. Click on **Next** - this will take you to the **Notification Settings**. Nothing needs to be set here for the time being, so just click on **Next** again. Your page has been created!
@@ -94,7 +94,7 @@ Now it’s time to create a Donation page!
 After you’ve finished creating your page, we now need to get the page ENgrid-ready. There are two ways to do this:
 
 - Manually, creating each necessary section as you go
-- If you have the TamperMonkey extension installed on Chrome, you can [grab this script](https://github.com/4site-interactive-studios/bryans-tampermonkey-scripts/blob/main/ENgrid%20-%20Populate%2018%20Semantic%20Sections%20into%20Advanced%20Row.user.js) for use for setting up your page.
+- If you have the TamperMonkey extension installed on Chrome, you can [grab this script](https://github.com/4site-interactive-studios/bryans-tampermonkey-scripts/blob/main/ENgrid%20-%20Populate%2018%20Semantic%20Sections%20into%20Advanced%20Row.user.js) for use for setting up your page. `bryans-tampermonkey-scripts` repository is private; access is restricted to 4Site staff only.
 
 In order to set up the structure for your page:
 
