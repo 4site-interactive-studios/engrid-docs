@@ -157,7 +157,7 @@ You can combine these parameters to completely disable ENgrid when troubleshooti
 
 ### Variables Reference
 
-- [https://raw.githubusercontent.com/4site-interactive-studios/engrid/main/packages/styles/src/\_engrid-variables.scss](https://raw.githubusercontent.com/4site-interactive-studios/engrid/main/packages/styles/src/_engrid-variables.scss)
+- You can find style variable references in the [Styles Source Folder](https://github.com/4site-interactive-studios/engrid/tree/main/packages/styles/src).
 
 ### Advanced "Row"
 

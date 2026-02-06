@@ -10,7 +10,7 @@ description: Learn the essentials of managing fundraising receipts with ENgrid a
 
 [https://e-activist.com/index.html#receipt](https://e-activist.com/index.html#receipt)
 
-There are seven types of receipts you can create. but OC only makes use of
+There are seven types of receipts you can create, but OC only makes use of
 
 * **Original Receipt** - For when someone makes a gift. [More information here](https://www.engagingnetworks.support/knowledge-base/fundraising-receipt/)
 * **Replacement Receipt** - A replacement of an Original Receipt. [More information here](https://www.engagingnetworks.support/knowledge-base/gadgets-single-donations/) under the “Issuing a replacement receipt” heading.
@@ -69,9 +69,9 @@ Screencast of resending a receipt: [https://d.pr/v/ucWHNB](https://d.pr/v/ucWHNB
 Received email for **"Replacement Receipt"**: [https://d.pr/i/b0dCkk](https://d.pr/i/b0dCkk)
 
 
-### Recurring Gift Recepting 
+### Recurring Gift Receipting 
 
-Note an option. According to EN support 
+Not an option. According to EN support 
 >We don't issue receipts for recurring donations because they are one part gift of a whole.
 
 
