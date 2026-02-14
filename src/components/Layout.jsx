@@ -64,6 +64,10 @@ export const navigation = [
         title: '4Site SOP: ENgrid Development & Code Deployment',
         href: '/docs/v2/4site-sop-engrid-development-code-deployment',
       },
+      {
+        title: 'Debug Panel',
+        href: '/docs/v2/debug-panel',
+      },
     ],
   },
   {
@@ -78,16 +82,44 @@ export const navigation = [
         href: '/docs/v2/conditionally-require-fields',
       },
       {
+        title: 'Form Validation',
+        href: '/docs/v2/validation',
+      },
+      {
+        title: 'Input Placeholders',
+        href: '/docs/v2/input-placeholders',
+      },
+      {
         title: 'International Addresses',
         href: '/docs/v2/international-form-addresses',
+      },
+      {
+        title: 'Country Options',
+        href: '/docs/v2/country-options',
       },
       {
         title: 'Dynamic Content based on URL arguments',
         href: '/docs/v2/dynamic-content-from-url-arguments',
       },
       {
+        title: 'URL Parameters',
+        href: '/docs/v2/url-parameters',
+      },
+      {
+        title: 'Data Attributes & Data Replace',
+        href: '/docs/v2/data-attributes',
+      },
+      {
         title: 'Embed / iFrame',
         href: '/docs/v2/embedding-engrid',
+      },
+      {
+        title: 'iFrame Communication',
+        href: '/docs/v2/iframe',
+      },
+      {
+        title: 'Auto Submit',
+        href: '/docs/v2/autosubmit',
       },
     ],
   },
@@ -107,8 +139,40 @@ export const navigation = [
         href: '/docs/v2/background-image-positioning',
       },
       {
+        title: 'Media Attribution',
+        href: '/docs/v2/media-attribution',
+      },
+      {
         title: 'Conditional Content Helper Classes',
         href: '/docs/v2/conditional-content-helper-classes',
+      },
+      {
+        title: 'Show If Amount',
+        href: '/docs/v2/show-if-amount',
+      },
+      {
+        title: 'Thank You Page Conditional Content',
+        href: '/docs/v2/thank-you-page-conditional-content',
+      },
+      {
+        title: 'Live Variables',
+        href: '/docs/v2/live-variables',
+      },
+      {
+        title: 'Skip Link (Accessibility)',
+        href: '/docs/v2/skip-link',
+      },
+      {
+        title: 'Mobile CTA',
+        href: '/docs/v2/mobile-cta',
+      },
+      {
+        title: 'Progress Bar',
+        href: '/docs/v2/progress-bar',
+      },
+      {
+        title: 'Ticker',
+        href: '/docs/v2/ticker',
       },
       { title: 'Welcome Back', href: '/docs/v2/welcome-back' },
     ],
@@ -123,6 +187,14 @@ export const navigation = [
         href: '/docs/v2/payment-types',
       },
       {
+        title: 'Digital Wallets',
+        href: '/docs/v2/digital-wallets',
+      },
+      {
+        title: 'Stripe Financial Connections',
+        href: '/docs/v2/stripe-financial-connections',
+      },
+      {
         title: 'Preferred Payment Method',
         href: '/docs/v2/preferred-payment-method',
       },
@@ -131,6 +203,7 @@ export const navigation = [
         href: '/docs/v2/in-memory-honor-helper-classes',
       },
       { title: 'Custom Premium', href: '/docs/v2/custom-premium' },
+      { title: 'Premium Gift', href: '/docs/v2/premium-gift' },
       { title: 'Upsells', href: '/docs/v2/upsells' },
       { title: 'Embedded Ecard', href: '/docs/v2/embedded-ecard' },
       { title: 'Donor Receipting', href: '/docs/v2/donation-receipting' },
@@ -145,11 +218,15 @@ export const navigation = [
     links: [
       { title: 'Custom Lightboxes', href: '/docs/v2/custom-lightboxes' },
       { title: 'Opt-In Ladder', href: '/docs/v2/opt-in-ladder' },
+      { title: 'Universal Opt-In', href: '/docs/v2/universal-opt-in' },
       { title: 'Post-Donation Donation', href: '/docs/v2/post-donation-embed' },
       { title: 'Remember Me', href: '/docs/v2/remember-me' },
+      { title: 'Fast Form Fill', href: '/docs/v2/fast-form-fill' },
       { title: 'Multi-step Forms', href: '/docs/v2/single-page-multistep' },
       { title: 'Exit Intent Lightbox', href: '/docs/v2/exit-intent-lightbox' },
       { title: 'Frequency Upsell Modal', href: '/docs/v2/frequency-upsell' },
+      { title: 'Email Validation', href: '/docs/v2/email-validation' },
+      { title: 'Event Tickets', href: '/docs/v2/event-tickets' },
       { title: 'Homepage Takeover', href: '/docs/v2/homepage-takeover' },
       { title: 'Sticky NSG', href: '/docs/v2/sticky-nsg' },
       { title: 'Sticky Pre-population', href: '/docs/v2/sticky-prepopulation' },
