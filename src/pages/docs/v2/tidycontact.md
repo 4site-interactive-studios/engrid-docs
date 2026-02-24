@@ -13,7 +13,7 @@ If you would like TidyContact Address to record the results of the API call, inc
 - TidyContact Address Date
 - TidyContact Address Status
 
-After you've created them, add them to a testing form and then inspect the source code of the page to get their values. For example this example markup of hidden field has a code level name of `supporter.NOT_TAGGED_3`.
+After you've created them, add them to a testing form and then inspect the source code of the page to get their values. For example, this markup of a hidden field has the code-level name `supporter.NOT_TAGGED_3`.
 
 ```html
 <input
