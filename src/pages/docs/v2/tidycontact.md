@@ -7,7 +7,7 @@ TidyContact is an additional functionality built into ENGrid that allows address
 
 ## Create Custom Supporter Fields (Optional)
 
-If you would like TidyContact Address to record the results of the API call, including the original user entered address, the date the call was made, and the returned statuss, then you need to create three custom supporter fields on your Engaging Networks Account to store this information. The field type should be "hidden" and you will need to add the fields to a form in order to get their actual sourc ecode `names``. When creating the three custom fields, we suggest the following field names:
+If you would like TidyContact Address to record the results of the API call, including the original user entered address, the date the call was made, and the returned statuss, then you need to create three custom supporter fields on your Engaging Networks Account to store this information. The field type should be "hidden" and you will need to add the fields to a form in order to get their actual sourc ecode `names`. When creating the three custom fields, we suggest the following field names:
 
 - TidyContact Address Record
 - TidyContact Address Date
