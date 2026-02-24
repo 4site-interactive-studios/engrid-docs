@@ -31,7 +31,7 @@ Make note of each as you will need to add these three field names to the ENGrid 
 Every option can be configured in your client theme options. 
 
 - **cid** - Address Standardization Client ID (**required**).
-- **page_types** - What type of Engaging Network pages (advocacy, donation, etc) TidyContact is permitted to run on, by default runs on all pages.
+- **page_types** - What type of Engaging Networks pages (advocacy, donation, etc) TidyContact is permitted to run on, by default runs on all pages.
 - **record_field** - Address Standardization Record. Set the field name to store the Address Standardization Record Data. Usually a hidden field.
 - **date_field** - Address Standardization Date. Set a field name to store the date. Every time the Address Standardization service is called, this field will be updated.
 - **status_field** - Address Standardization Status. Set a field name to store the status of the last Address Standardization attempt.
