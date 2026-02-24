@@ -82,6 +82,10 @@ export const navigation = [
         href: '/docs/v2/international-form-addresses',
       },
       {
+        title: 'TidyContact Integration',
+        href: '/docs/v2/tidycontact',
+      },
+      {
         title: 'Dynamic Content based on URL arguments',
         href: '/docs/v2/dynamic-content-from-url-arguments',
       },
