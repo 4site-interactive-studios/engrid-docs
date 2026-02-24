@@ -3,7 +3,7 @@ title: TidyContact
 description: How to integrate TidyContact into your ENGrid installation
 ---
 
-TidyContact is an additional functionality built into ENGrid that allows addresses submitted on Engaging Networks forms to be validated by 4Site's Address Standarization API. Using this implementation requires a cid issued by 4Site.
+TidyContact is an additional functionality built into ENGrid that allows addresses submitted on Engaging Networks forms to be validated by 4Site's Address Standardization API. Using this implementation requires a cid issued by 4Site.
 
 ## Create Custom Supporter Fields (Optional)
 
