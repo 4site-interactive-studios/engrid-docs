@@ -5,6 +5,8 @@ description: How to integrate TidyContact into your ENGrid installation
 
 TidyContact is an additional functionality built into ENGrid that allows addresses submitted on Engaging Networks forms to be validated by 4Site's Address Standardization API. Using this implementation requires a cid issued by 4Site.
 
+To learn more about TidyContact in general, you can visit [our product demonstration site](https://www.4sitestudios.com/products/4site-tidycontact-address/).
+
 ## Create Custom Supporter Fields (Optional)
 
 If you would like TidyContact Address to record the results of the API call, including the original user entered address, the date the call was made, and the returned status, then you need to create three custom supporter fields on your Engaging Networks Account to store this information. The field type should be "hidden" and you will need to add the fields to a form in order to get their actual source code `names`. When creating the three custom fields, we suggest the following field names:
