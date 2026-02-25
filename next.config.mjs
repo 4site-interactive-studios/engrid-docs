@@ -93,7 +93,7 @@ const nextConfig = {
       },
       {
         source: '/docs/ecard-to-target',
-        destination: '/docs/v2/ecard-to-target',
+        destination: '/docs/v2/advocacy-features#ecard-to-target',
         permanent: true,
       },
       {
@@ -116,6 +116,11 @@ const nextConfig = {
         destination: '/docs/v2/conditional-content-helper-classes',
         permanent: true,
       },
+      {
+        source: '/docs/v2/ecard-to-target',
+        destination: '/docs/v2/advocacy-features#ecard-to-target',
+        permanent: true,
+      }
     ]
   },
 }

@@ -137,8 +137,8 @@ export const navigation = [
     ],
   },
   {
-    title: 'Advocacy Pages',
-    links: [{ title: 'eCard To Target', href: '/docs/v2/ecard-to-target' }],
+    title: 'Page-Specific Features',
+    links: [{ title: 'Advocacy & Email-to-Target', href: '/docs/v2/advocacy-features' }],
   },
   {
     title: 'Advanced Features',
