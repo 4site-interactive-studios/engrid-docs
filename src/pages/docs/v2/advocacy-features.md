@@ -141,7 +141,7 @@ If one or more are found, the component doesn't run, allowing EN's merge tags to
 
 ## Ecard to Target
 
-ENgrid can transform your standard eCard pages into a targeted advocacy action.  Your eCard page will function similar to an Email To Target page, with the eCard being sent to a predefined target.
+With the `EcardToTarget` component, ENgrid can transform your standard eCard pages into a targeted advocacy action.  Your eCard page will function similar to an Email To Target page, with the eCard being sent to a predefined target.
 
 ### Overview
 

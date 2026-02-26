@@ -108,6 +108,8 @@ This is especially useful when:
 - Sharing links for public testing
 - Avoiding the need to maintain URL parameters
 
+For more information about asset loading, see [Loader](./loader.md)
+
 ---
 
 ## Building and deploying production files
