@@ -523,7 +523,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/component/tidy-contact',
+        source: '/component/tidycontact',
         destination: '/docs/v2/tidycontact',
         permanent: true,
       },
