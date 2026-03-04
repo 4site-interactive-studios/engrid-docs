@@ -306,7 +306,13 @@ When the field name is `en__pg` (premium gift), the `EN_FORM_VALUE_UPDATED` even
 
 # End of Gift Process Events (Advanced)
 
-ENgrid stores certain events in sessionStorage at the end of the gift process and replays them on the next page load. This is an advanced feature for tracking multi-step flows and ensuring all events are captured.
+ENgrid stores certain events in sessionStorage at the end of the gift process and replays them on the next page load. This is an advanced feature for tracking multi-step flows and ensuring all events are captured. Since ENGrid creates an event in the DataLayer for every action performed, this means you can see what a user did in the process of creating the conversion event.
+
+For example, did a user opt into receiving SMS messages only to change their mind before submitting? You could look at `EN_FORM_VALUE_UPDATED` events to see if the SMS opt-in was toggled multiple times before gift submission.
+
+As another example, if your donation form has a nudge to switch to monthly/annual payments in the later half, you could look at `EN_FORM_VALUE_UPDATED` events to see if a user switched recurring frequency after filling out their name and address.
+
+These "micro-conversions" are otherwise harder to spot if you were just looking at the end data, and can help with detecting pain points and patterns that better increase recurring contributions and Email/SMS signups.
 
 ## Developer API
 
