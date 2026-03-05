@@ -129,10 +129,10 @@ This script manages time-based redirections for specific dates on our landing pa
   
 (function() {
 var urlsByDate = {
-    "12-03": "https://support.example.org/page/12345/donate/1",
-    "12-30": "https://support.example.org/page/54321/donate/1",
-    "12-31": "https://support.example.org/page/12345/donate/1",
-    "06-30": "https://support.example.org/page/54321/donate/1"
+    "2026-12-03": "https://support.example.org/page/12345/donate/1",
+    "2026-12-30": "https://support.example.org/page/54321/donate/1",
+    "2026-12-31": "https://support.example.org/page/12345/donate/1",
+    "2026-06-30": "https://support.example.org/page/54321/donate/1"
 };
 
 var suppressionCookie = "redirectSuppressed";
@@ -169,11 +169,10 @@ function buildRedirectUrl(redirectUrl) {
 // Get the current date or the simulated date from query params
 function getCurrentOrSimulatedDate() {
     var simulateDate = queryParams.get("simulate-date");
-    if (simulateDate && /^\d{2}-\d{2}$/.test(simulateDate)) {
+    if (simulateDate && /^\d{4}-\d{2}-\d{2}$/.test(simulateDate)) {
     return simulateDate; // Use the simulated date if provided and valid
     }
-    var today = new Date();
-    return String(today.getMonth() + 1).padStart(2, '0') + "-" + String(today.getDate()).padStart(2, '0');
+    return new Date().toISOString().split('T')[0];
 }
 
 // Check if the date is one of the specified target dates
@@ -193,9 +192,9 @@ if (urlsByDate[todayFormatted]) {
 #### Preview Your Changes in GTM
 *   Use GTM’s Preview Mode to test your setup.
 *   Because the redirect is date-based, you can simulate a future date by appending the `simulate-date` parameter to your site URL.
-*  Example: `https://example.org?simulate-date=06-30`
+*  Example: `https://example.org?simulate-date=2026-06-30`
 
-This will trigger the takeover as if it were live on June 30.
+This will trigger the takeover as if it were live on June 30, 2026.
 
 #### Publish Your Changes
 
