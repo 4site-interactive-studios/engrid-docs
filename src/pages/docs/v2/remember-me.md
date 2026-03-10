@@ -1,222 +1,34 @@
-# Remember Me
-
-"Remember Me" is a solution that allows for creating and reading a single cross-domain and subdomain cookie. This feature enables visitors to save their form details and have them automatically filled in when they return to Engaging Networks forms.
+---
+title: Remember Me
+description: This page shows how to use ENgrid's remember me feature.
+---
 
 ## Overview
 
-"Remember Me" is a solution ([source code](https://github.com/4site-interactive-studios/engrid-scripts/blob/e5e7cd7b1f70e8649df0b9cfdde317971df19819/packages/common/src/remember-me.ts#L50)) that 4Site developed to allow for creating and reading a single cross-domain and subdomain cookie ([example](https://protect.worldwildlife.org/)). 
+The Remember Me component allows supporters to save their form information for future visits, making it faster to complete forms on the same device. When a supporter opts in to "Remember Me," their non-financial information is stored locally or on a remote server, and automatically filled in when they return to complete another form.
 
-During setup, a single static HTML file ([example](https://www.ran.org/wp-content/themes/ran-2020/data-remember.html)) will be added to the main ([www.4sitestudios.com](http://www.4sitestudios.com)) sub-domain; it can live at any URL. Then, anywhere the "Remember Me" cookie needs to be read from or written to, that static page will be opened in an iFrame.
-
-The `engrid-autofill` cookie is set by the static HTML page on the main domain and communicated with from the parent page via postMessage. This static HTML page does require the server it's hosted on to have a particular x-frame, or CSP setting, to accommodate this communication. It's also acceptable if the static HTML file needs to live at its own subdomain (remember.4sitestudios.com) to accommodate those configurations.
-
-4Site's ENgrid pages can then be configured to enable "Remember Me". Once configured, an opt-in checkbox in a spot, with a label and hover tooltip of your choosing, will appear. When checked, this will save the visitor's form details (First Name, Last Name, Country, Address 1, Address 2, Region, City, State, Postal Code, Email) into a cookie that has a 365-day expiration; the expiration length can be adjusted per AIUSA's preferences. It will then restore the values in this cookie whenever that visitor returns to an Engaging Networks form. During setup, you will be able to change the fields that are captured, adding or removing them. Post-setup, with custom code, non-EN forms could also set new data or pull it from this cookie.
-
-If a page loads and fields are already populated (e.g., clicking a Campaign Link on an Engaging Networks email), then any "Remember Me" cookie data will only be used to auto-fill empty fields.
-
-Additionally, every time the first-party "Remember Me" cookie is read, it will be recreated to future-proof against any browser-based hard cookie expirations ([example](https://github.com/WebKit/WebKit/pull/5347)). A similar read and re-create solution could be implemented on 4sitestudios.com so that visitors continue to top-up the life of their Remember Me cookie with every page view; that functionality is not a part of this project but could be explored as a follow-on engagement.
-
-Finally, if details are auto-filled from the "Remember Me" cookie, a "Clear Autofill" link will be shown instead of seeing the corresponding checkbox the visitor selected to opt in. Clicking this link will delete the `engrid-autofill` cookie, making the visitor's browser "forget" their personal details.
-
-## Configuration
-
-To enable Remember Me, add a `RememberMe` property to the `options` object in your ENgrid theme configuration.
-
-### Basic Configuration
-
-```javascript
-{
-  RememberMe: {
-    fieldNames: [
-      'supporter.firstName',
-      'supporter.lastName',
-      'supporter.emailAddress',
-      'supporter.address1',
-      'supporter.address2',
-      'supporter.city',
-      'supporter.region',
-      'supporter.postcode',
-      'supporter.country'
-    ]
-  }
-}
-```
-
-### Configuration Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `checked` | `boolean` | `false` | If set to `true`, the Remember Me opt-in checkbox will be checked by default. |
-| `remoteUrl` | `string` | `null` | URL to a webpage that will work as a remote repository for form details. If provided, the cookie will be saved to that remote URL's domain. If not provided, the cookie will be saved to the current page's domain. |
-| `cookieName` | `string` | `"engrid-autofill"` | The name of the cookie that stores the autofill data. |
-| `cookieExpirationDays` | `number` | `365` | Number of days for the cookie expiration. |
-| `fieldNames` | `string[]` | `[]` | An array of form input field names that will be saved and autofilled. Common field names include: `supporter.firstName`, `supporter.lastName`, `supporter.address1`, `supporter.address2`, `supporter.city`, `supporter.country`, `supporter.region`, `supporter.postcode`, `supporter.emailAddress`. |
-| `fieldOptInSelectorTarget` | `string` | `".en__field--emailAddress.en__field"` | A comma-delimited list of CSS selectors. The script will try each selector in turn until it finds one that exists, then place the Remember Me opt-in element relative to it. |
-| `fieldOptInSelectorTargetLocation` | `"before" \| "after"` | `"after"` | Determines whether the Remember Me opt-in element is placed before or after the target element. |
-| `fieldClearSelectorTarget` | `string` | `'label[for="en__field_supporter_firstName"]'` | A comma-delimited list of CSS selectors. The script will try each selector in turn until it finds one that exists, then place the "Clear Autofill" link relative to it. |
-| `fieldClearSelectorTargetLocation` | `"before" \| "after"` | `"before"` | Determines whether the "Clear Autofill" link is placed before or after the target element. |
-| `fieldDonationAmountRadioName` | `string` | `"transaction.donationAmt"` | The name of the Engaging Networks donation amount radio buttons. |
-| `fieldDonationAmountOtherName` | `string` | `"transaction.donationAmt.other"` | The name of the Engaging Networks donation amount "Other" input field. |
-| `fieldDonationRecurrPayRadioName` | `string` | `"transaction.recurrpay"` | The name of the Engaging Networks frequency field. |
-| `fieldDonationAmountOtherCheckboxID` | `string` | `"#en__field_transaction_donationAmt4"` | **Deprecated** - This option is deprecated and will be removed. |
-
-### Remote URL Setup
-
-When using a remote URL for cross-domain cookie storage, you'll need to create a static HTML file on your main domain. This file will handle cookie operations via postMessage communication.
-
-#### Remote HTML File Template
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Remember Me Cookie Handler</title>
-</head>
-<body>
-  <script>
-    (function () {
-      // Allowed domains
-      var whitelist = [
-        "www.client.org",
-        "act.client.org",
-      ];
-      
-      function verifyOrigin(origin) {
-        var domain = origin.replace(/^https?:\/\/|:\d{1,4}$/g, "").toLowerCase(),
-          i = 0,
-          len = whitelist.length;
-        while (i < len) {
-          if (whitelist[i] == domain) {
-            return true;
-          }
-          i++;
-        }
-        return false;
-      }
-      
-      function readCookie(name) {
-        var nameEQ = encodeURIComponent(name) + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) === ' ')
-            c = c.substring(1, c.length);
-          if (c.indexOf(nameEQ) === 0)
-            return decodeURIComponent(c.substring(nameEQ.length, c.length));
-        }
-        return null;
-      }
-      
-      function writeCookie(name, value, days) {
-        var d = new Date();
-        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = name + "=" + JSON.stringify(value) + ";expires=" + d.toUTCString() + ';SameSite=none;Secure;';
-      }
-      
-      function handleRequest(event) {
-        if (verifyOrigin(event.origin)) {
-          var data = JSON.parse(event.data);
-          if (data.hasOwnProperty('operation') && data.hasOwnProperty('key')) {
-            var retVal = {
-              id: data.id,
-              key: data.key,
-              value: null
-            };
-            if (data.operation == 'write' && data.hasOwnProperty('value')) {
-              writeCookie(data.key, data.value, data.expires || 365);
-            } else if (data.operation == 'read') {
-              retVal.value = readCookie(data.key);
-            }
-          }
-          event.source.postMessage(JSON.stringify(retVal), event.origin);
-        }
-      }
-      
-      if (window.addEventListener) {
-        window.addEventListener("message", handleRequest, false);
-      } else if (window.attachEvent) {
-        window.attachEvent("onmessage", handleRequest);
-      }
-    })();
-  </script>
-</body>
-</html>
-```
-
-#### Server Configuration Requirements
-
-The static HTML file requires specific server configurations:
-
-- **X-Frame-Options**: Must allow framing from your Engaging Networks domains
-- **Content Security Policy (CSP)**: Must allow framing and postMessage communication
-- **Alternative**: The file can be hosted on a separate subdomain (e.g., `remember.4sitestudios.com`) if needed to accommodate server configurations
+{% callout title="You should know!" %}
+Financial information is never stored. The Remember Me feature only saves personal details like name, email, address, and other non-payment fields.
+{% /callout %}
 
 ## How It Works
 
-### User Flow
+The component provides two storage modes:
 
-1. **First Visit**: When a visitor arrives at an Engaging Networks form with Remember Me enabled, they see an opt-in checkbox.
-2. **Opt-In**: If the visitor checks the "Remember Me" checkbox and submits the form, their form details are saved to a cookie.
-3. **Subsequent Visits**: When the visitor returns, their saved details are automatically filled into empty form fields.
-4. **Clear Autofill**: If data is auto-filled, a "Clear Autofill" link appears instead of the checkbox, allowing visitors to delete their saved information.
+1. **Local Storage** - Uses browser cookies to store data on the supporter's device
+2. **Remote Storage** - Uses a remote server via iframe postMessage to store data across domains
 
-### Cookie Behavior
+When a supporter returns:
+- The component checks for saved data
+- If found, it displays a "clear autofill" link and automatically fills in saved fields
+- If not found, it displays a "Remember Me" checkbox for opt-in
 
-- **Cookie Name**: `engrid-autofill` (configurable via `cookieName` option)
-- **Expiration**: 365 days by default (configurable via `cookieExpirationDays` option)
-- **Auto-Renewal**: The cookie is automatically recreated each time it's read to prevent browser-based hard expirations
-- **Field Priority**: If fields are already populated (e.g., from URL parameters), Remember Me data only fills empty fields
+## Basic Implementation
 
-### Events
-
-Remember Me dispatches custom events that can be listened to:
-
-- `RememberMe_Loaded`: Fired when Remember Me initializes
-  - `detail.withData`: `boolean` - Indicates whether saved data was found
-- `RememberMe_Cleared`: Fired when the user clears their saved data
+To enable the Remember Me component, initialize it in your page code block (for a page-by-page basis) or in client theme settings:
 
 ```javascript
-window.addEventListener('RememberMe_Loaded', (event) => {
-  console.log('Remember Me loaded', event.detail);
-});
-
-window.addEventListener('RememberMe_Cleared', () => {
-  console.log('Remember Me data cleared');
-});
-```
-
-## Encrypting Data at Rest
-
-To ensure donors' information is secure, the visitor's "Remember Me" data is encrypted at rest and never leaves their computer.
-
-The key to decrypting this data will be a **fingerprint ID** derived from the visitor's browser and hashed with their **IP address**.
-
-### Encryption Process
-
-1. **ID Generation**: If a visitor already has the `engrid-autofill` cookie set in their browser, or if they submit a form with the "Remember Me" checkbox selected, we will generate an **ID** for that visitor; this is done client-side, and the ID never leaves the browser. We don't need the ID to be truly unique per visitor; we just need it to be deterministic and unpredictable. For this, the open-source version of [FingerprintJS](https://github.com/fingerprintjs/fingerprintjs) ([demo](https://fingerprintjs.github.io/fingerprintjs/)) should work. The open-source version does not include the visitor's IP address as a signal, and we will use their IP to hash the ID and increase uniqueness. If changing IPs is a concern, we can explore not appending the user's IP address. Please note that since our original discussion, [the license](https://fingerprint.com/blog/fingerprintjs-license-change/) used by the open-source FingerprintJS project has changed. Either an old version will need to be used, which is our preference. Or a license will need to be purchased.
-
-2. **Encryption**: With the visitor **ID+IP** hash, we will encrypt the `engrid-autofill` cookie. Then, the visitor ID+IP hash will be discarded, having never been saved or having left their browser.
-
-3. **Decryption**: On subsequent visits, while the `engrid-autofill` cookie is detected in the visitor's browser, the process for generating the visitor's ID and hashing it with their IP address will be repeated, and the cookie will be decrypted. If the visitor's browser fingerprint or IP address changes, the decryption will fail, nothing will happen, and we will delete the `engrid-autofill` cookie as it can no longer be decrypted.
-
-### Security Model
-
-An attacker would need access to all three of the following to decrypt the cookie:
-- The fully encrypted cookies
-- The client-side generated browser fingerprint
-- The visitor's IP address
-
-Only with all three of those could the encrypted cookie be decrypted.
-
-## Examples
-
-### Basic Configuration
-
-```javascript
-{
+EngridOptions = {
   RememberMe: {
     fieldNames: [
       'supporter.firstName',
@@ -229,90 +41,322 @@ Only with all three of those could the encrypted cookie be decrypted.
       'supporter.country'
     ]
   }
+};
+```
+
+## Configuration Options
+
+The Remember Me component accepts the following configuration options:
+
+| Property | Description | Default |
+| -------- | ----------- | ------- |
+| `remoteUrl` | URL for remote iframe storage (enables cross-domain storage) | `null` (uses local cookies) |
+| `cookieName` | Name of the cookie used to store data | `"engrid-autofill"` |
+| `cookieExpirationDays` | Number of days before the cookie expires | `365` |
+| `fieldNames` | Array of field names to save and restore | `[]` |
+| `checked` | Whether the Remember Me checkbox is checked by default | `false` |
+
+### Donation-Specific Options
+
+For donation forms, you can configure how donation amounts are handled:
+
+| Property | Description | Default |
+| -------- | ----------- | ------- |
+| `fieldDonationAmountRadioName` | Name of the donation amount radio field | `"transaction.donationAmt"` |
+| `fieldDonationAmountOtherName` | Name of the other amount field | `"transaction.donationAmt.other"` |
+| `fieldDonationRecurrPayRadioName` | Name of the recurring payment radio field | `"transaction.recurrpay"` |
+| `fieldDonationAmountOtherCheckboxID` | ID of the other amount checkbox | `"#en__field_transaction_donationAmt4"` |
+
+### UI Customization Options
+
+Control where the Remember Me checkbox and clear link appear:
+
+| Property | Description | Default |
+| -------- | ----------- | ------- |
+| `fieldOptInSelectorTarget` | CSS selector for where to insert the Remember Me checkbox | `".en__field--emailAddress.en__field"` |
+| `fieldOptInSelectorTargetLocation` | Where to insert relative to target (`"before"` or `"after"`) | `"after"` |
+| `fieldClearSelectorTarget` | CSS selector for where to insert the clear link | `'label[for="en__field_supporter_firstName"]'` |
+| `fieldClearSelectorTargetLocation` | Where to insert relative to target (`"before"` or `"after"`) | `"before"` |
+
+## Complete Configuration Example
+
+```javascript
+window.EngridOptions = {
+  RememberMe: {
+    // Storage settings
+    cookieName: 'my-org-autofill',
+    cookieExpirationDays: 730, // 2 years
+    
+    // Fields to save
+    fieldNames: [
+      'supporter.firstName',
+      'supporter.lastName',
+      'supporter.emailAddress',
+      'supporter.phoneNumber',
+      'supporter.address1',
+      'supporter.city',
+      'supporter.region',
+      'supporter.postcode',
+      'supporter.country'
+    ],
+    
+    // Donation fields
+    fieldDonationAmountRadioName: 'transaction.donationAmt',
+    fieldDonationAmountOtherName: 'transaction.donationAmt.other',
+    fieldDonationRecurrPayRadioName: 'transaction.recurrpay',
+    
+    // UI positioning
+    fieldOptInSelectorTarget: '.en__field--emailAddress.en__field',
+    fieldOptInSelectorTargetLocation: 'after',
+    fieldClearSelectorTarget: 'label[for="en__field_supporter_firstName"]',
+    fieldClearSelectorTargetLocation: 'before',
+    
+    // Default opt-in state
+    checked: false
+  }
+};
+```
+
+## Remote Storage Setup
+
+For cross-domain storage, you'll need to host an iframe HTML file on your domain:
+
+```javascript
+window.EngridOptions = {
+  RememberMe: {
+    remoteUrl: 'https://yourdomain.com/remember-me-iframe.html',
+    fieldNames: [
+      'supporter.firstName',
+      'supporter.lastName',
+      'supporter.emailAddress'
+    ]
+  }
+};
+```
+
+{% callout title="You should know!" %}
+Remote storage requires hosting an HTML file that handles postMessage communication. The remote URL must support localStorage and be accessible from your form pages.
+{% /callout %}
+
+## User Interface
+
+### Remember Me Checkbox
+
+When no saved data exists, the component displays a checkbox with an info icon:
+
+- **Label**: "Remember Me"
+- **Info tooltip**: Explains that financial information won't be stored and should only be used on personal devices
+- **Checkbox state**: Controlled by the `checked` option
+
+### Clear Autofill Link
+
+When saved data exists, the component displays a link instead of the checkbox:
+
+- **Text**: "(clear autofill)"
+- **Action**: Clicking clears saved data and resets the form
+- **Location**: Controlled by `fieldClearSelectorTarget` and `fieldClearSelectorTargetLocation`
+
+## Custom Events
+
+The Remember Me component dispatches custom events you can listen for:
+
+### RememberMe_Loaded
+
+Fired when the component finishes loading:
+
+```javascript
+window.addEventListener('RememberMe_Loaded', (e) => {
+  if (e.detail.withData) {
+    console.log('Remember Me loaded with saved data');
+  } else {
+    console.log('Remember Me loaded without saved data');
+  }
+});
+```
+
+### RememberMe_Cleared
+
+Fired when the user clears their saved data:
+
+```javascript
+window.addEventListener('RememberMe_Cleared', () => {
+  console.log('Remember Me data has been cleared');
+});
+```
+
+## Field Behavior
+
+### Supported Field Types
+
+The component handles various field types:
+
+- **Text inputs** - Standard text fields
+- **Select dropdowns** - Single and multiple select
+- **Radio buttons** - Selects the matching radio option
+- **Checkboxes** - Checks if the value matches
+- **Textareas** - Multi-line text fields
+
+### Field Value Handling
+
+- Values are URL-encoded when saved
+- Values are decoded when restored
+- Empty values are skipped during save
+- Select fields only update if a matching option exists
+- Radio/checkbox fields only check if the value matches
+
+### Donation Amount Restoration
+
+For donation amounts, the component:
+1. Attempts to select a matching radio button
+2. If no match, fills the "other amount" field
+3. Triggers click events to ensure proper form updates
+
+### Recurring Donation Restoration
+
+For recurring donations:
+- Only activates if the saved value is "Y"
+- Clicks the recurring radio button to trigger any dependent logic
+
+## Security and Privacy
+
+{% callout title="You should know!" %}
+The component is designed for personal devices only. The info tooltip explicitly warns supporters to only use this feature on their own devices, not on shared or public computers.
+{% /callout %}
+
+### What Is Saved
+
+- Personal information fields specified in `fieldNames`
+- Non-financial data only
+- Data is stored as URL-encoded strings
+
+### What Is NOT Saved
+
+- Credit card numbers
+- CVV codes
+- Bank account information
+- Any payment-related sensitive data
+
+## Technical Details
+
+### Cookie Storage
+
+When using local storage:
+- Data is stored in a browser cookie with the specified name
+- Cookie expires after the configured number of days
+- Cookie is cleared when the user clicks "clear autofill"
+
+### Remote Storage
+
+When using remote storage:
+- Creates a hidden sandboxed iframe
+- Communicates via postMessage API
+- Requires JSON and localStorage support in the browser
+- iframe has `allow-same-origin allow-scripts` permissions
+
+### Form Integration
+
+The component integrates with ENgrid's form events:
+- Subscribes to the `onSubmit` event to save data
+- Only saves when the user has opted in via checkbox
+- Dispatches custom events for external integrations
+
+## Styling Customization
+
+The Remember Me checkbox can be styled using these selectors:
+
+```css
+/* Main wrapper */
+.rememberme-wrapper {
+  /* Your styles */
+}
+
+/* Checkbox field */
+#remember-me-checkbox {
+  /* Your styles */
+}
+
+/* Label content */
+.rememberme-content {
+  /* Your styles */
+}
+
+/* Info icon toggle */
+#rememberme-learn-more-toggle {
+  /* Your styles */
+}
+
+/* Clear autofill link */
+#clear-autofill-data {
+  /* Your styles */
 }
 ```
 
-### Cross-Domain Configuration
+You can also adjust the info icon margin using CSS variables:
+
+```css
+:root {
+  --rememberme-learn-more-toggle_margin-top: 0px;
+}
+```
+
+## Troubleshooting
+
+### Checkbox Doesn't Appear
+
+Check that:
+- The `fieldOptInSelectorTarget` matches an element on your page
+- The target selector is specific enough to find the right element
+- Multiple selectors can be provided, separated by commas
+
+### Data Isn't Being Saved
+
+Verify that:
+- The `fieldNames` array includes the correct field names
+- Field names match exactly with your form field `name` attributes
+- The Remember Me checkbox is checked before form submission
+- Cookies are enabled in the browser
+
+### Data Isn't Being Restored
+
+Ensure that:
+- The field names match between saved data and current form
+- Fields exist on the page with the correct `name` attributes
+- The cookie hasn't expired (check `cookieExpirationDays`)
+- For remote storage, the iframe loaded successfully
+
+## Example: Minimal Setup
 
 ```javascript
-{
+EngridOptions = {
   RememberMe: {
-    remoteUrl: 'https://www.4sitestudios.com/data-remember.html',
-    cookieName: 'engrid-autofill',
+    fieldNames: [
+      'supporter.firstName',
+      'supporter.lastName',
+      'supporter.emailAddress'
+    ]
+  }
+};
+```
+
+## Example: Cross-Domain Setup
+
+```javascript
+EngridOptions = {
+  RememberMe: {
+    remoteUrl: 'https://cdn.yourdomain.com/remember-me.html',
+    cookieName: 'engrid-supporter-data',
     cookieExpirationDays: 365,
     fieldNames: [
       'supporter.firstName',
       'supporter.lastName',
       'supporter.emailAddress',
       'supporter.address1',
-      'supporter.address2',
       'supporter.city',
       'supporter.region',
       'supporter.postcode',
-      'supporter.country'
-    ],
-    fieldOptInSelectorTarget: '.en__field--emailAddress.en__field',
-    fieldOptInSelectorTargetLocation: 'after',
-    fieldClearSelectorTarget: 'label[for="en__field_supporter_firstName"]',
-    fieldClearSelectorTargetLocation: 'before',
-    checked: false
+      'supporter.country',
+      'supporter.phoneNumber'
+    ]
   }
-}
+};
 ```
-
-### Custom Placement
-
-```javascript
-{
-  RememberMe: {
-    fieldNames: ['supporter.firstName', 'supporter.lastName', 'supporter.emailAddress'],
-    fieldOptInSelectorTarget: '.custom-email-field, .en__field--emailAddress',
-    fieldOptInSelectorTargetLocation: 'before',
-    fieldClearSelectorTarget: '.form-header, label[for="en__field_supporter_firstName"]',
-    fieldClearSelectorTargetLocation: 'after'
-  }
-}
-```
-
-## Best Practices
-
-1. **Field Selection**: Only include fields that are appropriate to save. Avoid saving sensitive financial information or payment details.
-
-2. **Privacy Considerations**: Always provide clear information to users about what data is being saved and how it's used. The default tooltip text explains this, but you can customize it.
-
-3. **Cross-Domain Setup**: When using `remoteUrl`, ensure your server configuration allows iframe embedding and postMessage communication.
-
-4. **Testing**: Test Remember Me functionality across different browsers and devices, especially when using cross-domain cookies.
-
-5. **Cookie Expiration**: Consider your organization's data retention policies when setting `cookieExpirationDays`.
-
-6. **Security**: When implementing encryption at rest, ensure you're using a secure hashing algorithm and properly handling the fingerprint and IP address data.
-
-## Troubleshooting
-
-### Cookie Not Saving
-
-- Check browser console for errors
-- Verify `fieldNames` array contains valid field names
-- Ensure cookie permissions are not blocked by browser settings
-- For remote URLs, verify the iframe can communicate via postMessage
-
-### Data Not Auto-Filling
-
-- Verify the cookie exists in browser storage
-- Check that field names match exactly (case-sensitive)
-- Ensure fields are empty (Remember Me won't overwrite existing values)
-- Verify the remote URL is accessible and properly configured
-
-### Cross-Domain Issues
-
-- Verify X-Frame-Options allows framing from your Engaging Networks domain
-- Check CSP headers allow postMessage communication
-- Ensure the remote HTML file includes proper origin verification
-- Consider using a subdomain if main domain restrictions prevent iframe embedding
-
-## Related Documentation
-
-- [ENgrid Configuration Options](/docs/v2/configuration)
-- [Events System](/docs/v2/events)
-- [Form Field Reference](/docs/v2/fields)

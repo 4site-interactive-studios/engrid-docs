@@ -49,6 +49,14 @@ export const navigation = [
         href: '/docs/v2/engrid-template-scaffolding-checklist',
       },
       {
+        title: 'Core ENgrid Functions',
+        href: '/docs/v2/engrid-core-functions',
+      },
+      {
+        title: 'Debug Tools',
+        href: '/docs/v2/debug-tools',
+      },
+      {
         title: 'Contributing to ENgrid',
         href: '/docs/v2/contributing-to-engrid',
       },
@@ -70,18 +78,24 @@ export const navigation = [
     title: 'Form Features',
     links: [
       {
-        title: 'Form Field Helper Classes',
-        href: '/docs/v2/form-field-helper-classes',
+        title: 'Auto-Fill & Smart Defaults',
+        href: '/docs/v2/auto-fill-smart-defaults',
       },
       {
-        title: 'Conditionally Require Fields',
-        href: '/docs/v2/conditionally-require-fields',
+        title: 'Form Field Enhancements',
+        href: '/docs/v2/form-field-enhancements',
+      },
+      {
+        title: 'Form Validation',
+        href: '/docs/v2/form-validation',
+      },
+      {
+        title: 'Country Redirect & Disable Controls',
+        href: '/docs/v2/country-redirect-controls',
       },
       {
         title: 'International Addresses',
         href: '/docs/v2/international-form-addresses',
-      },
-      {
         title: 'TidyContact Integration',
         href: '/docs/v2/tidycontact',
       },
@@ -99,8 +113,20 @@ export const navigation = [
     title: 'All Pages',
     links: [
       {
+        title: 'Data & URL Parameters',
+        href: '/docs/v2/data-and-url-parameters',
+      },
+      {
         title: 'Click to Expand Helper Classes',
         href: '/docs/v2/click-to-expand',
+      },
+      {
+        title: 'Show/Hide Radio Checkboxes',
+        href: '/docs/v2/show-hide-radio-checkboxes',
+      },
+      {
+        title: 'Media Attribution',
+        href: '/docs/v2/media-attribution',
       },
       {
         title: 'Replace Banner with Background',
@@ -114,26 +140,21 @@ export const navigation = [
         title: 'Conditional Content Helper Classes',
         href: '/docs/v2/conditional-content-helper-classes',
       },
+      {
+        title: 'Mobile CTA',
+        href: '/docs/v2/mobile-cta',
+      },
       { title: 'Welcome Back', href: '/docs/v2/welcome-back' },
     ],
   },
   {
     title: 'Donation Pages',
     links: [
-      { title: 'Frequency', href: '/docs/v2/gift-frequency' },
-      { title: 'Amount', href: '/docs/v2/gift-amount' },
-      {
-        title: 'Payment Types',
-        href: '/docs/v2/payment-types',
-      },
-      {
-        title: 'Preferred Payment Method',
-        href: '/docs/v2/preferred-payment-method',
-      },
-      {
-        title: 'In Honor/Memorial Giving',
-        href: '/docs/v2/in-memory-honor-helper-classes',
-      },
+      { title: 'Currency & Donation Amounts', href: '/docs/v2/currency-donation-amounts' },
+      { title: 'Payment Methods & Digital Wallets', href: '/docs/v2/payment-methods-digital-wallets' },
+      { title: 'Payment Security', href: '/docs/v2/payment-security' },
+      { title: 'Preferred Payment Method', href: '/docs/v2/preferred-payment-method' },
+      { title: 'Live Variables', href: '/docs/v2/live-variables' },
       { title: 'Custom Premium', href: '/docs/v2/custom-premium' },
       { title: 'Upsells', href: '/docs/v2/upsells' },
       { title: 'Embedded Ecard', href: '/docs/v2/embedded-ecard' },
@@ -141,19 +162,25 @@ export const navigation = [
     ],
   },
   {
-    title: 'Advocacy Pages',
-    links: [{ title: 'eCard To Target', href: '/docs/v2/ecard-to-target' }],
+    title: 'Other Page-Specific Features',
+    links: [
+      { title: 'Advocacy & Email-to-Target', href: '/docs/v2/advocacy-features' },
+      { title: 'Event Tickets', href: '/docs/v2/event-tickets' },
+      { title: 'Supporter Hub', href: '/docs/v2/supporter-hub' },
+    ],
   },
   {
     title: 'Advanced Features',
     links: [
+      { title: 'Loader', href: '/docs/v2/loader' },
+      { title: 'Progress Bar', href: '/docs/v2/progress-bar' },
+      { title: 'Ticker', href: '/docs/v2/ticker' },
       { title: 'Custom Lightboxes', href: '/docs/v2/custom-lightboxes' },
       { title: 'Opt-In Ladder', href: '/docs/v2/opt-in-ladder' },
       { title: 'Post-Donation Donation', href: '/docs/v2/post-donation-embed' },
       { title: 'Remember Me', href: '/docs/v2/remember-me' },
       { title: 'Multi-step Forms', href: '/docs/v2/single-page-multistep' },
       { title: 'Exit Intent Lightbox', href: '/docs/v2/exit-intent-lightbox' },
-      { title: 'Frequency Upsell Modal', href: '/docs/v2/frequency-upsell' },
       { title: 'Homepage Takeover', href: '/docs/v2/homepage-takeover' },
       { title: 'Sticky NSG', href: '/docs/v2/sticky-nsg' },
       { title: 'Sticky Pre-population', href: '/docs/v2/sticky-prepopulation' },
@@ -212,6 +239,347 @@ export const navigation = [
       },
     ],
   },
+  {
+    title: 'Components',
+    links: [
+      {
+        title: 'A11y',
+        href: '/docs/v2/form-field-enhancements#accessibility-a11y'
+      },
+      {
+        title: 'AddNameToMessage',
+        href: '/docs/v2/advocacy-features#add-name-to-message',
+      },
+      {
+        title: 'Advocacy',
+        href: '/docs/v2/advocacy-features#advocacy',
+      },
+      {
+        title: 'AmountLabel',
+        href: '/docs/v2/currency-donation-amounts#amount-label',
+      },
+      {
+        title: 'ApplePay',
+        href: '/docs/v2/payment-methods-digital-wallets#apple-pay',
+      },
+      {
+        title: 'AutoCountrySelect',
+        href: '/docs/v2/auto-fill-smart-defaults#auto-country-select',
+      },
+      {
+        title: 'AutoYear',
+        href: '/docs/v2/auto-fill-smart-defaults#auto-year',
+      },
+      {
+        title: 'Autocomplete',
+        href: '/docs/v2/form-field-enhancements#autocomplete',
+      },
+      {
+        title: 'Autosubmit',
+        href: '/docs/v2/auto-fill-smart-defaults#autosubmit',
+      },
+      {
+        title: 'BrandHTML',
+        href: '/docs/v2/visualizing-engrid-grids'
+      },
+      {
+        title: 'CapitalizeFields',
+        href: '/docs/v2/form-field-enhancements#capitalize-fields',
+      },
+      {
+        title: 'CheckboxLabel',
+        href: '/docs/v2/form-field-enhancements#checkbox-label',
+      },
+      {
+        title: 'ClickToExpand',
+        href: '/docs/v2/click-to-expand',
+      },
+      {
+        title: 'Cookie',
+        href: '/docs/v2/cookies#cookie-utilities',
+      },
+      {
+        title: 'CountryDisable',
+        href: '/docs/v2/country-redirect-controls#country-disable',
+      },
+      {
+        title: 'CountryRedirect',
+        href: '/docs/v2/country-redirect-controls#country-redirect',
+      },
+      {
+        title: 'CustomCurrency',
+        href: '/docs/v2/currency-donation-amounts#custom-currency',
+      },
+      {
+        title: 'CustomPremium',
+        href: '/docs/v2/custom-premium',
+      },
+      {
+        title: 'DataAttributes',
+        href: '/docs/v2/data-and-url-parameters#data-attributes',
+      },
+      {
+        title: 'DataHide',
+        href: '/docs/v2/data-and-url-parameters#data-hide',
+      },
+      {
+        title: 'DataLayer',
+        href: '/docs/v2/gtm-datalayer',
+      },
+      {
+        title: 'DataReplace',
+        href: '/docs/v2/data-and-url-parameters#data-replace',
+      },
+      {
+        title: 'DebugHiddenFields',
+        href: '/docs/v2/debug-tools#debug-hidden-fields',
+      },
+      {
+        title: 'DebugPanel',
+        href: '/docs/v2/debug-tools#debug-panel',
+      },
+      {
+        title: 'Deprecated',
+        href: '/docs/v2/deprecated',
+      },
+      {
+        title: 'DigitalWallets',
+        href: '/docs/v2/payment-methods-digital-wallets#digital-wallets',
+      },
+      {
+        title: 'EcardToTarget',
+        href: '/docs/v2/advocacy-features#ecard-to-target',
+      },
+      {
+        title: 'EmbeddedEcard',
+        href: '/docs/v2/embedded-ecard',
+      },
+      {
+        title: 'ENValidators',
+        href: '/docs/v2/form-validation#en-custom-validators',
+      },
+      {
+        title: 'ENGrid',
+        href: '/docs/v2/engrid-core-functions',
+      },
+      {
+        title: 'EventTickets',
+        href: '/docs/v2/event-tickets',
+      },
+      {
+        title: 'ExitIntentLightbox',
+        href: '/docs/v2/exit-intent-lightbox',
+      },
+      {
+        title: 'ExpandRegionName',
+        href: '/docs/v2/expand-region-name',
+      },
+      {
+        title: 'FastFormFill',
+        href: '/docs/v2/remember-me'
+      },
+      {
+        title: 'FrequencyUpsellModal',
+        href: '/docs/v2/upsells#donation-frequency-lightbox',
+      },
+      {
+        title: 'FrequencyUpsell',
+        href: '/docs/v2/upsells#donation-frequency-lightbox',
+      },
+      {
+        title: 'FreshAddress',
+        href: '/docs/v2/form-validation#fresh-address-email-validation',
+      },
+      {
+        title: 'GiveBySelect',
+        href: '/docs/v2/payment-methods-digital-wallets#give-by-select',
+      },
+      {
+        title: 'IFrame',
+        href: '/docs/v2/embedding-engrid',
+      },
+      {
+        title: 'InputHasValueAndFocus',
+        href: '/docs/v2/form-field-enhancements#input-has-value-and-focus',
+      },
+      {
+        title: 'InputPlaceholders',
+        href: '/docs/v2/form-field-enhancements#input-placeholders',
+      },
+      {
+        title: 'LiveCurrency',
+        href: '/docs/v2/currency-donation-amounts#live-currency',
+      },
+      {
+        title: 'LiveFrequency',
+        href: '/docs/v2/currency-donation-amounts#live-frequency',
+      },
+      {
+        title: 'LiveVariables',
+        href: '/docs/v2/live-variables',
+      },
+      {
+        title: 'Loader',
+        href: '/docs/v2/loader',
+      },
+      {
+        title: 'Logger',
+        href: '/docs/v2/debug-tools#logger',
+      },
+      {
+        title: 'MediaAttribution',
+        href: '/docs/v2/media-attribution',
+      },
+      {
+        title: 'MinMaxAmount',
+        href: '/docs/v2/currency-donation-amounts#min-max-amount',
+      },
+      {
+        title: 'MobileCTA',
+        href: '/docs/v2/mobile-cta',
+      },
+      {
+        title: 'Modal',
+        href: '/docs/v2/custom-lightboxes',
+      },
+      {
+        title: 'Neverbounce',
+        href: '/docs/v2/form-validation#neverbounce-email-validation',
+      },
+      {
+        title: 'OptinLadder',
+        href: '/docs/v2/opt-in-ladder',
+      },
+      {
+        title: 'OtherAmount',
+        href: '/docs/v2/currency-donation-amounts#other-amount',
+      },
+      {
+        title: 'PageBackground',
+        href: '/docs/v2/background-image-positioning',
+      },
+      {
+        title: 'PostDonationEmbed',
+        href: '/docs/v2/post-donation-embed',
+      },
+      {
+        title: 'PostalCodeValidator',
+        href: '/docs/v2/form-validation#us-postal-code-validator',
+      },
+      {
+        title: 'PreferredPaymentMethod',
+        href: '/docs/v2/preferred-payment-method',
+      },
+      {
+        title: 'PremiumGift',
+        href: '/docs/v2/custom-premium',
+      },
+      {
+        title: 'ProgressBar',
+        href: '/docs/v2/progress-bar',
+      },
+      {
+        title: 'RememberMe',
+        href: '/docs/v2/remember-me',
+      },
+      {
+        title: 'RequiredIfVisible',
+        href: '/docs/v2/form-field-enhancements#input-required-visibility',
+      },
+      {
+        title: 'SetAttr',
+        href: '/docs/v2/data-and-url-parameters#set-attribute',
+      },
+      {
+        title: 'SetRecurrFreq',
+        href: '/docs/v2/currency-donation-amounts#set-recurrence-frequency',
+      },
+      {
+        title: 'ShowHideRadioCheckboxes',
+        href: '/docs/v2/show-hide-radio-checkboxes',
+      },
+      {
+        title: 'ShowIfAmount',
+        href: '/docs/v2/currency-donation-amounts#show-if-amount',
+      },
+      {
+        title: 'ShowIfPresent',
+        href: '/docs/v2/conditional-content-helper-classes#hide-show-based-on-presence-of-question',
+      },
+      {
+        title: 'SkipLink',
+        href: '/docs/v2/skip-link',
+      },
+      {
+        title: 'SrcDefer',
+        href: '/docs/v2/deferred-asset-loading',
+      },
+      {
+        title: 'StripeFinancialConnections',
+        href: '/docs/v2/payment-security#stripe-financial-connections',
+      },
+      {
+        title: 'SupporterHub',
+        href: '/docs/v2/supporter-hub',
+      },
+      {
+        title: 'SwapAmounts',
+        href: '/docs/v2/currency-donation-amounts#swap-amounts',
+      },
+      {
+        title: 'ThankYouPageConditionalContent',
+        href: '/docs/v2/show-hide-radio-checkboxes'
+      },
+      {
+        title: 'Ticker',
+        href: '/docs/v2/ticker',
+      },
+      {
+        title: 'TidyContact',
+        href: '/docs/v2/tidycontact',
+      },
+      {
+        title: 'TranslateFields',
+        href: '/docs/v2/international-form-addresses',
+      },
+      {
+        title: 'UniversalOptIn',
+        href: '/docs/v2/form-field-enhancements#universal-opt-in',
+      },
+      {
+        title: 'UpsellCheckbox',
+        href: '/docs/v2/upsells#donation-upsell-checkbox',
+      },
+      {
+        title: 'UpsellLightbox',
+        href: '/docs/v2/upsells#donation-upsell-lightbox',
+      },
+      {
+        title: 'UrlParamsToBodyAttrs',
+        href: '/docs/v2/data-and-url-parameters#url-parameters-to-body-attributes',
+      },
+      {
+        title: 'UrlToForm',
+        href: '/docs/v2/data-and-url-parameters#url-to-form',
+      },
+      {
+        title: 'UsOnlyForm',
+        href: '/docs/v2/country-redirect-controls#us-only-form',
+      },
+      {
+        title: 'Version',
+        href: '/docs/v2/version',
+      },
+      {
+        title: 'VGS',
+        href: '/docs/v2/payment-security#vgs-very-good-security',
+      },
+      {
+        title: 'WelcomeBack',
+        href: '/docs/v2/welcome-back',
+      }
+    ]
+  }
 ]
 
 function GitHubIcon(props) {

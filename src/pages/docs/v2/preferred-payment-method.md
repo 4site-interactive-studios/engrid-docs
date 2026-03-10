@@ -20,7 +20,7 @@ If the chosen option is available, the component triggers the corresponding give
 
 ## Configuration
 
-`PreferredPaymentMethod` is configured through `window.EngridOptions` / `window.EngridPageOptions` with two optional properties.
+`PreferredPaymentMethod` is configured through `EngridOptions` / `window.EngridPageOptions` with two optional properties.
 
 ```ts
 window.EngridPageOptions = {

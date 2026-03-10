@@ -6,9 +6,9 @@ description: Learn how use Conditional Content Helper Classes in ENgrid.
 ## Hide / Show based on another fields value
 
 
-### In Memorial / In Honor Giving (add to form component)
+### In Memorial / In Honor Giving
 
-A utility class to hide/show a component based on in memorial / in honor giving.
+A utility class to hide/show a component based on in memorial / in honor giving. Add to your form content and it will automatically show or hide based on the value of the tribute giving field.
 
 - `inmem-Y` = Show component if tribute giving option is checked and value is `Y`
 
@@ -57,6 +57,8 @@ Utility classes to hide/show a component based on gift type.
 | `giveBySelect-ACH`    | Show component when Give by Check is selected  | Yes                       |
 | `giveBySelect-Paypal` | Show component when Give by Paypal is selected | Yes                       |
 
+- See [Give By Select](./payment-methods-digital-wallets#give-by-select) for more details on these classes and how to use them.
+
 ---
 
 ### Hide any element based on the selected value of a checkbox or radio select field
@@ -94,123 +96,241 @@ Example Label:
 
 ### Dynamic Content Based on Amount (added as classes on content)
 
-{% callout title="You should know!" %}
-These classes can also be used on thank you pages
-{% /callout %}
-
-Utility classes to hide/show a component based on giving amount.
-
-```
-showifamount-{operand}-{value}
-```
-
-{% callout title="You should know!" %}
-`showifamount`- classes can also be used on thank you pages
-{% /callout %}
-
-**Operands:**
-
-- lessthan - Shows component when giving amount is less than {value} - Example:
-
-```
-showifamount-lessthan-10
-
-```
-
-- lessthanorequalto - Shows component when giving amount is less than or equal to {value} - Example:
-
-```
-showifamount-lessthanorequalto-10
-```
-
-- equalto - Shows component when giving amount is exactly equal to {value} - Example:
-
-```
-showifamount-equalto-10
-```
-
-- greaterthanorequalto - Shows component when giving amount is greater than or equal to {value} - Example:
-
-```
-showifamount-greaterthanorequalto-10
-```
-
-- greaterthan - Shows component when giving amount is greater than {value} - Example:
-
-```
-showifamount-greaterthan-10
-```
-
-- between - Shows component when giving amount is between {valuemin} and {valuemax} - Example:
-
-```
-showifamount-between-10-100
-```
-
-**Animation classes for dynamic content:**
-
-| Class                    | Description                                      |
-| ------------------------ | ------------------------------------------------ |
-| `animate-replace`        | Will animate the content switch using scale      |
-| `animate-vertical-slide` | Will animate the content switch using max-height |
+- [ShowIfAmount](./currency-donation-amounts#show-if-amount)
 
 ---
 
 ## Hide / Show based on URL arguments
 
-### Hide any element via URL arguments using a Class or ID
-
-By using one of the following you can hide any content based on its class or ID with a URL argument.
-
-Example: [https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id](https://website.org/page/12345/donate/1?engrid_hide[header-logo]=id)
-
-```
-engrid_hide[element]=id
-engrid_hide[element]=class
-```
+- See [DataHide](./data-and-url-parameters#data-hide)
 
 ---
 
 ## Hide / Show based on presence of question
 
+The `ShowIfPresent` component controls element visibility based on whether specific supporter questions are present or absent on the page.
+
+### Overview
+
+Use special class names to show/hide elements depending on whether EN renders certain supporter questions. Common use case: hiding opt-in language when supporter is already opted in.
+
 {% callout title="You should know!" %}
 These classes can also be used on thank you pages
 {% /callout %}
 
-Special classes can be used to hide elements if certain supporter questions are present or absent on the page.
+### How It Works
 
-Typically, this can be used to hide elements, such as lead-in copy, when an opt-in question is not rendered on the page because the supporter came from a campaign link and is already opted in, so EN doesn't render the question on the page. But it can be used in other ways too.
+When supporters arrive via certain campaign links and are already opted in, EN doesn't render the opt-in question. This component lets you conditionally show/hide content based on this.
 
-The class format looks like this:
-
-- Show this element when the supporter question is present:
+### Class Name Format
 
 ```
 engrid__supporterquestions{id}-present
-```
-
-- Show this element when the supporter question is absent:
-
-```
 engrid__supporterquestions{id}-absent
 ```
 
-{% callout title="You should know!" %}
-The `{id}` is the id of the supporter question. This can be found by inspecting the element on the page
-{% /callout %}
+**`-present`**: Element shows ONLY when question is on page
+**`-absent`**: Element shows ONLY when question is NOT on page
 
-It's also possible to combine multiple questions using the following format. These examples show 2 questions, but you can use as many as you like:
+### Finding Question IDs
 
-- Show this element when EITHER question is present:
+Inspect the supporter question element to find its ID:
+
+```html
+<input type="checkbox" 
+       name="supporter.questions.123456" 
+       id="en__field_supporter_questions_123456">
+```
+
+The ID is the number: `123456`
+
+### Single Question Examples
+
+**Show only when opt-in is present:**
+```html
+<div class="engrid__supporterquestions123456-present">
+  <p>Please check the box above to hear from us!</p>
+</div>
+```
+
+**Show only when opt-in is absent:**
+```html
+<div class="engrid__supporterquestions123456-absent">
+  <p>You're already subscribed to our updates!</p>
+</div>
+```
+
+### Multiple Questions (OR Logic)
+
+Combine multiple questions using double underscores:
 
 ```
 engrid__supporterquestions{id1}__supporterquestions{id2}-present
-```
-
-- Show this element when EITHER question is absent:
-
-```
 engrid__supporterquestions{id1}__supporterquestions{id2}-absent
 ```
 
----
+**Logic:**
+- `-present`: Show if EITHER question is present
+- `-absent`: Show if EITHER question is absent
+
+### Multiple Question Example
+
+```html
+<!-- Show if EITHER question 12345 OR question 67890 is present -->
+<div class="engrid__supporterquestions12345__supporterquestions67890-present">
+  <p>Please answer the question(s) above.</p>
+</div>
+
+<!-- Show if EITHER question is absent -->
+<div class="engrid__supporterquestions12345__supporterquestions67890-absent">
+  <p>You're all set!</p>
+</div>
+```
+
+### Real-World Use Cases
+
+**1. Opt-in Instructions:**
+```html
+<!-- Only show instructions when opt-in checkbox is visible -->
+<div class="engrid__supporterquestions123456-present">
+  <p><strong>Stay Connected!</strong> Check the box above to receive email updates.</p>
+</div>
+```
+
+**2. Already Opted-In Message:**
+```html
+<!-- Show when supporter is already opted in (question hidden) -->
+<div class="engrid__supporterquestions123456-absent">
+  <p>✓ You're already subscribed to our email list.</p>
+</div>
+```
+
+**3. Multiple Opt-In Options:**
+```html
+<!-- Show instructions if ANY opt-in question is present -->
+<div class="engrid__supporterquestions100__supporterquestions200__supporterquestions300-present">
+  <h4>Communication Preferences</h4>
+  <p>Select how you'd like to hear from us above.</p>
+</div>
+```
+
+**4. All Questions Answered:**
+```html
+<!-- Show thank you when no questions are displayed -->
+<div class="engrid__supporterquestions100__supporterquestions200-absent">
+  <p>Thank you! Your preferences are already set.</p>
+</div>
+```
+
+### How It Works Internally
+
+1. Component finds all elements with `engrid__supporterquestions` classes
+2. Extracts question IDs from class names
+3. Checks if questions exist on page: `document.getElementsByName('supporter.questions.123456')`
+4. Hides elements if conditions aren't met
+
+**Hiding logic:**
+```typescript
+// For -present classes: hide if question is absent
+if (action.type === 'present' && questionAbsent) {
+  element.style.display = 'none';
+}
+
+// For -absent classes: hide if question is present
+if (action.type === 'absent' && questionPresent) {
+  element.style.display = 'none';
+}
+```
+
+### Debug Logging
+
+Enable debug mode to see visibility actions
+
+Look for [👀 ShowIfPresent] in console:
+```
+[👀 ShowIfPresent] Conditions not met, hiding elements with class engrid__supporterquestions123456-present
+```
+
+### Complex Example
+
+Complete opt-in flow with conditional messaging:
+
+```html
+<div class="opt-in-section">
+  <!-- Instructions when opt-in is visible -->
+  <div class="engrid__supporterquestions123456-present">
+    <h4>Stay in Touch</h4>
+    <p>Check the box below to receive our monthly newsletter with impact stories and campaign updates.</p>
+  </div>
+  
+  <!-- The actual opt-in question (rendered by EN) -->
+  <!-- supporter.questions.123456 -->
+  
+  <!-- Confirmation when already opted in -->
+  <div class="engrid__supporterquestions123456-absent alert alert-success">
+    <strong>You're already subscribed!</strong>
+    <p>You'll continue receiving updates at the email address you provided.</p>
+  </div>
+</div>
+```
+
+### Multiple Preference Questions
+
+```html
+<!-- Email opt-in: 100, SMS opt-in: 200, Mail opt-in: 300 -->
+
+<!-- Header shows if ANY preference question is visible -->
+<div class="engrid__supporterquestions100__supporterquestions200__supporterquestions300-present">
+  <h3>Communication Preferences</h3>
+  <p>Choose how you'd like to stay connected:</p>
+</div>
+
+<!-- Individual question instructions -->
+<div class="engrid__supporterquestions100-present">
+  <label class="preference-label">
+    <strong>Email:</strong> Receive our monthly newsletter
+  </label>
+</div>
+
+<div class="engrid__supporterquestions200-present">
+  <label class="preference-label">
+    <strong>SMS:</strong> Get urgent action alerts
+  </label>
+</div>
+
+<!-- All preferences already set message -->
+<div class="engrid__supporterquestions100__supporterquestions200__supporterquestions300-absent">
+  <div class="alert alert-info">
+    <p>✓ Your communication preferences are already configured.</p>
+  </div>
+</div>
+```
+
+#### Best Practices
+
+1. **Test Both States**: Test with questions present and absent
+2. **Clear Messaging**: Make it obvious why content is showing/hiding
+3. **Accessibility**: Ensure hidden content doesn't break page flow
+4. **Mobile Testing**: Verify conditional content works on mobile
+5. **Question IDs**: Double-check question IDs match exactly
+6. **Multiple Questions**: Use OR logic thoughtfully
+7. **Fallback Content**: Consider what shows if JS fails to load
+
+#### Troubleshooting
+
+**Elements not hiding/showing:**
+- Verify question ID is correct (inspect the input's `name` attribute)
+- Check class name syntax exactly matches pattern
+- Ensure question actually exists/doesn't exist on page
+- Enable debug mode to see what component is doing
+- Check for CSS `!important` rules overriding `display: none`
+
+**Wrong question targeted:**
+- Inspect the form to find correct question ID
+- Question IDs are numbers only (no letters)
+- Use browser DevTools to verify question name attribute
+
+**Multiple questions not working:**
+- Ensure using double underscores: `__` between questions
+- Verify both question IDs are correct
+- Remember it's OR logic, not AND logic
