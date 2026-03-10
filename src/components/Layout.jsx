@@ -37,6 +37,10 @@ export const navigation = [
         href: '/docs/v2/developing-with-engrid',
       },
       {
+        title: 'Deploying ENgrid Assets',
+        href: '/docs/v2/deploying-assets',
+      },
+      {
         title: 'ENgrid Visualization',
         href: '/docs/v2/visualizing-engrid-grids',
       },

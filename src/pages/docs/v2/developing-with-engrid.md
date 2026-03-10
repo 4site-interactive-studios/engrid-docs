@@ -114,19 +114,7 @@ For more information about asset loading, see [Loader](./loader.md)
 
 ## Building and deploying production files
 
-Once you're happy with everything, you can compile the final assets with
-
-```shell
-npm run build
-```
-
-Then, upload the engrid.min.css and `engrid.min.js` files from your `/dist` folder to Engaging Networks, overwriting the existing assets.
-
-{% callout title="You should know!" %}
-Before doing this you should thoroughly test your changes using a Github branch, especially if you're upgrading engrid versions.
-{% /callout %}
-
-It may take some time for Engaging Network to refresh its cached assets. Until then, you can preview the changes by using the `?assets=flush URL parameter`, which will apply cache-busting to the assets.
+- See [Deploying ENgrid Assets](./deploying-assets.md)
 
 ## Advanced Development Techniques with ENgrid for Engaging Networks
 
