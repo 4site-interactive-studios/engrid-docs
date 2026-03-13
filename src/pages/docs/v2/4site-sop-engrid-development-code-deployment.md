@@ -2,6 +2,10 @@
 title: "4Site SOP: ENgrid Development & Code Deployment"
 ---
 
+{% callout title="Information" %}
+This is an internal 4Site SOP document. For a client-facing overview of the release and deployment process, see [Release Cycle & Code Updates](/docs/v2/release-cycle).
+{% /callout %}
+
 ## **1\. Objective**
 
 To ensure the stability of live client pages, prevent version regression, and maintain quality assurance across all ENgrid Engaging Networks deployments. This process specifically addresses protocols for pushing code to active accounts and managing front-end changes that impact multiple clients.

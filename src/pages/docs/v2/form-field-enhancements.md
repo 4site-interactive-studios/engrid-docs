@@ -11,7 +11,7 @@ ENgrid provides several components that automatically enhance form fields with b
 
 ## Accessibility (A11y)
 
-The `A11y` class automatically adds accessibility attributes and features to ensure ENgrid forms meet WCAG standards.
+The `A11y` class automatically adds accessibility attributes and features to ensure ENgrid forms meet WCAG standards. For a high-level overview of all ENgrid accessibility features, see [Accessibility Features](/docs/v2/accessibility-overview).
 
 ### Features
 

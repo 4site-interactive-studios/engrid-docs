@@ -66,3 +66,9 @@ Make sure to remove any development and debugging assets, copies, code blocks, a
 - Remove any test pages that were created for development purposes, unless these are intended to be used as reference pages for the client after handoff. 
 
   - You may choose to keep these pages in the development folder as "Closed" for future reference.
+
+---
+
+{% callout title="Information" %}
+For a non-technical overview of the release and deployment process, see [Release Cycle & Code Updates](/docs/v2/release-cycle).
+{% /callout %}

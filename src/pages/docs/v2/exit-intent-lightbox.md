@@ -26,3 +26,9 @@ const EngridExitIntent = {
 | ` cookieDuration`          | Expiry length of the cookie                                                                               |
 | `triggers.visibilityState` | Boolean - if the lightbox should trigger on visibilityState changes (e.g., changing tab)                  |
 | ` triggers.mousePosition`  | Boolean - if the lightbox should trigger on mousePosition (e.g., the mouse goes towards the close button) |
+
+---
+
+{% callout title="Information" %}
+Exit intent is also used as a foundation for custom solutions like cart abandonment recovery. See [Portfolio & Case Studies](/docs/v2/case-studies) for examples of advanced exit intent use cases.
+{% /callout %}

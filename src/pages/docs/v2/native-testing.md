@@ -3,6 +3,10 @@ title: Multivariate and A/B Testing
 description: Learn about built-in options for multivariate and A/B testing in Engaging Networks, including Page Split Tests and Split Test Emails.
 ---
 
+{% callout title="Information" %}
+For a broader overview of ENgrid's analytics and testing capabilities, see [Analytics & Reporting](/docs/v2/analytics-overview).
+{% /callout %}
+
 ## Engaging Networks Testing Features: Page Split Test & Split Test Email
 
 Engaging Networks offers robust native testing features, including **Page Split Tests** and **Split Test Emails**, which are highly effective for optimizing campaigns and donor engagement. We strongly recommend leveraging these built-in options whenever possible, as we’ve seen consistently positive results from both.

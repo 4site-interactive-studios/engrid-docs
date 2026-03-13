@@ -13,9 +13,28 @@ import { ThemeSelector } from '@/components/ThemeSelector'
 
 export const navigation = [
   {
+    title: 'About ENgrid',
+    links: [
+      { title: 'Features Overview', href: '/docs/v2/features-overview' },
+      { title: 'Accessibility Features', href: '/docs/v2/accessibility-overview' },
+      { title: 'Analytics & Reporting', href: '/docs/v2/analytics-overview' },
+      { title: 'Portfolio & Case Studies', href: '/docs/v2/case-studies' },
+      { title: 'Organizations Using ENgrid', href: '/docs/v2/clients' },
+    ],
+  },
+  {
+    title: 'Working with 4Site',
+    links: [
+      { title: 'Implementation Methodology', href: '/docs/v2/implementation-methodology' },
+      { title: 'Release Cycle & Code Updates', href: '/docs/v2/release-cycle' },
+      { title: 'Retainer Services', href: '/docs/v2/retainer-services' },
+    ],
+  },
+  {
     title: 'Getting Started',
     links: [
       { title: 'Introduction', href: '/' },
+      { title: 'Content Editor Guide', href: '/docs/v2/content-editor-guide' },
       { title: 'Training', href: '/docs/v2/training' },
       { title: 'EN Account Buildout', href: '/docs/v2/en-account-buildout' },
       { title: 'PCI Compliance', href: '/docs/v2/pci-compliance' },
@@ -100,6 +119,8 @@ export const navigation = [
       {
         title: 'International Addresses',
         href: '/docs/v2/international-form-addresses',
+      },
+      {
         title: 'TidyContact Integration',
         href: '/docs/v2/tidycontact',
       },

@@ -17,5 +17,8 @@ Welcome to the **ENgrid Training Walkthrough and Documentation Portal**. ENgrid 
 We would love to hear from you. [Contact us!](https://www.4sitestudios.com/contact/)
 
 {% quick-links %}
-{% quick-link title="Developers Getting Started Guide" icon="presets" href="/docs/v2/training" description="Comprehensive training guide for developing with ENgrid." /%}
+{% quick-link title="Features Overview" icon="lightbulb" href="/docs/v2/features-overview" description="A comprehensive overview of everything ENgrid can do." /%}
+{% quick-link title="Content Editor Guide" icon="installation" href="/docs/v2/content-editor-guide" description="For content admins managing ENgrid pages in the EN page builder." /%}
+{% quick-link title="Developer Training Guide" icon="presets" href="/docs/v2/training" description="Comprehensive training guide for developing with ENgrid." /%}
+{% quick-link title="Organizations Using ENgrid" icon="plugins" href="/docs/v2/clients" description="See who uses ENgrid and explore live examples." /%}
 {% /quick-links %}

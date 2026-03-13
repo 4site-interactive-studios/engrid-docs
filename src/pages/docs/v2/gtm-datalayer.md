@@ -3,6 +3,10 @@ title: Google Tag Manager (GTM DataLayer Setup)
 description: Maximize your Engaging Networks platform's tracking capabilities by integrating Google Tag Manager and DataLayer with ENgrid. Learn how to capture custom events, define variables, and optimize your user data collection for more informed decisions and strategies.
 ---
 
+{% callout title="Information" %}
+For a general overview of ENgrid's analytics capabilities including supported platforms and implementation approach, see [Analytics & Reporting](/docs/v2/analytics-overview).
+{% /callout %}
+
 4Site's ENgrid automatically takes all of the available data from your Engaging Networks pages and pushes it to Google Tag Manager's as GTM Custom Events and GTM Custom Variables. In order to take advantage of this data and use it in your reporting in Google Analytics, Google Ads, Meta, and more, you'll need to create a set of variables, triggers, and tags in your Google Tag Manager (GTM) container that will capture the data when a user lands on and interacts with your page.
 
 When your Engaging Networks page loads on a user's screen, ENgrid automatically pushes all available data to the DataLayer in a single event called `pageJsonVariablesReady`. This event contains all `pageJson` properties (prefixed with `EN_PAGEJSON_*`), URL parameters (prefixed with `EN_URLPARAM_*`), recurring frequencies (for donation pages), and submission success variables. This allows you to see details like donation amount, donation frequency, currency, and more in GTM, GA4, Meta, and other analytics platforms you might use.

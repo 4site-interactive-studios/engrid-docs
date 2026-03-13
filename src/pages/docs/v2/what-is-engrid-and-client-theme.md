@@ -5,6 +5,10 @@ description: Learn about ENgrid Scripts and ENgrid Client Themes
 
 As you get started working with ENgrid, it is good to discuss what a "Client Theme" is and how it relates to the rest of the ENgrid upstream "ENgrid Scripts" code base.
 
+{% callout title="You should know!" %}
+For a high-level overview of all ENgrid features, see the [Features Overview](/docs/v2/features-overview). For details on the monthly release process and how updates are staged for client QA, see [Release Cycle & Code Updates](/docs/v2/release-cycle).
+{% /callout %}
+
 ## What is a "Theme"?
 
 A "Theme" is the markup and code required to build an Engaging Networks Page Template (aka "Theme"). The Engaging Networks Page Templates are then used by Engaging Networks pages, loading the code and markup defined in them. Later on we'll discuss what is a "Client Theme".

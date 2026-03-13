@@ -3,6 +3,10 @@ title: ENgrid Training Guide
 description: A comprehensive guide to developing with ENgrid, from setup to deployment
 ---
 
+{% callout title="Looking for non-developer documentation?" %}
+If you are a content editor or administrator managing ENgrid pages through the Engaging Networks page builder, see the [Content Editor Guide](/docs/v2/content-editor-guide) instead. For a high-level overview of all ENgrid features, see the [Features Overview](/docs/v2/features-overview).
+{% /callout %}
+
 ## Reference Links
 
 * [ENgrid's Documentation](/) (This website)

@@ -282,6 +282,7 @@ Here's an ideal page structure for the skip link component:
 
 ## Related Resources
 
+- [Accessibility Features](/docs/v2/accessibility-overview) — High-level overview of all ENgrid accessibility features
 - WCAG 2.1 Guideline 2.4.1: [Bypass Blocks](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
 - WebAIM Article: [Skip Navigation Links](https://webaim.org/techniques/skipnav/)
 - A11y Project: [Skip Navigation](https://www.a11yproject.com/posts/skip-nav-links/)
