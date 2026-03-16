@@ -215,6 +215,16 @@ Tip: The variables listed above are already being pushed to the data layer as pa
 
 ---
 
+# Configuration in ENGrid
+
+There are additional configurations you can make in ENgrid to ensure the right events and variables are being pushed to the DataLayer for GTM to pick up.
+
+| Parameter | Description | Default Value |
+| --------- | ----------- | -------------- |
+| `SuppressPurchaseEcard` | Prevents the purchase event from firing on an e-card page | `false` |
+
+---
+
 # Testing and Validation
 
 After setting up your GTM configuration:
@@ -232,6 +242,7 @@ After setting up your GTM configuration:
 
 - **Variables not populating**: Ensure the Data Layer Variable Names match exactly
 - **Events not firing**: Check that triggers are set to "All Custom Events" (when applicable)
+- **Events appear twice**: If you're using a [Embedded E-card Page](./embedded-ecard.md), try setting `SuppressPurchaseEcard` to `true` in ENgrid configuration to prevent duplicate purchase events.
 - **Missing data**: Verify "Expose transaction details" is enabled in Engaging Networks
 - **GTM not loading**: Ensure GTM is properly installed on your pages and you're not running an Ad Blocker
 
