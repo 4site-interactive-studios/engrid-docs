@@ -102,6 +102,18 @@ If you want to auto-inject the Opt-in Ladder on all your Thank You pages, you ca
 
 That's it! Now, the Opt-in Ladder will be automatically injected into all your Thank You pages.
 
+## Opt-in Ladder Configuration Options
+
+- To apply configuration options to the Opt-in Ladder, you need to add parameters to the iFrame URL, which can be done in both methods of adding the Opt-in Ladder to your Thank You page (manually or using the component options). The available parameters are:
+
+  - `data-engrid-opt-in-ladder-persist=true`: This parameter will force the opt-in ladder to display the "Thank You" page of the opt-in ladder, even if the user has already completed all the steps. This is useful if you want to show a custom Thank You page on the iFrame instead of hiding it when the user has completed all the steps. Default - false (if the user has completed all the steps, the iFrame will be hidden on next load).
+
+### Example of an iFrame URL with the `data-engrid-opt-in-ladder-persist` parameter:
+
+```
+https://{URL_TO_OPTIN_LADDER_PAGE}/data/1?chain&data-engrid-opt-in-ladder-persist=true&engrid_hide[body-headerOutside]=class&engrid_hide[body-banner]=class&engrid_hide[content-footer]=class&engrid_hide[page-backgroundImage]=class
+```
+
 **Notes:**
 
 - We will not inject the iFrame if there's a hardcoded iframe with the `opt-in-ladder-iframe` CSS class. This is useful if you want to manually add the iFrame to a specific page.
