@@ -30,9 +30,10 @@ If you are a content editor or administrator managing ENgrid pages through the E
 * How to add code to different page states:
   * **onLoad;**
   * **onResize;**
-  * **onSubmit;** - bypassed when digital wallets used
-  * **onError;** - bypassed when digital wallets used
-  * **onValidate;** - bypassed when digital wallets used
+  * **onSubmit;** - Uses Engaging Networks' enOnSubmit event, bypassed when digital wallets used.
+  * **onIntentSubmit;** - NOT bypassed when digital wallets used, triggered when a user indicates intent to submit the form but before the form is validated. Should not be used on logic that expects the form to have passed validation and been fully submitted. onSubmit will also be dispatched if digital wallets are not used, so do not repeat the same logic in both onIntentSubmit and onSubmit.
+  * **onError;** - Uses Engaging Networks' enOnError event, bypassed when digital wallets used. onError is only fired when the form fails validation on Engaging Networks' side, not when client-side validation fails.
+  * **onValidate;** - Uses Engaging Networks' enOnValidate event, bypassed when digital wallets used. This validation refers to the form validation executed by Engaging Networks, not ENgrid's client-side validation.
     * How to use these hooks in your code too.
 * Most useful static functions from the App (ENGrid) class.
 * ENgrid Custom Events
