@@ -59,7 +59,7 @@ An optional accessible navigation component that can be activated in your theme 
 
 ### Click-to-Expand Sections
 
-Expandable content sections are built with accessibility in mind — they can be opened with a click, touch, or by pressing Enter or Spacebar when focused with a keyboard. ARIA attributes communicate the expanded/collapsed state to screen readers.
+Expandable content sections are built with accessibility in mind — they can be opened with a click, touch, or by pressing Enter or Spacebar when focused with a keyboard. Content can be labeled with the `click-to-expand-screenreader-tip` class. ARIA attributes communicate the expanded/collapsed state to screen readers.
 
 See [Click to Expand Helper Classes](/docs/v2/click-to-expand) for usage details.
 
