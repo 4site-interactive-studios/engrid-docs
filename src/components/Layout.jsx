@@ -201,6 +201,7 @@ export const navigation = [
       { title: 'Progress Bar', href: '/docs/v2/progress-bar' },
       { title: 'Ticker', href: '/docs/v2/ticker' },
       { title: 'Custom Lightboxes', href: '/docs/v2/custom-lightboxes' },
+      { title: 'Iframe Queue', href: '/docs/v2/iframe-queue' },
       { title: 'Opt-In Ladder', href: '/docs/v2/opt-in-ladder' },
       { title: 'Post-Donation Donation', href: '/docs/v2/post-donation-embed' },
       { title: 'Remember Me', href: '/docs/v2/remember-me' },
@@ -422,6 +423,10 @@ export const navigation = [
       {
         title: 'IFrame',
         href: '/docs/v2/embedding-engrid',
+      },
+      {
+        title: 'IframeQueue',
+        href: '/docs/v2/iframe-queue',
       },
       {
         title: 'InputHasValueAndFocus',

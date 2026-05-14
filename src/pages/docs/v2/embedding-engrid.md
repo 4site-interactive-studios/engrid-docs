@@ -13,6 +13,8 @@ Should you want to embed one Engaging Networks page in another (e.g. Embedded do
 
 [Also read about the embedded ecard component](/docs/v2/embedded-ecard)
 
+For flows that need to submit several embedded EN forms in sequence (for example, a chain of opt-in QCBs after a donation), use the [Iframe Queue](/docs/v2/iframe-queue) instead of stacking `?chain` iframes. The queue passes field data via `postMessage` and waits on each Thank You page before advancing.
+
 ---
 
 ## Embedding an EN page inside WordPress
