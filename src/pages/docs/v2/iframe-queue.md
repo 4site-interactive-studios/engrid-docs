@@ -7,10 +7,10 @@ description: Submit a sequence of embedded Engaging Networks forms one at a time
 
 The Iframe Queue submits a chain of embedded EN pages sequentially. Each iframe is created only after the previous one finishes, whether by reaching its Thank You page, erroring, or timing out. Field values are passed into each iframe with `postMessage` instead of EN's `?chain` URL parameter.
 
-Use it when a parent page needs to record several EN submissions without the user seeing or clicking anything extra. The original use case was three Quick Customer Builder (QCB) opt-ins (double opt-in email, postal mail, mobile phone) firing after a donation.
+Use it when a parent page needs to record several EN submissions without the user seeing or clicking anything extra. A common case is recording a chain of opt-ins after a donation, so the supporter does not have to click through several pages on their own.
 
 {% callout type="warning" title="Why this exists" %}
-Engaging Networks' platform loses roughly 40% of records when several hidden iframes submit in parallel using `?chain`. The fix tracked as EN-2802 / EN-2803 was to drop `?chain` and load the iframes one at a time. This component generalises that pattern so any consumer can reuse it.
+Engaging Networks' platform is unreliable when several hidden iframes submit in parallel using `?chain`; a significant share of records is silently dropped. The agreed fix is to drop `?chain` and load the iframes one at a time. This component generalises that pattern so any consumer can reuse it.
 {% /callout %}
 
 ## Enable the component in your theme
