@@ -488,10 +488,10 @@ The `SwapAmounts` component dynamically changes available donation amounts when 
 window.EngridAmounts = {
   onetime: {
     amounts: {
-      "25": 25,
-      "50": 50,
-      "100": 100,
-      "250": 250,
+      "[$]25": 25,
+      "[$]50": 50,
+      "[$]100": 100,
+      "[$]250": 250,
       "Other": "other"
     },
     default: 50,
@@ -499,10 +499,10 @@ window.EngridAmounts = {
   },
   monthly: {
     amounts: {
-      "10": 10,
-      "25": 25,
-      "50": 50,
-      "100": 100,
+      "[$]10": 10,
+      "[$]25": 25,
+      "[$]50": 50,
+      "[$]100": 100,
       "Other": "other"
     },
     default: 25,
