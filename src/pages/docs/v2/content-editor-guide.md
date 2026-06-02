@@ -16,7 +16,7 @@ If you are a developer writing code for ENgrid, start with the [Training](/docs/
 ENgrid page templates are designed so that all on-page content is managed through the Engaging Networks page builder. Nothing is hard-coded into the page template itself. This means you can change:
 
 - All text content, headings, and body copy
-- Images
+- Images and background media
 - Form fields and their labels
 - Conditional content blocks
 - Page layout and structure
@@ -41,6 +41,15 @@ This redirects you straight to the Engaging Networks page builder for that page.
 ENgrid provides six built-in layout options that control how content and the form are arranged on the page. You can choose a layout on a per-page basis by adding a class to a code block in the page builder.
 
 For a visual guide to all available layouts and how they work, see [ENgrid Visualization](/docs/v2/visualizing-engrid-grids).
+
+---
+
+## Per-Page Background Images
+
+Every page can have its own unique background image. You control this through the page builder by adding your media to the designated content area. ENgrid handles responsive sizing, lazy loading, and performance optimization automatically.
+
+- **Background images** can be positioned using helper classes — see [Background Image Positioning](/docs/v2/background-image-positioning)
+- **Banner replacement** with full-bleed backgrounds is also supported — see [Replace Banner with Background](/docs/v2/replace-banner-with-background)
 
 ---
 
