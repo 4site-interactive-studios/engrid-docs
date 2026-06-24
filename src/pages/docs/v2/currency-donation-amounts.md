@@ -522,6 +522,7 @@ When the number of amounts differs from one frequency to another, the number of 
 | `amounts` | Object | Label-value pairs for amount buttons |
 | `default` | Number | Which amount is pre-selected |
 | `stickyDefault` | Boolean | Force default selection on every swap |
+| `overrideNSG` | Boolean | Override Next Suggested Gift values provided by EN |
 
 ### Sticky Default
 
@@ -533,6 +534,12 @@ When the number of amounts differs from one frequency to another, the number of 
 - Always selects the configured default on frequency change
 - Ignores user's previous selection
 - Useful for campaigns with specific ask ladders
+
+### Next Suggested Gift (NSG)
+
+When Engaging Networks has Next Suggested Gift (NSG) enabled, by default it will take priority your configured amounts. To override NSG and use your configured amounts, set `overrideNSG: true` in your configuration.
+
+This priority is on a per-frequency basis, so if your EN configuration has NSG enabled for one-time but not monthly/recurring, SwapAmounts will respect that and only override the monthly amounts, unless `overrideNSG: true` is set for one-time.
 
 ### URL-Based Amounts
 
@@ -553,9 +560,10 @@ With default amount:
 
 1. **Frequency changes** (e.g., one-time → monthly)
 2. **Config looked up** for new frequency
-3. **EN's swapList called** with new amounts
-4. **Default selected** (unless sticky or user changed)
-5. **Amount loads** from new selection
+3. **Check for NSG** (Next Suggested Gift) and override if configured
+4. **EN's swapList called** with new amounts
+5. **Default selected** (unless sticky or user changed)
+6. **Amount loads** from new selection
 
 ### Amount Object Structure
 
@@ -605,6 +613,23 @@ onetime: {
   default: 50
 }
 ```
+
+#### Next Suggested Gift Override
+
+```javascript
+monthly: {
+  amounts: { "5": 5, "10": 10, "15": 15, "25": 25, "Other": "other" },
+  default: 15,
+  stickyDefault: true,
+  overrideNSG: true
+},
+onetime: {
+  amounts: { "50": 50, "100": 100, "250": 250, "Other": "other" },
+  default: 100,
+  overrideNSG: true
+}
+```
+
 
 ### Debug Logging
 
