@@ -53,6 +53,7 @@ The Remember Me component accepts the following configuration options:
 | `cookieExpirationDays` | Number of days before the cookie expires | `365` |
 | `fieldNames` | Array of field names to save and restore | `[]` |
 | `checked` | Whether the Remember Me checkbox is checked by default | `false` |
+| `encryptData` | Encrypts the stored payload with AES-GCM (Web Crypto) | `false` |
 
 ### Donation-Specific Options
 
@@ -235,6 +236,44 @@ For recurring donations:
 {% callout title="You should know!" %}
 The component is designed for personal devices only. The info tooltip explicitly warns supporters to only use this feature on their own devices, not on shared or public computers.
 {% /callout %}
+
+### Encryption (encryptData)
+
+When `encryptData: true` is set, the Remember Me payload is encrypted with browser-native AES-GCM (Web Crypto API) before being stored. The encrypted output is base64-encoded for storage.
+
+| Property | Description | Default |
+| -------- | ----------- | ------- |
+| `encryptData` | Enables AES-GCM encryption of the stored payload | `false` |
+
+**How it works:**
+
+- A 256-bit AES-GCM encryption key is generated once per device and stored in `localStorage` — it is never written to the cookie, so it never travels with the transported value.
+- On each save, the payload is encrypted with a random 12-byte IV (Initialization Vector), producing a different ciphertext each time even for the same data.
+- On read, the component decrypts the payload using the stored key. If the key is missing (different device or cleared storage), decryption fails silently and the component falls back to the normal, no-autofill experience — no errors are thrown.
+
+**Two modes of operation:**
+
+1. **Local only (`encryptData` without `remoteUrl`)** — The ENgrid script handles encryption/decryption directly. The key is a random secret in `localStorage` of the current page origin. This works for same-site usage only.
+
+2. **Remote (`encryptData` with `remoteUrl`)** — The remote iframe page (`data-remember.html`) handles encryption/decryption. The key is derived deterministically from a simple device fingerprint (screen resolution, language, CPU cores, device memory, timezone → SHA-256). This means even though Chrome partitions `localStorage` by top-level site, the same device always produces the same key — enabling cross-site sharing (e.g. FWW and FWA).
+
+**Example with encryption enabled:**
+
+```javascript
+window.EngridOptions = {
+  RememberMe: {
+    remoteUrl: 'https://rememberme.yourdomain.org',
+    encryptData: true,
+    fieldNames: [
+      'supporter.firstName',
+      'supporter.lastName',
+      'supporter.emailAddress'
+    ]
+  }
+};
+```
+
+When using `encryptData` with `remoteUrl`, the remote iframe HTML page must implement the matching encrypt/decrypt protocol. See the `data-remember.html` reference implementation for details. The remote page derives the encryption key from a device fingerprint, so it produces the same key regardless of which top-level site loads the iframe — solving Chrome's third-party storage partitioning limitation.
 
 ### What Is Saved
 
