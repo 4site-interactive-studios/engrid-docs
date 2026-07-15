@@ -7,9 +7,7 @@ description: This page shows how to use ENgrid's remember me feature.
 
 The Remember Me component allows supporters to save their form information for future visits, making it faster to complete forms on the same device. When a supporter opts in to "Remember Me," their non-financial information is stored locally or on a remote server, and automatically filled in when they return to complete another form.
 
-{% callout title="You should know!" %}
 Financial information is never stored. The Remember Me feature only saves personal details like name, email, address, and other non-payment fields.
-{% /callout %}
 
 ## How It Works
 
@@ -77,6 +75,7 @@ Control where the Remember Me checkbox and clear link appear:
 | `fieldOptInSelectorTargetLocation` | Where to insert relative to target (`"before"` or `"after"`) | `"after"` |
 | `fieldClearSelectorTarget` | CSS selector for where to insert the clear link | `'label[for="en__field_supporter_firstName"]'` |
 | `fieldClearSelectorTargetLocation` | Where to insert relative to target (`"before"` or `"after"`) | `"before"` |
+| `fieldClearLabel` | Text or HTML for the clear autofill link | `"(clear autofill)"` |
 
 ## Complete Configuration Example
 
@@ -110,6 +109,7 @@ window.EngridOptions = {
     fieldOptInSelectorTargetLocation: 'after',
     fieldClearSelectorTarget: 'label[for="en__field_supporter_firstName"]',
     fieldClearSelectorTargetLocation: 'before',
+    fieldClearLabel: '(clear autofill)',
     
     // Default opt-in state
     checked: false
@@ -152,9 +152,22 @@ When no saved data exists, the component displays a checkbox with an info icon:
 
 When saved data exists, the component displays a link instead of the checkbox:
 
-- **Text**: "(clear autofill)"
+- **Default text**: "(clear autofill)"
+- **Custom text**: Set with `fieldClearLabel` (supports plain text or HTML)
 - **Action**: Clicking clears saved data and resets the form
 - **Location**: Controlled by `fieldClearSelectorTarget` and `fieldClearSelectorTargetLocation`
+
+{% callout title="You should know!" %}
+The value of `fieldClearLabel` is rendered using `innerHTML`, so you can include HTML markup. Make sure any dynamic or user-provided content is properly sanitized to avoid unexpected behavior.
+{% /callout %}
+
+```javascript
+window.EngridOptions = {
+  RememberMe: {
+    fieldClearLabel: 'Clear my saved information'
+  }
+};
+```
 
 ## Custom Events
 
