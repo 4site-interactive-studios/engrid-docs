@@ -609,6 +609,30 @@ export const navigation = [
         href: '/docs/v2/welcome-back',
       }
     ]
+  },
+  {
+    title: 'Marketing Tools',
+    links: [
+      { title: 'Overview', href: '/docs/v2/marketing-tools-overview' },
+      { title: 'Template', href: '/docs/v2/marketing-tools-template' },
+      {
+        title: 'Reference Emails',
+        href: '/docs/v2/marketing-tools-reference-emails',
+      },
+      { title: 'Blocks', href: '/docs/v2/marketing-tools-blocks' },
+      {
+        title: 'Building an Email Broadcast',
+        href: '/docs/v2/marketing-tools-building-an-email-broadcast',
+      },
+      {
+        title: 'Updating Variable Replacements',
+        href: '/docs/v2/marketing-tools-updating-variable-replacements',
+      },
+      {
+        title: 'Coding New Blocks',
+        href: '/docs/v2/marketing-tools-coding-new-blocks',
+      },
+    ],
   }
 ]
 

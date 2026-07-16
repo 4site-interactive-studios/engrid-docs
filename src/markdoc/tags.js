@@ -62,12 +62,17 @@ const tags = {
       src: { type: String },
       alt: { type: String },
       caption: { type: String },
+      width: { type: Number },
     },
-    render: ({ src, alt = '', caption }) => (
+    render: ({ src, alt = '', caption, width }) => (
       <figure>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt} />
-        <figcaption>{caption}</figcaption>
+        <img
+          src={src}
+          alt={alt}
+          style={width ? { maxWidth: `${width}px`, height: 'auto' } : undefined}
+        />
+        {caption && <figcaption>{caption}</figcaption>}
       </figure>
     ),
   },
