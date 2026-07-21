@@ -374,11 +374,15 @@ Look for `[💰 OtherAmount]` in console logs.
 
 ## Min/Max Amount
 
-The `MinMaxAmount` class validates donation amounts against minimum and maximum thresholds, supporting both static and frequency-based validation.
+The `MinMaxAmount` class validates donation amounts against minimum and maximum thresholds, supporting both static and frequency-based validation. It runs on donation pages only.
+
+There are two ways to set the thresholds: directly in ENgrid options (static), or by having ENgrid read the amount validator configured in Engaging Networks (`UseAmountValidatorFromEN`).
 
 ### Configuration
 
 #### Static Min/Max
+
+Set the thresholds in your theme options:
 
 ```javascript
 EngridOptions = {
@@ -390,9 +394,31 @@ EngridOptions = {
 };
 ```
 
+Defaults when unset:
+
+| Option | Default |
+| ------ | ------- |
+| `MinAmount` | `1` |
+| `MaxAmount` | `100000` |
+| `MinAmountMessage` | `"Amount must be at least $1"` |
+| `MaxAmountMessage` | `"Amount must be less than $100,000"` |
+| `UseAmountValidatorFromEN` | `false` |
+
 {% callout title="You should know!" %}
-When `UseAmountValidatorFromEN` is set to true, it will prioritize EN validator settings.
+When `UseAmountValidatorFromEN` is set to true and an EN amount validator is applied to the page, the EN validator settings take priority over the static options.
 {% /callout %}
+
+#### Page-Level Override
+
+To change the minimum on a single page without touching the theme, add a code block to the page (above the theme's main script) with `EngridPageOptions`. Page options merge over theme options, so anything you don't set keeps its theme value:
+
+```html
+<script>
+  window.EngridPageOptions = window.EngridPageOptions || {};
+  window.EngridPageOptions.MinAmount = 25;
+  window.EngridPageOptions.MinAmountMessage = "This campaign has a $25 minimum";
+</script>
+```
 
 #### Use EN Validators
 
@@ -404,7 +430,22 @@ EngridOptions = {
 };
 ```
 
-This reads the amount validator configured in EN and applies those rules. This also uses the error messages set in EN.
+This reads the amount validator applied to the donation amount field on the page and adopts its min, max, and error message for ENgrid's own validation. Pages without an amount validator fall back to the static options above.
+
+EN has two validator types for this, both managed under **Pages > Alerts & Validators** in your EN account (see [Managing Validators](https://knowledge.engagingnetworks.net/pages/managing-validators)):
+
+- **Donation Amount** (`AMNT`): one min and max for the field, entered as `min~max` (e.g. `5~1000`, decimals allowed as `5.01~1000.99`)
+- **Donation Amount with frequency minimum** (`FAMNT`): a different min and max per gift frequency
+
+To use one:
+
+1. Go to **Pages > Alerts & Validators**, create a new validator, and pick the type
+2. Enter the `min~max` range and the error message supporters will see
+3. In Page Builder, open the donation amount field's settings in the form block and apply the validator to that field
+
+{% callout title="You should know!" %}
+EN enforces its validators at submit time regardless of ENgrid settings. If a page has an EN validator but `UseAmountValidatorFromEN` is `false`, the two layers validate independently and can show conflicting errors (e.g. ENgrid accepts $2 against its $1 default, then EN blocks the submit at its $10 minimum). Either manage thresholds entirely through ENgrid options, or apply EN validators with `UseAmountValidatorFromEN: true`.
+{% /callout %}
 
 ### Frequency-Based Validation
 
@@ -438,6 +479,18 @@ Runs on form submission attempt:
 - Blocks submission if invalid
 - Focuses other amount field
 - Shows error message
+
+#### Disabling Live Validation
+
+To only validate at submit time (no error while the supporter types), set:
+
+```javascript
+EngridOptions = {
+  DisableMinMaxLiveValidation: true
+};
+```
+
+With this on, ENgrid skips the live check entirely and shows the error message (and blocks submission) only when the form is submitted with an out-of-range amount.
 
 ### Error Display
 
