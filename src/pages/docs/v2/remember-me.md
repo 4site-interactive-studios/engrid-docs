@@ -7,7 +7,9 @@ description: This page shows how to use ENgrid's remember me feature.
 
 The Remember Me component allows supporters to save their form information for future visits, making it faster to complete forms on the same device. When a supporter opts in to "Remember Me," their non-financial information is stored locally or on a remote server, and automatically filled in when they return to complete another form.
 
+{% callout title="You should know!" %}
 Financial information is never stored. The Remember Me feature only saves personal details like name, email, address, and other non-payment fields.
+{% /callout %}
 
 ## How It Works
 
@@ -283,6 +285,17 @@ When `encryptData: true` is set, the Remember Me payload is encrypted with brows
 
 2. **Remote (`encryptData` with `remoteUrl`)** — The remote iframe page (`data-remember.html`) handles encryption/decryption. The key is derived deterministically from a simple device fingerprint (screen resolution, language, CPU cores, device memory, timezone → SHA-256). This means even though Chrome partitions `localStorage` by top-level site, the same device always produces the same key — enabling cross-site sharing (e.g. FWW and FWA).
 
+**Browser compatibility for cross-site restoration:**
+
+- **Chrome**: Cross-site restoration works when the user has previously interacted with the iframe. Subject to third-party storage partitioning which may block access in new/clean browsing contexts. To establish cross-site storage access:
+  1. Navigate directly to the iframe URL (`https://cdn.foodandwaterwatch.org/remember-me-ifram.html`)
+  2. Wait a few seconds for localStorage to initialize
+  3. Return to your form page and refresh
+
+- **Safari and Firefox**: Cross-site restoration fails because these browsers block localStorage access from within cross-origin iframes, even when the remote page properly implements the postMessage protocol. Same-site usage (on the same domain as the remote URL) works normally.
+
+- **Different devices**: When using `encryptData` with `remoteUrl`, the encryption key is derived deterministically from the device fingerprint. If the same saved data is accessed from a different device (different screen resolution, language, CPU cores, memory, or timezone), decryption will fail silently because the derived key won't match. The component falls back to the normal, no-autofill experience.
+
 **Example with encryption enabled:**
 
 ```javascript
@@ -300,6 +313,8 @@ window.EngridOptions = {
 ```
 
 When using `encryptData` with `remoteUrl`, the remote iframe HTML page must implement the matching encrypt/decrypt protocol. See the `data-remember.html` reference implementation for details. The remote page derives the encryption key from a device fingerprint, so it produces the same key regardless of which top-level site loads the iframe — solving Chrome's third-party storage partitioning limitation.
+
+**Note**: Even with encryption, Safari and Firefox will still block cross-site localStorage access in the iframe. The encryption protocol works correctly, but the browser's storage policy prevents reading the stored data from a different site.
 
 ### What Is Saved
 
@@ -330,6 +345,13 @@ When using remote storage:
 - Communicates via postMessage API
 - Requires JSON and localStorage support in the browser
 - iframe has `allow-same-origin allow-scripts` permissions
+- Data is stored in a cookie on the remote domain
+
+**Cross-site restoration behavior:**
+
+- **Chrome**: Cross-site restoration works when the user has previously interacted with the iframe. May fail in new/clean browsing contexts due to third-party storage partitioning.
+- **Safari and Firefox**: Cross-site restoration fails entirely because these browsers block localStorage access within cross-origin iframes. The iframe cannot read the cookie data even when the remote page properly implements the postMessage protocol. Same-site usage (on the same domain as the remote URL) works normally.
+- **Different devices**: When `encryptData` is enabled, the encryption key is derived from a device fingerprint. Data saved on one device cannot be restored on another device because the derived key won't match. The component fails silently, falling back to the normal, no-autofill experience.
 
 ### Form Integration
 
