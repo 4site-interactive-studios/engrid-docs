@@ -25,3 +25,14 @@ The options are:
 {% callout title="Warning" type="warning" %}
 Changes to a template are not applied to Emails that are already built using that template. If you need to make a change to a template (including altering its Variable Replacements), then you will need to rebuild any email using it from scratch. This includes the Reference Emails.
 {% /callout %}
+
+## Custom Code
+
+Templates have 2 options for adding custom code:
+
+- Template Custom CSS
+- Template Custom Head HTML
+
+In the CSS options, you can write any custom CSS to apply to your email to overwrite default styles.
+
+The Custom Head HTML Option will add HTML to the *head* of the document - this is useful for things such as analytics tags or other meta tags.
