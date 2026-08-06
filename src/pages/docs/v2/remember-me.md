@@ -54,6 +54,7 @@ The Remember Me component accepts the following configuration options:
 | `fieldNames` | Array of field names to save and restore | `[]` |
 | `checked` | Whether the Remember Me checkbox is checked by default | `false` |
 | `encryptData` | Encrypts the stored payload with AES-GCM (Web Crypto) | `false` |
+| `hide` | Hides the Remember Me opt-in element while keeping functionality (useful for clients who want autofill without showing the checkbox) | `false` |
 
 ### Donation-Specific Options
 
@@ -113,9 +114,13 @@ window.EngridOptions = {
     fieldClearLabel: '(clear autofill)',
     
     // Default opt-in state
-    checked: false
+    checked: false,
+    
+    // Hide the opt-in element (keeps autofill functionality invisible)
+    hide: true
   }
 };
+```
 ```
 
 ## Remote Storage Setup
@@ -135,8 +140,29 @@ window.EngridOptions = {
 };
 ```
 
+## Hide Remember Me Checkbox
+
+To keep autofill functionality while hiding the opt-in checkbox from users, set `hide: true`:
+
+```javascript
+window.EngridOptions = {
+  RememberMe: {
+    hide: true,
+    fieldNames: [
+      'supporter.firstName',
+      'supporter.lastName',
+      'supporter.emailAddress'
+    ]
+  }
+};
+```
+
+When hidden, the component still saves and restores data, but users won't see the Remember Me checkbox or clear link. This is useful for clients who want transparent autofill without the opt-in UI.
+
 {% callout title="You should know!" %}
 Remote storage requires hosting an HTML file that handles postMessage communication. The remote URL must support localStorage and be accessible from your form pages.
+
+**Browser compatibility note**: When using `remoteUrl`, the component saves data correctly on the same site, but reading data across different domains fails in Safari and Firefox. These browsers block cross-origin iframe access to localStorage, even when the remote page properly implements the postMessage protocol. Chrome may also fail in cross-site contexts unless the user has previously interacted with the iframe.
 {% /callout %}
 
 ## User Interface
@@ -375,6 +401,7 @@ Ensure that:
 - Fields exist on the page with the correct `name` attributes
 - The cookie hasn't expired (check `cookieExpirationDays`)
 - For remote storage, the iframe loaded successfully
+- For Safari and Firefox users, `remoteUrl` will work only same-site.
 
 ## Example: Minimal Setup
 
