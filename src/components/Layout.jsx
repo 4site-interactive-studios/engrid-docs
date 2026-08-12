@@ -200,6 +200,7 @@ export const navigation = [
       { title: 'Loader', href: '/docs/v2/loader' },
       { title: 'Progress Bar', href: '/docs/v2/progress-bar' },
       { title: 'Ticker', href: '/docs/v2/ticker' },
+      { title: 'Page Background Slideshows', href: '/docs/v2/page-background-rotation' },
       { title: 'Custom Lightboxes', href: '/docs/v2/custom-lightboxes' },
       { title: 'Iframe Queue', href: '/docs/v2/iframe-queue' },
       { title: 'Opt-In Ladder', href: '/docs/v2/opt-in-ladder' },
@@ -483,6 +484,10 @@ export const navigation = [
       {
         title: 'OtherAmount',
         href: '/docs/v2/currency-donation-amounts#other-amount',
+      },
+      {
+        title: 'PageBackgroundRotation',
+        href: '/docs/v2/page-background-rotation',
       },
       {
         title: 'PageBackground',
