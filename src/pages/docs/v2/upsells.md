@@ -150,11 +150,35 @@ window.EngridFrequencyUpsell = {
   upsellFromFrequency: ['onetime'], // An array of frequencies to upsell from. Can be "onetime", "monthly", "quarterly", "semi_annual", "annual".
   customClass: '', // A custom class to add to the modal. Useful for custom styling.
   upsellAmount: (currentAmount) => currentAmount, // A function that takes the current donation amount and returns the upsell amount. This is useful for calculating the upsell amount based on the current amount. By default it will be the same as the current donation amount. It must return a number.
+  showCloseX: false, // Set to true to show an X button in the top-right corner of the modal, giving the supporter a way to dismiss it without using either button.
+  submitOnClose: false, // When the modal is dismissed (X button or ESC key), set to true to submit the form with the original amount and frequency, or false to pause the submission and leave the supporter on the page.
   onOpen: () => {}, // A function that will be called right after the modal opens (before the user clicks). Useful for analytics impressions.
   onAccept: () => {}, // A function that will be called when the user accepts the upsell. This is useful for tracking/analytics or any custom page functionality.
-  onDecline: () => {}, // A function that will be called when the user declines the upsell. This is useful for tracking/analytics or any custom page functionality.
+  onDecline: () => {}, // A function that will be called when the user declines the upsell. A dismissal (X button or ESC key) counts as a decline, so this also fires then. This is useful for tracking/analytics or any custom page functionality.
 }
 ```
+
+#### Dismissing the Modal
+
+By default the modal has no X button (`showCloseX: false`), so the supporter must choose the Yes or No button to continue. Clicking outside the modal never closes it — it plays a "bounce" animation instead.
+
+Setting `showCloseX: true` adds the X button, and ESC key dismissal becomes available. Either way, a dismissal is treated as a decline:
+
+- `onDecline` fires, exactly as if the supporter had clicked the No button.
+- If `submitOnClose` is `true`, the form is submitted with the supporter's original amount and frequency.
+- If `submitOnClose` is `false` (the default), the submission is paused and the supporter stays on the donation page with the form intact, so they can keep editing and submit again.
+
+```js
+window.EngridFrequencyUpsell = {
+  paragraph: 'Would you like to make it an annual gift?',
+  showCloseX: true,
+  submitOnClose: true, // Dismissing the modal processes the original one-time gift
+}
+```
+
+{% callout title="You should know!" %}
+`submitOnClose: false` means a supporter who dismisses the modal has *not* completed their donation. Only use it if you want them to stay on the page and make a deliberate choice; otherwise pair `showCloseX: true` with `submitOnClose: true` so a dismissal still processes their original gift.
+{% /callout %}
 
 ### Default Values of the Frequency Upsell Modal
 
@@ -172,6 +196,8 @@ window.EngridFrequencyUpsell = {
   upsellFromFrequency: ['onetime'],
   customClass: '',
   upsellAmount: (currentAmount) => currentAmount,
+  showCloseX: false,
+  submitOnClose: false,
   onOpen: () => {},
   onAccept: () => {},
   onDecline: () => {},
@@ -180,7 +206,7 @@ window.EngridFrequencyUpsell = {
 
 ### Example
 
-In this example, we'll create a Frequency Upsell Modal that suggests to the supporter that, instead of making an annual donation, they could make a monthly donation with 1/12 of the annual amount.
+In this example, we'll create a Frequency Upsell Modal that suggests to the supporter that, instead of making an annual donation, they could make a monthly donation with 1/12 of the annual amount. The X button is enabled, and dismissing the modal processes their original annual gift.
 
 ```js
 window.EngridFrequencyUpsell = {
@@ -192,6 +218,8 @@ window.EngridFrequencyUpsell = {
   upsellFromFrequency: ['annual'],
   customClass: 'my-custom-class',
   upsellAmount: (currentAmount) => Math.floor(currentAmount / 12),
+  showCloseX: true,
+  submitOnClose: true,
   onOpen: () => {
     window.dataLayer.push({
       event: 'upsellOpened',

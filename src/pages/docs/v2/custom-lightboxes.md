@@ -11,11 +11,12 @@ This is an abstract class that cannot be instantiated directly. You must extend 
 
 ## Key Features
 
-- **Accessibility Built-in**: ARIA attributes, focus trapping, keyboard navigation
+- **Accessibility Built-in**: ARIA attributes, focus trapping, keyboard navigation, ESC to close
 - **Flexible Content**: Accepts HTML strings, DOM elements, or NodeLists
 - **Customizable Behavior**: Configure click-outside behavior, close buttons, and styling
 - **Body Data Integration**: Automatically sets `data-has-lightbox` on body when opened
-- **Multiple Close Methods**: X button, overlay click, close button, or programmatic
+- **Multiple Close Methods**: X button, overlay click, close button, ESC key, or programmatic
+- **Dismiss Callback**: Run your own logic whenever the user dismisses the modal
 
 ## Creating your own lightbox component
 
@@ -31,7 +32,9 @@ export class MyCustomModal extends Modal {
       addCloseButton: true,
       closeButtonLabel: "Got it!",
       customClass: "my-custom-modal",
-      showCloseX: true
+      showCloseX: true,
+      closeOnEsc: true,
+      onDismiss: () => console.log("Modal dismissed by the user")
     });
   }
 
@@ -71,6 +74,8 @@ The `Modal` constructor accepts an options object with the following properties:
 | `closeButtonLabel` | `string` | Text for the close button (if enabled) | `"Okay!"` |
 | `customClass` | `string` | Space-separated custom CSS classes to add | `""` |
 | `showCloseX` | `boolean` | Show the X button in top-right corner | `true` |
+| `closeOnEsc` | `boolean` | Close the modal when the ESC key is pressed | `true` |
+| `onDismiss` | `() => void` | Callback fired when the user dismisses the modal | `() => {}` |
 
 ### Option Details
 
@@ -89,6 +94,26 @@ The `Modal` constructor accepts an options object with the following properties:
 **showCloseX**
 - Controls the X button in the top-right corner
 - Adds `engrid-modal--close-x` class when enabled
+
+**closeOnEsc**
+- When `true`, pressing the ESC key while focus is inside the modal dismisses it
+- Enabled by default as a general accessibility enhancement
+- Set to `false` if your modal must not be dismissible by keyboard (for example, a required confirmation step)
+
+**onDismiss**
+- Fires whenever the user dismisses the modal — the X button, the optional bottom close button, any `.modal__close` element, a click outside (when `onClickOutside: "close"`), or the ESC key
+- Fires *before* the modal closes, so you can still read the modal's DOM state inside the callback
+- Does **not** fire when you call `close()` yourself, so an explicit action button in your content can bypass the dismiss logic
+
+```typescript
+super({
+  showCloseX: true,
+  closeOnEsc: true,
+  onDismiss: () => {
+    window.dataLayer?.push({ event: "myModalDismissed" });
+  }
+});
+```
 
 ## Public Methods
 
@@ -110,11 +135,13 @@ modal.open();
 Closes the modal and restores page state:
 - Adds `modal--hidden` class
 - Sets `data-has-lightbox="false"` on body
-- Disables focus trapping
+- Disables focus trapping and the ESC key handler
 
 ```typescript
 modal.close();
 ```
+
+Calling `close()` directly does **not** fire `onDismiss`. All of the user-initiated close paths route through an internal `dismiss()` method, which fires `onDismiss` and then calls `close()`.
 
 ### `getModalContent()`
 
@@ -163,7 +190,10 @@ The modal can be closed through multiple methods:
 2. **Overlay Click**: Click outside the modal (if `onClickOutside: "close"`)
 3. **Close Button**: Click the bottom button (if `addCloseButton: true`)
 4. **CSS Class**: Any element with class `modal__close` inside the modal
-5. **Programmatically**: Call `modal.close()` from your code
+5. **ESC Key**: Press ESC while focus is inside the modal (if `closeOnEsc: true`)
+6. **Programmatically**: Call `modal.close()` from your code
+
+Methods 1 through 5 are user dismissals and fire `onDismiss` first. Method 6 does not.
 
 ## Accessibility Features
 
@@ -188,6 +218,7 @@ All interactive elements are keyboard accessible:
 - Close X button is focusable with `tabindex="0"`
 - Modal container receives focus on open
 - Focus returns appropriately on close
+- ESC dismisses the modal by default (`closeOnEsc: true`), and the handler is removed on close so it never fires for a hidden modal
 
 ## Complete Example
 
@@ -319,6 +350,7 @@ new App(options)
 5. **Style Appropriately**: Use `customClass` for theme-specific styling
 6. **Consider Mobile**: Ensure modals work well on small screens
 7. **Handle Events**: Set up event listeners after modal creation in constructor
+8. **Use onDismiss for Dismissals**: Track or react to user dismissals with `onDismiss` instead of wrapping every close path yourself
 
 ## Related Components
 
