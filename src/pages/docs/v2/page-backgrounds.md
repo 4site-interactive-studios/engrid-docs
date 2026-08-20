@@ -1,7 +1,50 @@
 ---
-title: Background Image Positioning
-description: Learn how to control the position of background images in ENgrid pages using positioning classes and data attributes.
+title: Page Backgrounds
+description: Learn how to manage page backgrounds and control the positioning of background images in ENgrid pages.
 ---
+
+# Using Body Banner as Page Background
+
+Background content placed within the body-banner grid area can be used as a page background, allowing you to position critical LCP/MCP elements earlier in the DOM for improved performance and user experience. 
+
+{% callout title="You should know!" %}
+Using the body banner as the reference area for page backgrounds is done on an opt-in basis and requires enabling the feature in your client page or on a per page basis, see steps below on how to enable it. Keep in mind that this will affect the layout and rendering of your page content, and you should review your pages thoroughly after enabling it, especially if you frequently use the body banner for other purposes.
+{% /callout %}
+
+## Enabling Body Banner as Page Background
+
+There are 2 options: 
+
+1. Per page basis -- Create a new code block with the following content to enable the body banner as the page background:
+
+```html
+<script>
+  window.UseBodyBannerImageAsBackground = true;
+</script>
+```
+2. Client theme basis (Apply everywhere) -- Add the following line in your client theme's index file:
+
+```ts
+const options: Options = {
+  // ...
+  UseBodyBannerImageAsBackground: true,
+  // ...
+};
+```
+
+## Using Body Banner as Page Background
+
+To use the body banner as the page background, ensure that you have enabled the feature either on a per-page basis or in your client theme as described above. Then, place your background content within the body-banner grid area. This content will automatically be treated as the page background, allowing you to position critical LCP/MCP elements earlier in the DOM for improved performance and user experience. Images, Figures, and Video are all supported items for the body banner background. [Figattributes and Figcaptions](/docs/v2/media-attribution) you set will also be applied correctly.
+
+### Debug Logging
+
+Enable debug mode to see checkbox toggling:
+
+Look for `🖼️ PageBackground` in console logs.
+
+# Background Image Positioning
+
+Learn how to control the position of background images in ENgrid pages using positioning classes and data attributes.
 
 ## Overview
 

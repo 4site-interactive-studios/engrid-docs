@@ -158,8 +158,8 @@ export const navigation = [
         href: '/docs/v2/replace-banner-with-background',
       },
       {
-        title: 'Background Image Positioning',
-        href: '/docs/v2/background-image-positioning',
+        title: 'Page Backgrounds & Background Image Positioning',
+        href: '/docs/v2/page-backgrounds',
       },
       {
         title: 'Conditional Content Helper Classes',

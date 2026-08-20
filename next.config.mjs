@@ -156,7 +156,12 @@ const nextConfig = {
         destination: '/docs/v2/data-and-url-parameters',
         permanent: true,
       },
-            {
+      {
+        source: '/docs/v2/background-image-positioning',
+        destination: '/docs/v2/page-backgrounds#background-image-positioning',
+        permanent: true,
+      },
+      {
         source: '/component/a11y',
         destination: '/docs/v2/form-field-enhancements#accessibility-a11y',
         permanent: true,
