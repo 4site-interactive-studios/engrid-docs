@@ -48,7 +48,7 @@ For a visual guide to all available layouts and how they work, see [ENgrid Visua
 
 Every page can have its own unique background image. You control this through the page builder by adding your media to the designated content area. ENgrid handles responsive sizing, lazy loading, and performance optimization automatically.
 
-- **Background images** can be positioned using helper classes — see [Background Image Positioning](/docs/v2/background-image-positioning)
+- **Background images** can be positioned using helper classes — see [Background Image Positioning](/docs/v2/page-backgrounds#background-image-positioning)
 - **Banner replacement** with full-bleed backgrounds is also supported — see [Replace Banner with Background](/docs/v2/replace-banner-with-background)
 
 ---

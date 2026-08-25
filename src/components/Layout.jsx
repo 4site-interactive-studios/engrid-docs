@@ -486,7 +486,7 @@ export const navigation = [
       },
       {
         title: 'PageBackground',
-        href: '/docs/v2/background-image-positioning',
+        href: '/docs/v2/page-backgrounds',
       },
       {
         title: 'PostDonationEmbed',
