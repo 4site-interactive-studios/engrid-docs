@@ -53,6 +53,7 @@ ENgrid ships a small dictionary for the UI strings it generates. When the page l
 | `placeholders.emailAddress` | Email Address | Correo electrónico |
 | `placeholders.phoneNumber` | Phone Number | Teléfono |
 | `placeholders.phoneNumberOptional` | Phone Number (Optional) | Teléfono (opcional) |
+| `placeholders.phoneNumber2Optional` | 000-000-0000 (Optional) | 000-000-0000 (opcional) |
 | `placeholders.country` | Country | País |
 | `placeholders.address1` | Street Address | Calle y número |
 | `placeholders.address2` | Apt., Ste., Bldg. | Depto., Piso, Edif. |
