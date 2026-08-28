@@ -78,6 +78,17 @@ Control where the Remember Me checkbox and clear link appear:
 | `fieldClearSelectorTarget` | CSS selector for where to insert the clear link | `'label[for="en__field_supporter_firstName"]'` |
 | `fieldClearSelectorTargetLocation` | Where to insert relative to target (`"before"` or `"after"`) | `"before"` |
 
+### Label and Localization Options
+
+Control the text of the Remember Me checkbox and clear link:
+
+| Property | Description | Default |
+| -------- | ----------- | ------- |
+| `rememberMeLabel` | Text of the Remember Me checkbox label | Localized `"Remember Me"` (e.g. `"Recuérdame"` on Spanish pages) |
+| `fieldClearLabel` | Text of the clear autofill link | Localized `"(clear autofill)"` (e.g. `"(borrar autocompletado)"` on Spanish pages) |
+
+The defaults, the info tooltip, and the iframe title follow the page language automatically. Values you set here always win over the built-in dictionary. See [Multilingual Pages](/docs/v2/multilingual-pages) for details.
+
 ## Complete Configuration Example
 
 ```javascript
