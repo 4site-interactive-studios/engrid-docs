@@ -48,8 +48,21 @@ ENgrid ships a small dictionary for the UI strings it generates. When the page l
 | `translateFields.select` | Select | Seleccione |
 | `translateFields.recipientTo` | To: | Para: |
 | `a11y.errorSummary` | There are {count} errors: {messages}. | Hay {count} errores: {messages}. |
+| `placeholders.firstName` | First Name | Nombre |
+| `placeholders.lastName` | Last Name | Apellidos |
+| `placeholders.emailAddress` | Email Address | Correo electrónico |
+| `placeholders.phoneNumber` | Phone Number | Teléfono |
+| `placeholders.phoneNumberOptional` | Phone Number (Optional) | Teléfono (opcional) |
+| `placeholders.country` | Country | País |
+| `placeholders.address1` | Street Address | Calle y número |
+| `placeholders.address2` | Apt., Ste., Bldg. | Depto., Piso, Edif. |
+| `placeholders.city` | City | Ciudad |
+| `placeholders.region` | Region | Provincia/Estado |
+| `placeholders.postcode` | ZIP Code | Código Postal |
 
 Values in curly braces (like `{count}` or `{label}`) are placeholders that ENgrid fills in at runtime.
+
+The `placeholders.*` keys drive the [input placeholders](/docs/v2/form-field-enhancements#input-placeholders) ENgrid adds when the `add-input-placeholders` body data attribute is enabled. Placeholders you set yourself with the `Placeholders` option always win — ENgrid never translates your custom strings.
 
 ## Customizing Strings with `EngridI18n`
 
@@ -107,6 +120,8 @@ Country-based translations (like the built-in Brazilian Portuguese, German, Fren
 If the selected country has no defined translations, the page language stays in place. For example, on a Spanish page, a donor who selects Brazil gets the Portuguese address labels, and any field not covered by the Portuguese set remains in Spanish.
 
 State field labels and "Select…" placeholder options also follow the page language (for example, "Select State" becomes "Seleccione Estado" on Spanish pages), while state and province names themselves are not translated.
+
+When a field's placeholder mirrors its label, the placeholder is translated along with the label. A placeholder with custom hint text of its own is left untouched, so you keep full control over format hints.
 
 You can extend or replace the language layer with the existing `EngridTranslate` global, using the 2-letter language code as the key:
 
