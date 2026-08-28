@@ -38,7 +38,7 @@ ENgrid ships a small dictionary for the UI strings it generates. When the page l
 | --- | ------- | ------- |
 | `rememberMe.label` | Remember Me | Recuérdame |
 | `rememberMe.clearLabel` | (clear autofill) | (borrar autocompletado) |
-| `rememberMe.tooltip` | Check "{label}" to complete forms on this device faster... | Marca "{label}" para completar los formularios en este dispositivo más rápido... |
+| `rememberMe.tooltip` | Check “{label}” to complete forms on this device faster... | Marque “{label}” para completar los formularios en este dispositivo más rápido... |
 | `rememberMe.iframeTitle` | Remember Me iframe | iframe de Recuérdame |
 | `translateFields.state` | State | Estado |
 | `translateFields.stateGeneric` | Province / State | Provincia/Estado |
@@ -71,6 +71,12 @@ window.EngridI18n = {
 
 Resolution order for every string: the current page language → English → the key itself. If a string is missing in the page language, the English default is used, so partial dictionaries are safe.
 
+You can check whether a key is defined for the current page language (not counting the English fallback) with `ENGrid.hasI18nKey(key)`:
+
+```typescript
+ENGrid.hasI18nKey("translateFields.recipientTo"); // true on "es" pages, false on "fr" unless you add it
+```
+
 ## Translating Form Fields by Page Language
 
 When the TranslateFields component is enabled (`TranslateFields: true`, on by default), the page language is used as the **base translation layer** for supporter field labels and placeholders. It is applied on page load and again every time the country field changes.
@@ -84,7 +90,7 @@ Spanish pages get these field translations out of the box:
 | `supporter.emailAddress` | Correo electrónico |
 | `supporter.phoneNumber` | Teléfono |
 | `supporter.address1` | Dirección |
-| `supporter.address2` | Complemento |
+| `supporter.address2` | Departamento/Piso |
 | `supporter.postcode` | Código Postal |
 | `supporter.city` | Ciudad |
 | `supporter.region` | Provincia/Estado |

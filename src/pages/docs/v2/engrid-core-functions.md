@@ -112,6 +112,8 @@ ENGrid.t("a11y.errorSummary", { count: 2, messages: "First name. Email" });
 // Spanish page: "Hay 2 errores: First name. Email."
 ```
 
+`ENGrid.hasI18nKey(key)` checks whether a key is defined for the current page language, without counting the English fallback.
+
 See [Multilingual Pages](/docs/v2/multilingual-pages) for the full list of dictionary keys and how to override them with `window.EngridI18n`.
 
 ### Page Type Detection
