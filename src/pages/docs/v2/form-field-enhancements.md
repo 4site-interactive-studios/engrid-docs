@@ -337,6 +337,8 @@ The component includes defaults for all standard EN fields:
 
 ...and many more (over 30 fields covered).
 
+The built-in defaults follow the page language — on Spanish pages they are added in Spanish automatically (for example, "Street Address" becomes "Calle y número"). Placeholders you set via the `Placeholders` option are never translated. See [Multilingual Pages](/docs/v2/multilingual-pages) for details.
+
 ### Customizing Placeholders
 
 Override defaults globally via `window.EngridOptions`:

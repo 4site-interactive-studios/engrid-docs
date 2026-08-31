@@ -91,6 +91,30 @@ ENGrid.createHiddenInput("utm_source", "email_campaign");
 | `ENGrid.getPageCount()` | Returns total number of pages | `number \| null` |
 | `ENGrid.isThankYouPage()` | Checks if current page is the thank you page | `boolean` |
 | `ENGrid.getGiftProcess()` | Returns gift process status | `boolean \| null` |
+| `ENGrid.getPageLanguage()` | Returns the 2-letter page language from `pageJson.locale` (defaults to `"en"`) | `string` |
+
+### Page Language
+
+`ENGrid.getPageLanguage()` returns the first two characters of `pageJson.locale`, lowercased (`"es_US"` → `"es"`). When `pageJson` or the locale is unavailable, it returns `"en"`.
+
+```typescript
+if (ENGrid.getPageLanguage() === "es") {
+  // Spanish page logic
+}
+```
+
+### Translating UI Strings
+
+`ENGrid.t(key, replacements?)` looks up a string in ENgrid's built-in i18n dictionary for the current page language, falling back to English. Values in curly braces are interpolated from the `replacements` argument.
+
+```typescript
+ENGrid.t("a11y.errorSummary", { count: 2, messages: "First name. Email" });
+// Spanish page: "Hay 2 errores: First name. Email."
+```
+
+`ENGrid.hasI18nKey(key)` checks whether a key is defined for the current page language, without counting the English fallback.
+
+See [Multilingual Pages](/docs/v2/multilingual-pages) for the full list of dictionary keys and how to override them with `window.EngridI18n`.
 
 ### Page Type Detection
 
