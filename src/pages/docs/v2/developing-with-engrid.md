@@ -108,13 +108,13 @@ This is especially useful when:
 - Sharing links for public testing
 - Avoiding the need to maintain URL parameters
 
-For more information about asset loading, see [Loader](./loader.md)
+For more information about asset loading, see [Loader](./loader)
 
 ---
 
 ## Building and deploying production files
 
-- See [Deploying ENgrid Assets](./deploying-assets.md)
+- See [Deploying ENgrid Assets](./deploying-assets)
 
 ## Advanced Development Techniques with ENgrid for Engaging Networks
 

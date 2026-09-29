@@ -95,7 +95,7 @@ Here are the variables you need to create:
 
 ### Additional variable: live page type
 
-If any donation page in your account uses the [Embedded Ecard](./embedded-ecard.md) feature, add this one additional variable. Unlike everything above, it is **not** a Data Layer Variable — it reads `pageJson` directly off the page.
+If any donation page in your account uses the [Embedded Ecard](./embedded-ecard) feature, add this one additional variable. Unlike everything above, it is **not** a Data Layer Variable — it reads `pageJson` directly off the page.
 
 1. Go to **Variables** > **User-Defined Variables** > **New**
 2. Choose type **Custom JavaScript**
@@ -166,7 +166,7 @@ Two triggers are required because GTM evaluates an exception at the same lifecyc
 **Important Notes:**
 
 - The `pageJsonVariablesReady` event fires on every page load and contains all `EN_PAGEJSON_*` variables, `EN_URLPARAM_*` variables, `EN_RECURRING_FREQUENCIES` (for donation pages), and `EN_SUBMISSION_SUCCESS_{PAGETYPE}` variables when on the final page
-- To detect a successful donation, use the `pageJsonVariablesReady` trigger with a condition: `EN_PAGEJSON_GIFTPROCESS` equals `"TRUE"`. If your donation page uses an [Embedded Ecard](./embedded-ecard.md), add a second condition: `EN_PAGEJSON_PAGETYPE` **does not equal** `"E-CARD"`. Without it, the eCard iframe fires the conversion a second time — see [Troubleshooting](#troubleshooting).
+- To detect a successful donation, use the `pageJsonVariablesReady` trigger with a condition: `EN_PAGEJSON_GIFTPROCESS` equals `"TRUE"`. If your donation page uses an [Embedded Ecard](./embedded-ecard), add a second condition: `EN_PAGEJSON_PAGETYPE` **does not equal** `"E-CARD"`. Without it, the eCard iframe fires the conversion a second time — see [Troubleshooting](#troubleshooting).
 - The `EN_SUBMISSION_SUCCESS_{PAGETYPE}` is a variable (not an event) that appears in the `pageJsonVariablesReady` event payload when `pageNumber` equals `pageCount` (i.e., on the final page)
 - `EN_FORM_VALUE_UPDATED` fires whenever a user changes a form field value (blur for text inputs, change for checkboxes/radios/selects)
 - The submission opt-in/out events fire when a form is submitted, indicating whether the user checked an email opt-in checkbox
@@ -329,7 +329,7 @@ Checking `Container Loaded` specifically matters. At `DOM Ready` or later the va
 
 - **Variables not populating**: Ensure the Data Layer Variable Names match exactly
 - **Events not firing**: Check that triggers are set to "All Custom Events" (when applicable)
-- **Events appear twice**: Caused by an [Embedded E-card Page](./embedded-ecard.md) loading a second GTM container instance inside its iframe. There are two distinct symptoms and they need different fixes:
+- **Events appear twice**: Caused by an [Embedded E-card Page](./embedded-ecard) loading a second GTM container instance inside its iframe. There are two distinct symptoms and they need different fixes:
   - *Duplicate `purchase` / conversion events* — add the condition `EN_PAGEJSON_PAGETYPE` does not equal `"E-CARD"` to your `EN Successful Donation` trigger. Setting `SuppressPurchaseEcard` to `true` in ENgrid configuration is a useful second layer, but the trigger condition is the primary fix and is container-side, so it holds regardless of ENgrid version.
   - *Duplicate page views and pixel fires* — add the eCard exception triggers to your page-load tags. See [Preventing duplicate page views from an embedded eCard](#4-preventing-duplicate-page-views-from-an-embedded-e-card).
   - Note that GA4 silently deduplicates `purchase` events sharing a `transaction_id`, so a duplicate conversion can be invisible in DebugView while still double-counting in Meta. Verify in GTM Preview that the tag fires once, rather than relying on what GA4 reports.- **Missing data**: Verify "Expose transaction details" is enabled in Engaging Networks
