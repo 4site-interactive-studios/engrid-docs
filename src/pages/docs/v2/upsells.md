@@ -77,25 +77,13 @@ amountRange: [
 
 The donation amount is compared to each `max` property and, when it's lower or equal, we'll return the equivalent `suggestion` value. If the suggested amount is 0 the lightbox will not display.
 
-Each entry can also set a `frequency` to upsell that range to a different frequency, for example `{ max: 250, suggestion: 25, frequency: "annual" }`. A range's `frequency` wins over `upsellToFrequency`.
-
 As you can see in the example above, you can also use javascript code as the **"suggestion"** property. When using javascript code (inside quotes) to calculate your suggestion, use the special word `amount`. That word will get replaced by the dynamic one-time amount.
 
 * **canClose** - `true` or `false` to enable/disable the close functions/button.
 
 * **submitOnClose** - `true` or `false` to enable/disable the form submission when closing the lightbox. It only works if **canClose** is `true`.
 
-* **upsellToFrequency** - The frequency to upsell to: `"onetime"`, `"monthly"`, `"quarterly"`, `"semi_annual"`, or `"annual"`. Default: `"monthly"`. Every range in the default `amountRange` sets `frequency: "monthly"`, which wins over this option, so supply your own `amountRange` when you change it. The lightbox only opens when the target frequency is one of the frequency options on the page.
-
-* **minAmount** - The lowest amount the lightbox suggests or accepts in the "other amount" field. Default: `0`.
-
-* **oneTime**, **monthly**, **annual** - Which gift frequencies open the lightbox. Defaults: `true`, `false`, `false`. Quarterly and semi-annual gifts never open it.
-
-* **disablePaymentMethods** - An array of payment types that skip the lightbox, for example `["paypal"]`. Vantiv Apple Pay (`applepay`) is always skipped. EN digital wallet gifts never open the lightbox, because EN doesn't call `enOnSubmit` for them.
-
-* **skipUpsell** - Set to `true` to turn the lightbox off, for example from another script.
-
-* **conversionField** - The name of a field to write the upsell result to. ENgrid creates it as a hidden field if it isn't on the page, and writes a value like `event:upsellSuccess,freq:onetime,amt:50,sugFreq:monthly,sugAmt:15,subFreq:monthly,subAmt:15`. Default: `""` (off).
+* **debug** - `true` or `false` to enable/disable console notifications.
 
 You can omit any option that you don't need to change the default value.
 
@@ -106,10 +94,6 @@ Some options allows variables, that will get replaced by dynamic values:
 * `{new-amount}` - Will get replaced by the current suggested upsell amount based on the `amountRange` option.
 
 * `{old-amount}` - Will get replaced by the current one-time amount this user is trying to give.
-
-* `{new-frequency}` - Will get replaced by the frequency of the suggested upsell (for example, monthly).
-
-* `{old-frequency}` - Will get replaced by the frequency of the gift this user is trying to give.
 
 
 ### Features
@@ -170,7 +154,7 @@ window.EngridFrequencyUpsell = {
   upsellFromFrequency: ['onetime'], // An array of frequencies to upsell from. Can be "onetime", "monthly", "quarterly", "semi_annual", "annual".
   customClass: '', // A custom class to add to the modal. Useful for custom styling.
   upsellAmount: (currentAmount) => currentAmount, // A function that takes the current donation amount and returns the upsell amount. This is useful for calculating the upsell amount based on the current amount. By default it will be the same as the current donation amount. It must return a number.
-  showCloseX: false, // Set to true to show an X button in the top-right corner of the modal. The ESC key dismisses the modal either way.
+  showCloseX: false, // Set to true to show an X button in the top-right corner of the modal, giving the supporter a way to dismiss it without using either button.
   submitOnClose: false, // When the modal is dismissed (X button or ESC key), set to true to submit the form with the original amount and frequency, or false to pause the submission and leave the supporter on the page.
   onOpen: () => {}, // A function that will be called right after the modal opens (before the user clicks). Useful for analytics impressions.
   onAccept: () => {}, // A function that will be called when the user accepts the upsell. This is useful for tracking/analytics or any custom page functionality.
@@ -180,9 +164,9 @@ window.EngridFrequencyUpsell = {
 
 #### Dismissing the Modal
 
-By default the modal has no X button (`showCloseX: false`), so a mouse or touch user has to choose the Yes or No button to continue. Clicking outside the modal never closes it. It plays a "bounce" animation instead. The ESC key always dismisses it.
+By default the modal has no X button (`showCloseX: false`), so the supporter must choose the Yes or No button to continue. Clicking outside the modal never closes it — it plays a "bounce" animation instead.
 
-Setting `showCloseX: true` adds the X button. A dismissal, by the X or the ESC key, is treated as a decline:
+Setting `showCloseX: true` adds the X button, and ESC key dismissal becomes available. Either way, a dismissal is treated as a decline:
 
 - `onDecline` fires, exactly as if the supporter had clicked the No button.
 - If `submitOnClose` is `true`, the form is submitted with the supporter's original amount and frequency.
@@ -197,7 +181,7 @@ window.EngridFrequencyUpsell = {
 ```
 
 {% callout title="You should know!" %}
-`submitOnClose: false` means a supporter who dismisses the modal has *not* completed their donation. Only use it if you want them to stay on the page and make a deliberate choice; otherwise set `submitOnClose: true` (usually with `showCloseX: true`) so a dismissal still processes their original gift. The ESC key dismisses the modal even when there's no X.
+`submitOnClose: false` means a supporter who dismisses the modal has *not* completed their donation. Only use it if you want them to stay on the page and make a deliberate choice; otherwise pair `showCloseX: true` with `submitOnClose: true` so a dismissal still processes their original gift.
 {% /callout %}
 
 ### Default Values of the Frequency Upsell Modal

@@ -46,7 +46,7 @@ The component automatically generates this structure:
 For multi-page forms, the progress calculates automatically:
 
 ```html
-<!-- On page 1 of 3: shows 0% -->
+<!-- On page 1 of 3: shows 33% -->
 <!-- On page 2 of 3: shows 67% -->
 <!-- On page 3 of 3: shows 100% -->
 <span data-engrid-progress-indicator></span>
@@ -54,19 +54,19 @@ For multi-page forms, the progress calculates automatically:
 
 **Calculation:**
 ```javascript
-percentage = pageNumber === 1 ? 0 : Math.ceil((pageNumber / pageCount) * maxValue)
+percentage = Math.ceil((pageNumber / pageCount) * maxValue)
 ```
 
 ### Campaign Goal Progress
 
-For a campaign goal you update by hand, set `amount` to the percentage to show. ENgrid displays `amount` as a percentage, so convert a raised total first ($75,000 of a $100,000 goal is `75`):
+For campaign goal tracking, set a custom amount:
 
 ```html
-<!-- Shows 75% -->
-<span data-engrid-progress-indicator amount="75"></span>
+<!-- Shows 75% if $75,000 raised toward $100,000 goal -->
+<span data-engrid-progress-indicator 
+      max="100000" 
+      amount="75000"></span>
 ```
-
-For live campaign totals, use Engaging Networks' [Display widgets](https://knowledge.engagingnetworks.net/pages/display-widgets).
 
 **Calculation:**
 ```javascript
@@ -76,7 +76,7 @@ percentage = Math.ceil(amountValue) > Math.ceil(maxValue)
 ```
 
 {% callout title="You should know!" %}
-If the amount exceeds max, it caps at max (100% by default). This prevents the progress bar from overflowing.
+If the amount exceeds max, it caps at 100%. This prevents the progress bar from overflowing.
 {% /callout %}
 
 ### Animation

@@ -3,7 +3,7 @@ title: ENgrid Features Overview
 description: A comprehensive overview of ENgrid's features across giving, advocacy, accessibility, content editing, and developer tools
 ---
 
-ENgrid is 4Site's open-source code framework for supercharging Engaging Networks page templates. It provides a wide range of features beyond what EN offers on its own, organized across giving pages, advocacy, accessibility, content editing, and developer tooling. This page provides a high-level overview of what ENgrid can do — follow the links to detailed documentation for each feature.
+ENgrid is 4Site's open-source code framework for supercharging Engaging Networks page templates. It provides a wide range of features that are not available natively in EN, organized across giving pages, advocacy, accessibility, content editing, and developer tooling. This page provides a high-level overview of what ENgrid can do — follow the links to detailed documentation for each feature.
 
 {% callout title="Information" %}
 Engaging Networks now offers native versions of some of these features, such as the upsell lightbox and fee cover. See [ENgrid vs. Native EN Features](/docs/v2/engrid-vs-native-en) to decide which one to use.
