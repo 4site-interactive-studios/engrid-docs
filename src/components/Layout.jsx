@@ -257,6 +257,10 @@ export const navigation = [
     title: 'Native EN',
     links: [
       {
+        title: 'ENgrid vs. Native EN Features',
+        href: '/docs/v2/engrid-vs-native-en',
+      },
+      {
         title: 'Transaction Field Values',
         href: '/docs/v2/transaction-field-values',
       },

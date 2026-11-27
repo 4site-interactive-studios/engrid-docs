@@ -39,6 +39,10 @@ data-processing-fee-fixed-amount-added=".30"
 
 Drop this Code Block into your donation page to trigger an Upsell Lightbox whenever a one-time gift is made.
 
+{% callout title="You should know!" %}
+Engaging Networks has its own native upsell lightbox. Use one or the other on a page, not both. See the [upsell lightbox comparison](/docs/v2/engrid-vs-native-en#upsell-lightbox-detailed-comparison) to decide which fits.
+{% /callout %}
+
 ### Options
 | Property        | Description                                                                   |
 | --------------- | ----------------------------------------------------------------------------- |
