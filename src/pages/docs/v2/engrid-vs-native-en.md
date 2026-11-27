@@ -3,7 +3,7 @@ title: ENgrid vs. Native EN Features
 description: How ENgrid components differ from the Engaging Networks features that look like them, and which one to use.
 ---
 
-Some Engaging Networks (EN) features look like ENgrid components. Each section below shows how a pair differs and which one to use.
+Some Engaging Networks features look like ENgrid components. Each section below shows how a pair differs and which one to use.
 
 {% callout title="You should know!" %}
 Checked against EN release 6.7.0 (November 2026). This page compares ENgrid with Page Builder. EN's Smart Pages don't allow custom code, so ENgrid isn't available there.
